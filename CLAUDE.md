@@ -1127,9 +1127,11 @@ When starting a session:
    - **Context reading ≠ permission to act**
    - **This rule applies EVERY TIME, without exception**
 
-2. **Read session context first**: `docs/session-logs/SESSION_LOG.md` or `NEXT_SESSION.md` (if exists)
+2. **Read session context first (MANDATORY):**
+   - `NEXT_SESSION.md` - Immediate context and next steps (read FIRST)
+   - Latest log file in `logs/` directory (e.g., `logs/PHASE0_FOUNDATION_LOG.md`)
 
-3. **Check current todos**: `TODOS.md` (if exists)
+3. **Check current todos**: TodoWrite tool for active session tasks
 
 4. **Follow mandatory workflows**:
    - **Testing**: MANDATORY for ALL code (see [Testing Workflow](docs/guidelines/TESTING_WORKFLOW.md)) ⭐ **READ BEFORE EVERY COMMIT**
@@ -1201,7 +1203,223 @@ Auto-compaction can compress or lose nuanced context. Proper documentation befor
 
 ---
 
-## 11. 🚨 CRITICAL: Test Failure Protocol 🚨
+## 11. Session Documentation Protocol
+
+### Session Logging System
+
+**Purpose:** Maintain detailed history and enable seamless continuity across sessions
+
+### Three-Document System
+
+#### 1. Session Logs (`logs/` directory)
+
+**Location:** `/logs/`
+
+**Naming Convention:**
+- **Phase-based:** `PHASE0_FOUNDATION_LOG.md`, `PHASE1_SETUP_LOG.md`
+- **Month-based:** `M1W1_LOG.md` (Month 1, Weeks 1-2), `M1W3_LOG.md` (Month 1, Weeks 3-4)
+- **Format:** Short, descriptive, chronological
+
+**Examples:**
+```
+logs/
+├── PHASE0_FOUNDATION_LOG.md      # Infrastructure and planning (current)
+├── M1W1_LOG.md                   # Month 1, Weeks 1-2 development
+├── M1W3_LOG.md                   # Month 1, Weeks 3-4 development
+├── M2W1_LOG.md                   # Month 2, Weeks 1-2 development
+└── ...
+```
+
+**Content:** Detailed session history including:
+- What was accomplished
+- Decisions made
+- Problems encountered and solved
+- Code changes
+- Testing results
+- Time spent
+
+**When to Create:**
+- At END of each work session
+- When completing a development phase
+- Before moving to new curriculum module
+
+#### 2. Handoff Document (`NEXT_SESSION.md`)
+
+**Location:** Root directory (always)
+
+**Purpose:** Bridge between sessions - tells next Claude session exactly where to start
+
+**Updated:** At END of every session
+
+**Critical Contents:**
+1. **Current State:**
+   - What phase/module we're on
+   - What's completed
+   - What's uncommitted (if anything)
+   - Current git branch
+   - Latest log file reference
+
+2. **Immediate Next Steps:**
+   - Numbered, specific action items
+   - Order of operations
+   - Success criteria for each step
+   - Estimated time for each
+
+3. **Important Context:**
+   - Recent decisions
+   - Blockers or issues to be aware of
+   - Files that need review
+   - Commands needed
+
+4. **Git Status:**
+   - Current branch
+   - Uncommitted changes
+   - What needs testing before commit
+
+**Format:**
+```markdown
+# NEXT SESSION - Handoff Document
+
+**Last Updated:** [Date]
+**Current Phase:** [Phase name]
+**Next Phase:** [What's next]
+**Latest Log:** [Path to log file]
+
+## Where We Are
+- Completed this session
+- Current state
+- Uncommitted work
+
+## Immediate Next Steps
+1. Step 1 with details
+2. Step 2 with details
+...
+
+## Important Context
+- Key decisions
+- Files to review
+- Critical reminders
+```
+
+#### 3. Session Todos (TodoWrite tool)
+
+**Purpose:** Track active tasks within current session
+
+**Management:**
+- Created at session start
+- Updated as work progresses
+- Marked complete as tasks finish
+- Not persisted to files (tool-managed)
+
+### Session Start Protocol
+
+**At beginning of EVERY session, Claude MUST:**
+
+1. **Read NEXT_SESSION.md** (if exists)
+   - Understand current state
+   - Identify immediate next steps
+   - Note any uncommitted work
+
+2. **Read latest log file**
+   - Get detailed session history
+   - Understand recent decisions
+   - Learn from problems solved
+
+3. **Read CLAUDE.md** (if needed for context)
+   - Full project overview
+   - Guidelines and workflows
+
+4. **Ask user:** "What would you like to work on?"
+   - Confirm next steps from NEXT_SESSION.md
+   - Or get new direction from user
+
+5. **Create feature branch** (if coding)
+   - Before writing any code
+   - Following Git workflow
+
+### Session End Protocol
+
+**At END of every session, Claude MUST:**
+
+1. **Commit all tested code:**
+   - Follow pre-commit checklist
+   - Ensure all tests pass
+   - Push to GitHub
+
+2. **Update log file:**
+   - Create new log or append to existing
+   - Document what was accomplished
+   - Note decisions and learnings
+
+3. **Update NEXT_SESSION.md:**
+   - Current state
+   - Immediate next steps (numbered, specific)
+   - Important context
+   - Git status
+
+4. **Verify documentation:**
+   - All changes documented
+   - Clear handoff to next session
+   - No missing context
+
+### Auto-Compact Warning Protocol
+
+**When user notifies of 15% token warning:**
+
+1. **STOP** new complex tasks
+2. **Finish** current task if < 5 minutes
+3. **Update** log file with session summary
+4. **Update** NEXT_SESSION.md with detailed handoff
+5. **Commit** if work is tested and complete
+6. **Document** any uncommitted work clearly
+
+### Log File Content Guidelines
+
+**Include:**
+- ✅ Accomplishments (what was built/fixed)
+- ✅ Decisions made and rationale
+- ✅ Problems encountered and solutions
+- ✅ Testing results
+- ✅ Git commits made
+- ✅ Next steps identified
+
+**Exclude:**
+- ❌ Excessive code snippets (link to files instead)
+- ❌ Repeated information from previous sessions
+- ❌ Obvious or trivial details
+
+### Example Log Entry
+
+```markdown
+## Session 2024-12-03 (Phase 0 - Foundation)
+
+### Accomplished
+- ✅ Initialized Next.js 14 + TypeScript project
+- ✅ Created Prisma database schema (15+ models)
+- ✅ Configured Tailwind CSS
+- ✅ Imported development guidelines from SMS project
+- ✅ Created GitHub repository: https://github.com/jayudas/SANSKRIT
+
+### Decisions Made
+- **Repository name:** SANSKRIT (shortened for clarity)
+- **Documentation system:** Phase-based logs + NEXT_SESSION.md handoff
+- **Development approach:** Month-by-month incremental
+
+### Git Activity
+- Commit 1: Initial project structure
+- Commit 2: Documentation updates
+- Branch: main
+- All code pushed to GitHub
+
+### Next Steps
+- Set up PostgreSQL database locally
+- Create content data structure
+- Import Month 1, Week 1 content
+```
+
+---
+
+## 12. 🚨 CRITICAL: Test Failure Protocol 🚨
 
 **⚠️ TRIGGER: Whenever you see test failures, errors, or any indication that tests are not passing:**
 

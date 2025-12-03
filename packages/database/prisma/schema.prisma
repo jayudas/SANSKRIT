@@ -1,0 +1,303 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ==================== USER MANAGEMENT ====================
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  passwordHash  String?
+  createdAt     DateTime  @default(now())
+  lastLogin     DateTime?
+
+  // Relations
+  progress          UserProgress[]
+  lessonProgress    UserLessonProgress[]
+  flashcards        UserFlashcard[]
+  flashcardReviews  FlashcardReview[]
+  quizAttempts      QuizAttempt[]
+  dailyStats        UserDailyStats[]
+  achievements      UserAchievement[]
+
+  @@map("users")
+}
+
+// ==================== COURSE STRUCTURE ====================
+
+model Phase {
+  id               Int       @id
+  name             String
+  description      String?
+  durationMonths   Int
+  orderIndex       Int
+
+  // Relations
+  modules          Module[]
+
+  @@map("phases")
+}
+
+model Module {
+  id                  String   @id @default(cuid())
+  phaseId             Int
+  month               Int
+  week                Int?
+  title               String
+  description         String?
+  learningObjectives  Json?
+  orderIndex          Int
+
+  // Relations
+  phase               Phase        @relation(fields: [phaseId], references: [id])
+  lessons             Lesson[]
+  exercises           Exercise[]
+  userProgress        UserProgress[]
+
+  @@map("modules")
+  @@index([phaseId, month, week])
+}
+
+model Lesson {
+  id              String   @id @default(cuid())
+  moduleId        String
+  title           String
+  type            String   // 'video', 'text', 'interactive', 'exercise'
+  content         Json
+  durationMinutes Int?
+  orderIndex      Int
+
+  // Relations
+  module          Module                @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  userProgress    UserLessonProgress[]
+
+  @@map("lessons")
+  @@index([moduleId, orderIndex])
+}
+
+// ==================== VOCABULARY ====================
+
+model Vocabulary {
+  id              String   @id @default(cuid())
+  sanskrit        String
+  devanagari      String
+  transliteration String
+  english         String
+  partOfSpeech    String?  // noun, verb, adjective, etc.
+  gender          String?  // masculine, feminine, neuter
+  declensionType  String?
+  exampleSentence String?
+  audioUrl        String?
+  difficultyLevel Int      @default(1)
+  frequencyRank   Int?
+  tags            Json?
+
+  // Relations
+  userFlashcards  UserFlashcard[]
+
+  @@map("vocabulary")
+  @@index([difficultyLevel])
+}
+
+// ==================== EXERCISES & QUIZZES ====================
+
+model Exercise {
+  id                String   @id @default(cuid())
+  moduleId          String
+  type              String   // 'multiple-choice', 'fill-blank', 'matching', etc.
+  title             String
+  instructions      String?
+  content           Json
+  difficultyLevel   Int      @default(1)
+  points            Int      @default(10)
+  timeLimitSeconds  Int?
+
+  // Relations
+  module            Module           @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  questions         ExerciseQuestion[]
+  attempts          QuizAttempt[]
+
+  @@map("exercises")
+  @@index([moduleId, type])
+}
+
+model ExerciseQuestion {
+  id              String   @id @default(cuid())
+  exerciseId      String
+  questionData    Json
+  correctAnswer   Json
+  explanation     String?
+  orderIndex      Int
+
+  // Relations
+  exercise        Exercise      @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  answers         QuizAnswer[]
+
+  @@map("exercise_questions")
+  @@index([exerciseId, orderIndex])
+}
+
+// ==================== USER PROGRESS ====================
+
+model UserProgress {
+  userId              String
+  moduleId            String
+  status              String   @default("not-started") // not-started, in-progress, completed
+  progressPercentage  Int      @default(0)
+  startedAt           DateTime?
+  completedAt         DateTime?
+
+  // Relations
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  module              Module   @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  @@id([userId, moduleId])
+  @@map("user_progress")
+  @@index([userId, status])
+}
+
+model UserLessonProgress {
+  userId          String
+  lessonId        String
+  completed       Boolean  @default(false)
+  timeSpentSeconds Int     @default(0)
+  lastAccessed    DateTime @default(now())
+
+  // Relations
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson          Lesson   @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@id([userId, lessonId])
+  @@map("user_lesson_progress")
+}
+
+// ==================== FLASHCARDS & SRS ====================
+
+model UserFlashcard {
+  id            String   @id @default(cuid())
+  userId        String
+  vocabularyId  String
+  easeFactor    Float    @default(2.5)
+  intervalDays  Int      @default(1)
+  repetitions   Int      @default(0)
+  lastReviewed  DateTime?
+  nextReview    DateTime @default(now())
+  status        String   @default("new") // new, learning, review, relearning
+
+  // Relations
+  user          User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  vocabulary    Vocabulary        @relation(fields: [vocabularyId], references: [id], onDelete: Cascade)
+  reviews       FlashcardReview[]
+
+  @@unique([userId, vocabularyId])
+  @@map("user_flashcards")
+  @@index([userId, nextReview])
+  @@index([userId, status])
+}
+
+model FlashcardReview {
+  id                String   @id @default(cuid())
+  userFlashcardId   String
+  reviewedAt        DateTime @default(now())
+  quality           Int      // 0-5 rating (based on SM-2 algorithm)
+  timeSpentSeconds  Int
+
+  // Relations
+  userFlashcard     UserFlashcard @relation(fields: [userFlashcardId], references: [id], onDelete: Cascade)
+  user              User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId            String
+
+  @@map("flashcard_reviews")
+  @@index([userFlashcardId, reviewedAt])
+}
+
+// ==================== QUIZ RESULTS ====================
+
+model QuizAttempt {
+  id                String   @id @default(cuid())
+  userId            String
+  exerciseId        String
+  score             Int
+  maxScore          Int
+  percentage        Float
+  timeSpentSeconds  Int
+  completedAt       DateTime @default(now())
+
+  // Relations
+  user              User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  exercise          Exercise     @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  answers           QuizAnswer[]
+
+  @@map("quiz_attempts")
+  @@index([userId, exerciseId])
+  @@index([completedAt])
+}
+
+model QuizAnswer {
+  id                String   @id @default(cuid())
+  attemptId         String
+  questionId        String
+  userAnswer        Json
+  isCorrect         Boolean
+  timeSpentSeconds  Int
+
+  // Relations
+  attempt           QuizAttempt      @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question          ExerciseQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@map("quiz_answers")
+  @@index([attemptId])
+}
+
+// ==================== USER STATS & ACHIEVEMENTS ====================
+
+model UserDailyStats {
+  userId              String
+  date                DateTime @db.Date
+  studyMinutes        Int      @default(0)
+  lessonsCompleted    Int      @default(0)
+  exercisesCompleted  Int      @default(0)
+  flashcardsReviewed  Int      @default(0)
+  streakActive        Boolean  @default(true)
+
+  // Relations
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, date])
+  @@map("user_daily_stats")
+  @@index([userId, date])
+}
+
+model Achievement {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  icon        String?
+  criteria    Json
+
+  // Relations
+  userAchievements UserAchievement[]
+
+  @@map("achievements")
+}
+
+model UserAchievement {
+  userId        String
+  achievementId String
+  earnedAt      DateTime @default(now())
+
+  // Relations
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement   Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+
+  @@id([userId, achievementId])
+  @@map("user_achievements")
+}

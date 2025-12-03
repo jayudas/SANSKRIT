@@ -5,7 +5,7 @@ An interactive web-based application for learning Classical Sanskrit, based on a
 ## Project Structure
 
 ```
-sanskrit-learning-platform/
+SANSKRIT/
 ├── apps/
 │   └── web/                 # Next.js 14 web application
 ├── packages/

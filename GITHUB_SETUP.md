@@ -21,7 +21,7 @@ You have two options:
 ### Option A: Using GitHub CLI (Recommended)
 
 ```bash
-cd /Users/johnkitchin/AI/SANSKRIT/sanskrit-learning-platform
+cd /Users/johnkitchin/AI/SANSKRIT
 
 # Create public repository
 gh repo create SANSKRIT --public --source=. --remote=origin --push
@@ -47,7 +47,7 @@ This command will:
 Then connect your local repository:
 
 ```bash
-cd /Users/johnkitchin/AI/SANSKRIT/sanskrit-learning-platform
+cd /Users/johnkitchin/AI/SANSKRIT
 
 # Add GitHub as remote
 git remote add origin https://github.com/YOUR_USERNAME/SANSKRIT.git

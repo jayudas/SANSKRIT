@@ -79,7 +79,7 @@
 ## 📁 Project Structure
 
 ```
-sanskrit-learning-platform/
+SANSKRIT/
 ├── apps/
 │   └── web/                    # Next.js 14 application
 │       ├── src/app/

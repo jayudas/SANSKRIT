@@ -56,7 +56,7 @@
 
 4. Create environment file:
    ```bash
-   cd /Users/johnkitchin/AI/SANSKRIT/sanskrit-learning-platform/packages/database
+   cd /Users/johnkitchin/AI/SANSKRIT/packages/database
    cp ../../.env.example .env
    ```
 

@@ -107,7 +107,7 @@ The project owner is an American English speaker who wants to learn Classical Sa
 ### Project Structure
 
 ```
-sanskrit-learning-platform/
+SANSKRIT/
 ├── apps/
 │   └── web/                    # Next.js application
 │       ├── src/

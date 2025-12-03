@@ -105,7 +105,7 @@ After completing the setup, we'll build:
 ## Project Structure
 
 ```
-sanskrit-learning-platform/
+SANSKRIT/
 ├── apps/
 │   └── web/                    # Next.js application
 │       ├── src/

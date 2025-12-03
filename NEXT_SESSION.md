@@ -1,6 +1,6 @@
 # NEXT SESSION - Handoff Document
 
-**Last Updated:** December 3, 2024
+**Last Updated:** December 3, 2024 (Session 2)
 **Current Phase:** Phase 0 - Foundation (Complete)
 **Next Phase:** Database Setup & Content Structure
 **Latest Log:** `logs/PHASE0_FOUNDATION_LOG.md`
@@ -9,24 +9,31 @@
 
 ## 🎯 Where We Are
 
-### ✅ Completed This Session
-- Project foundation fully established (Next.js 14 + TypeScript + Turborepo)
+### ✅ Completed This Session (Session 2 - Project Restructuring)
+- **Project directory migration:** Moved all files from `sanskrit-learning-platform/` subfolder to `SANSKRIT/` root
+- **Documentation updates:** Updated all file path references in 6 documentation files
+- **Testing:** Build and dev server confirmed working after migration
+- **Git:** All changes committed (5b99de4) and pushed to GitHub
+- **Cleanup:** Removed empty subfolder, cleaner project structure
+
+### ✅ Previously Completed (Session 1 - Foundation)
+- Project foundation established (Next.js 14 + TypeScript + Turborepo)
 - Database schema designed (Prisma - 15+ models)
 - TypeScript types created for all features
 - Development guidelines imported from SMS project
 - CLAUDE.md updated with all best practices
 - Git repository initialized
 - GitHub repository created: **https://github.com/jayudas/SANSKRIT**
-- All code committed and pushed to GitHub
-- Documentation system established
 
 ### 📊 Current State
 - **Repository:** https://github.com/jayudas/SANSKRIT
 - **Branch:** main
-- **Commits:** 2
+- **Latest Commit:** 5b99de4 (Project restructuring)
 - **All code:** Committed and pushed ✅
 - **Uncommitted work:** None
-- **Tests:** N/A (no code to test yet)
+- **Working directory:** Clean
+- **Project structure:** Root level (no more subfolder nesting)
+- **Tests:** Build ✅ | Dev server ✅
 
 ---
 
@@ -174,15 +181,16 @@ git checkout -b feature/content-structure
 ## 📝 Important Context for Next Session
 
 ### Key Decisions Made
-1. **Repository name:** SANSKRIT (shortened from sanskrit-learning-platform)
-2. **Documentation system:** Phase-based logs in `/logs/` + `NEXT_SESSION.md` handoff
-3. **Development approach:** Build Month 1 completely before Month 2
-4. **Audio strategy:** Record/source as we build each module
+1. **Project structure:** Files now at root level of SANSKRIT/ (no subfolder nesting)
+2. **Repository name:** SANSKRIT (shortened, cleaner)
+3. **Documentation system:** Phase-based logs in `/logs/` + `NEXT_SESSION.md` handoff
+4. **Development approach:** Build Month 1 completely before Month 2
+5. **Audio strategy:** Record/source as we build each module
 
 ### Files to Review at Session Start
-1. **CLAUDE.md** - Full project context and guidelines
-2. **NEXT_SESSION.md** (this file) - Immediate next steps
-3. **logs/PHASE0_FOUNDATION_LOG.md** - Session history
+1. **NEXT_SESSION.md** (this file) - Start here for immediate context
+2. **logs/PHASE0_FOUNDATION_LOG.md** - Session history (now includes Session 2)
+3. **CLAUDE.md** - Full project context and guidelines
 4. **SETUP.md** - Database setup instructions
 
 ### Git Workflow Reminder
@@ -239,6 +247,9 @@ cd packages/database && npm run db:studio
 
 # View current branch
 git branch
+
+# Check git status
+git status
 ```
 
 ---
@@ -253,6 +264,32 @@ git branch
 
 ---
 
+## 📂 Updated Project Structure (After Migration)
+
+```
+SANSKRIT/                           # Root directory (clean!)
+├── apps/
+│   └── web/                        # Next.js 14 application
+├── packages/
+│   ├── database/                   # Prisma schema
+│   └── types/                      # Shared TypeScript types
+├── docs/
+│   └── guidelines/                 # 10 development guideline files
+├── logs/
+│   └── PHASE0_FOUNDATION_LOG.md   # Session history
+├── classical_sanskrit_course.md    # 24-month curriculum
+├── CLAUDE.md                       # Project context (44KB)
+├── README.md
+├── SETUP.md
+├── GITHUB_SETUP.md
+├── NEXT_SESSION.md                # This file
+└── package.json
+```
+
+---
+
 **Ready to begin database setup and content structuring!**
 
 **Next session starts with:** Database setup (Step 1 above)
+
+**Session 2 complete:** Project restructuring ✅

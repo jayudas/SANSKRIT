@@ -375,6 +375,91 @@ Working directory clean: ✅
 
 ---
 
+## Session 2: Project Restructuring - December 3, 2024
+
+### Duration
+~30 minutes
+
+### Accomplishments
+
+✅ **Project Directory Migration:**
+- Moved all project files from `sanskrit-learning-platform/` subfolder to `SANSKRIT/` root directory
+- Cleaner structure with files at root level instead of nested subfolder
+- Removed unnecessary directory nesting
+
+✅ **Documentation Updates:**
+- Updated all file path references in 6 documentation files:
+  - CLAUDE.md - Project structure diagram
+  - README.md - Project structure diagram
+  - SETUP.md - Project structure diagram
+  - GITHUB_SETUP.md - Command path examples
+  - NEXT_SESSION.md - Database setup paths
+  - logs/PHASE0_FOUNDATION_LOG.md - Structure diagram
+- Added classical_sanskrit_course.md to git repository
+
+✅ **Testing & Verification:**
+- Tested build: `npm run build` - ✅ Successful
+- Tested dev server: `npm run dev` - ✅ Successful (runs on localhost:3001)
+- Git repository and history intact
+- All relative paths in code continue to work correctly
+
+### Git Activity
+
+**Commit:** `5b99de4`
+```
+chore: migrate project from subfolder to root directory
+
+- Moved all files from sanskrit-learning-platform/ to SANSKRIT/ root
+- Updated all file path references in documentation
+- Tested build and dev server - all working correctly
+```
+
+**Files Changed:** 7 files
+- Modified: CLAUDE.md, GITHUB_SETUP.md, NEXT_SESSION.md, README.md, SETUP.md, logs/PHASE0_FOUNDATION_LOG.md
+- Added: classical_sanskrit_course.md
+
+**Pushed to GitHub:** ✅ Yes
+
+### Project Structure (Updated)
+
+```
+SANSKRIT/                           # Root directory (was: sanskrit-learning-platform/)
+├── apps/
+│   └── web/                        # Next.js 14 application
+│       ├── src/app/
+│       ├── public/
+│       └── package.json
+├── packages/
+│   ├── database/                   # Prisma schema
+│   └── types/                      # Shared TypeScript types
+├── docs/
+│   └── guidelines/                 # Development guidelines
+├── logs/
+│   └── PHASE0_FOUNDATION_LOG.md   # This file
+├── classical_sanskrit_course.md    # 24-month curriculum (added to git)
+├── CLAUDE.md                       # Project context
+├── README.md
+├── SETUP.md
+├── GITHUB_SETUP.md
+├── NEXT_SESSION.md
+└── package.json
+```
+
+### Why This Migration?
+
+User requested cleaner structure without unnecessary subfolder nesting. All project files now live directly in the SANSKRIT/ root directory, making the project easier to navigate and maintain.
+
+### Status After Migration
+
+- ✅ All files successfully moved to root
+- ✅ All documentation updated
+- ✅ Build system working
+- ✅ Dev server working
+- ✅ Git history preserved
+- ✅ Changes committed and pushed to GitHub
+
+---
+
 **Phase 0 Complete!** ✅
 
 Next: Database Setup & Content Structure

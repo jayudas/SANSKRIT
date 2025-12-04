@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
@@ -38,9 +40,11 @@ export default function Home() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors">
-            Start Learning
-          </button>
+          <Link href="/lessons">
+            <button className="px-8 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors">
+              Start Learning
+            </button>
+          </Link>
         </div>
       </div>
     </main>

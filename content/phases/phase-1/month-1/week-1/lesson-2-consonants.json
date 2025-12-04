@@ -1,0 +1,278 @@
+{
+  "lessonId": "p1-m1-w1-l2-consonants",
+  "title": "First 10 Consonants of Sanskrit (व्यञ्जनानि)",
+  "order": 2,
+  "estimatedMinutes": 60,
+  "objectives": [
+    "Master the first 10 Sanskrit consonants (ka-varga and ca-varga) with classical pronunciation",
+    "Understand the systematic organization of Sanskrit consonants by place of articulation",
+    "Learn the distinction between unaspirated and aspirated consonants (phonemic in Sanskrit)",
+    "Recognize voiced vs. voiceless consonants and nasal sounds"
+  ],
+  "sections": [
+    {
+      "type": "introduction",
+      "title": "Introduction to Sanskrit Consonants",
+      "content": "Sanskrit consonants (व्यञ्जनानि vyañjanāni) are organized with remarkable scientific precision. Unlike English, Sanskrit systematically arranges consonants in groups called vargas, organized by PLACE OF ARTICULATION (where in the mouth the sound is made) and MANNER OF ARTICULATION (how the sound is produced). Each varga has 5 consonants: (1) voiceless unaspirated, (2) voiceless aspirated, (3) voiced unaspirated, (4) voiced aspirated, and (5) nasal. This lesson introduces the first two vargas: Ka-varga (velars) and Ca-varga (palatals). We teach CLASSICAL pronunciation (~500 BCE-500 CE), NOT modern Indian tradition. Key concept: ASPIRATION is phonemic—it changes word meaning. Aspirated consonants have a strong puff of air.",
+      "order": 1
+    },
+    {
+      "type": "content",
+      "title": "Ka-varga (कवर्ग) - Velar Consonants",
+      "content": "The Ka-varga consists of 5 consonants produced at the VELUM (soft palate at back of mouth). These are called velars or gutturals (kaṇṭhya). The tongue body contacts the velum to create the sound. This is the first and most basic consonant series.",
+      "order": 2,
+      "items": [
+        {
+          "devanagari": "क",
+          "iast": "ka",
+          "ipa": "/k/",
+          "pronunciation": "Like 'k' in 'skill' (voiceless, NO aspiration)",
+          "audioFile": "/audio/phonemes/consonants/ka.mp3",
+          "category": "velar-stop",
+          "note": "Classical: pure /k/ without aspiration or breath. In English, initial 'k' in 'kill' is aspirated [kʰ], but Sanskrit क is UNASPIRATED like 'skill'. Articulation: back of tongue touches soft palate (velum).",
+          "examples": [
+            {
+              "word": "कमल",
+              "iast": "kamala",
+              "meaning": "lotus",
+              "audioFile": "/audio/words/kamala.mp3"
+            },
+            {
+              "word": "कवि",
+              "iast": "kavi",
+              "meaning": "poet",
+              "audioFile": "/audio/words/kavi.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ख",
+          "iast": "kha",
+          "ipa": "/kʰ/",
+          "pronunciation": "Like 'k' in 'kill' WITH strong breath (aspirated)",
+          "audioFile": "/audio/phonemes/consonants/kha.mp3",
+          "category": "velar-stop",
+          "note": "Classical: aspirated /kʰ/ with STRONG puff of air. Hold hand in front of mouth—you should feel the breath. This is DIFFERENT from क and changes meaning. Example: kala (time) vs. khala (threshing floor).",
+          "examples": [
+            {
+              "word": "खग",
+              "iast": "khaga",
+              "meaning": "bird (sky-goer)",
+              "audioFile": "/audio/words/khaga.mp3"
+            },
+            {
+              "word": "खेल",
+              "iast": "khela",
+              "meaning": "play, sport",
+              "audioFile": "/audio/words/khela.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ग",
+          "iast": "ga",
+          "ipa": "/g/",
+          "pronunciation": "Like 'g' in 'go' (voiced, NO aspiration)",
+          "audioFile": "/audio/phonemes/consonants/ga.mp3",
+          "category": "velar-stop",
+          "note": "Classical: voiced /g/ without aspiration. Your vocal cords vibrate (voiced), but there's no puff of air. Touch your throat—you should feel vibration.",
+          "examples": [
+            {
+              "word": "गज",
+              "iast": "gaja",
+              "meaning": "elephant",
+              "audioFile": "/audio/words/gaja.mp3"
+            },
+            {
+              "word": "गुरु",
+              "iast": "guru",
+              "meaning": "teacher, heavy",
+              "audioFile": "/audio/words/guru.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "घ",
+          "iast": "gha",
+          "ipa": "/gʰ/",
+          "pronunciation": "Like 'g' + 'h' as in 'doghouse' (voiced AND aspirated)",
+          "audioFile": "/audio/phonemes/consonants/gha.mp3",
+          "category": "velar-stop",
+          "note": "Classical: voiced aspirated /gʰ/. Both vocal cords vibrate AND there's a strong breath. Rare in English—closest is 'g' + 'h' in compound words like 'doghouse'. This sound is common in Sanskrit but foreign to English speakers.",
+          "examples": [
+            {
+              "word": "घट",
+              "iast": "ghaṭa",
+              "meaning": "pot, jar",
+              "audioFile": "/audio/words/ghata.mp3"
+            },
+            {
+              "word": "घृत",
+              "iast": "ghṛta",
+              "meaning": "ghee, clarified butter",
+              "audioFile": "/audio/words/ghrita.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ङ",
+          "iast": "ṅa",
+          "ipa": "/ŋ/",
+          "pronunciation": "Like 'ng' in 'sing' (velar nasal)",
+          "audioFile": "/audio/phonemes/consonants/nga.mp3",
+          "category": "velar-nasal",
+          "note": "Classical: velar nasal /ŋ/. Air flows through nose while tongue contacts velum. In Sanskrit, this appears mainly before other velar consonants (क, ख, ग, घ) or as anusvāra before velars. NEVER appears at word beginning in classical Sanskrit.",
+          "examples": [
+            {
+              "word": "अङ्ग",
+              "iast": "aṅga",
+              "meaning": "limb, body part",
+              "audioFile": "/audio/words/anga.mp3"
+            },
+            {
+              "word": "गङ्गा",
+              "iast": "gaṅgā",
+              "meaning": "Ganges river",
+              "audioFile": "/audio/words/ganga.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Ca-varga (चवर्ग) - Palatal Consonants",
+      "content": "The Ca-varga consists of 5 consonants produced at the HARD PALATE (roof of mouth behind alveolar ridge). These are called palatals (tālavya). The front-middle of the tongue contacts the hard palate. In classical pronunciation, these may have been true palatal stops [c ɟ] or palatal affricates [tɕ dʑ]—scholarly debate continues, but both are more fronted than English 'ch/j'.",
+      "order": 3,
+      "items": [
+        {
+          "devanagari": "च",
+          "iast": "ca",
+          "ipa": "/c/ or /tɕ/",
+          "pronunciation": "Like 'ch' in 'church' but WITHOUT lip rounding (voiceless palatal)",
+          "audioFile": "/audio/phonemes/consonants/ca.mp3",
+          "category": "palatal-stop",
+          "note": "Classical: /c/ (true palatal stop) or /tɕ/ (voiceless palatal affricate). The tongue contacts the hard palate, NOT the alveolar ridge like English 'ch'. NO lip rounding (English 'ch' has slight rounding). Unaspirated—no puff of air.",
+          "examples": [
+            {
+              "word": "चन्द्र",
+              "iast": "candra",
+              "meaning": "moon",
+              "audioFile": "/audio/words/candra.mp3"
+            },
+            {
+              "word": "चित्र",
+              "iast": "citra",
+              "meaning": "picture, painting",
+              "audioFile": "/audio/words/citra.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "छ",
+          "iast": "cha",
+          "ipa": "/cʰ/ or /tɕʰ/",
+          "pronunciation": "Like 'ch' in 'church' WITH strong breath (aspirated)",
+          "audioFile": "/audio/phonemes/consonants/cha.mp3",
+          "category": "palatal-stop",
+          "note": "Classical: aspirated /cʰ/ or /tɕʰ/. Same place of articulation as च but with STRONG puff of air. Again, no lip rounding. Hold hand in front of mouth to feel the aspiration.",
+          "examples": [
+            {
+              "word": "छात्र",
+              "iast": "chātra",
+              "meaning": "student",
+              "audioFile": "/audio/words/chaatra.mp3"
+            },
+            {
+              "word": "छाया",
+              "iast": "chāyā",
+              "meaning": "shadow, shade",
+              "audioFile": "/audio/words/chaaya.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ज",
+          "iast": "ja",
+          "ipa": "/ɟ/ or /dʑ/",
+          "pronunciation": "Like 'j' in 'judge' but WITHOUT lip rounding (voiced palatal)",
+          "audioFile": "/audio/phonemes/consonants/ja.mp3",
+          "category": "palatal-stop",
+          "note": "Classical: voiced palatal /ɟ/ or /dʑ/. Tongue at hard palate, vocal cords vibrate, no aspiration, no lip rounding. The voiced counterpart of च.",
+          "examples": [
+            {
+              "word": "जल",
+              "iast": "jala",
+              "meaning": "water",
+              "audioFile": "/audio/words/jala.mp3"
+            },
+            {
+              "word": "जन",
+              "iast": "jana",
+              "meaning": "person, people",
+              "audioFile": "/audio/words/jana.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "झ",
+          "iast": "jha",
+          "ipa": "/ɟʰ/ or /dʑʰ/",
+          "pronunciation": "Like 'j' + 'h' as in 'hedgehog' (voiced AND aspirated)",
+          "audioFile": "/audio/phonemes/consonants/jha.mp3",
+          "category": "palatal-stop",
+          "note": "Classical: voiced aspirated palatal /ɟʰ/ or /dʑʰ/. Rare in English—think 'j' + 'h' in compound words. Both voicing AND strong breath. This is one of the most foreign sounds to English speakers.",
+          "examples": [
+            {
+              "word": "झर",
+              "iast": "jhara",
+              "meaning": "waterfall, cascade",
+              "audioFile": "/audio/words/jhara.mp3"
+            },
+            {
+              "word": "झटिति",
+              "iast": "jhaṭiti",
+              "meaning": "quickly, suddenly",
+              "audioFile": "/audio/words/jhatiti.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ञ",
+          "iast": "ña",
+          "ipa": "/ɲ/",
+          "pronunciation": "Like 'ny' in 'canyon' or Spanish 'ñ' in 'mañana' (palatal nasal)",
+          "audioFile": "/audio/phonemes/consonants/nya.mp3",
+          "category": "palatal-nasal",
+          "note": "Classical: palatal nasal /ɲ/. Air flows through nose while tongue contacts hard palate. Like Spanish 'ñ' or Italian 'gn'. In Sanskrit, this appears mainly before other palatal consonants (च, छ, ज, झ) or as anusvāra before palatals. Rarely appears at word beginning.",
+          "examples": [
+            {
+              "word": "ज्ञान",
+              "iast": "jñāna",
+              "meaning": "knowledge, wisdom",
+              "audioFile": "/audio/words/jnaana.mp3"
+            },
+            {
+              "word": "अञ्जलि",
+              "iast": "añjali",
+              "meaning": "offering with cupped hands",
+              "audioFile": "/audio/words/anjali.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "title": "Summary: Systematic Organization of Sanskrit Consonants",
+      "content": "Congratulations! You have learned the first 10 consonants organized into 2 systematic vargas. KA-VARGA (velars): क ख ग घ ङ—produced at the velum (back of mouth). CA-VARGA (palatals): च छ ज झ ञ—produced at the hard palate (front-middle of mouth). Each varga follows the same pattern: (1) voiceless unaspirated, (2) voiceless aspirated, (3) voiced unaspirated, (4) voiced aspirated, (5) nasal. KEY CONCEPTS: ASPIRATION is phonemic—ख is NOT the same as क. VOICING is phonemic—ग is NOT the same as क. This scientific organization reflects the grammatical precision of Sanskrit and was documented by ancient Indian phoneticians (Pāṇini, Prātiśākhyas). Classical pronunciation: no lip rounding for palatals, true palatal articulation (NOT English alveolar 'ch/j'), strong aspiration for kh/gh/ch/jh. There are 3 more vargas (retroflexes, dentals, labials) totaling 33 consonants—you'll learn those next!",
+      "order": 4
+    },
+    {
+      "type": "practice",
+      "title": "Practice Exercises",
+      "content": "Daily Practice (45 minutes): 1) Write each consonant in Devanagari 20 times, focusing on proper stroke order. 2) Listen to each consonant's classical pronunciation 5 times and repeat aloud—pay special attention to aspiration (hold hand in front of mouth for ख, घ, छ, झ). 3) Practice the varga pattern: unaspirated → aspirated → voiced → voiced aspirated → nasal. Say each varga in order multiple times. 4) Distinguish between similar pairs: क vs ख (aspiration), क vs ग (voicing), च vs ज (voicing). 5) Practice with example words, ensuring correct classical pronunciation (no lip rounding for च/छ/ज/झ, true palatal articulation). 6) Try combining these consonants with vowels you learned in Lesson 1 (e.g., क + आ = का /kaː/, च + इ = चि /ci/). 7) Important: pronounce the inherent vowel 'a' (/ɐ/) in each consonant unless modified by a mātṛkā.",
+      "order": 5
+    }
+  ]
+}

@@ -60,10 +60,10 @@ export function AudioPlayer({
         disabled={error}
         className={`inline-flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
           error
-            ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+            ? 'bg-amber-50 text-amber-500 cursor-not-allowed border border-amber-200'
             : 'bg-primary-100 text-primary-600 hover:bg-primary-200'
         } ${className}`}
-        title={error ? 'Audio not available' : 'Play audio'}
+        title={error ? 'Audio not yet available (placeholder)' : 'Play audio'}
       >
         <audio
           ref={audioRef}
@@ -73,7 +73,10 @@ export function AudioPlayer({
           autoPlay={autoPlay}
         />
         {error ? (
-          <span className="text-xs">✕</span>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+          </svg>
         ) : isPlaying ? (
           <svg
             className="w-4 h-4"

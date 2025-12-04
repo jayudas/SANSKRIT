@@ -1,8 +1,48 @@
 # CLAUDE.md - Sanskrit Learning Platform
 
 ## Project Context Document
-**Last Updated:** December 3, 2024
+**Last Updated:** December 3, 2024 (Session 3 - Added MANDATORY SESSION START PROTOCOL)
 **Project Status:** Foundation Complete - Ready for Component Development
+
+---
+
+## 🚨 CRITICAL: MANDATORY SESSION START PROTOCOL 🚨
+
+**⚠️ AT THE START OF EVERY NEW SESSION, BEFORE DOING ANYTHING ELSE:**
+
+### STEP 1: READ SESSION CONTEXT (MANDATORY - NO EXCEPTIONS)
+
+**YOU MUST AUTOMATICALLY READ THESE FILES IN THIS ORDER:**
+
+1. **`NEXT_SESSION.md`** (read FIRST - immediate context and next steps)
+   ```
+   Read file: /Users/johnkitchin/AI/SANSKRIT/NEXT_SESSION.md
+   ```
+
+2. **Latest log file in `logs/` directory**
+   ```
+   Find latest: Use Glob tool on logs/*.md
+   Read the most recent log file (e.g., logs/PHASE0_FOUNDATION_LOG.md)
+   ```
+
+**DO NOT:**
+- ❌ Wait for user to tell you to read these files
+- ❌ Ask if you should read them
+- ❌ Skip them because you "remember" from previous sessions
+- ❌ Read only partial content
+
+**DO:**
+- ✅ AUTOMATICALLY read both files at session start
+- ✅ Read ENTIRE files (use chunks if needed for large files)
+- ✅ THEN ask user: "What would you like me to do next?"
+
+**WHY THIS MATTERS:**
+- Each Claude session has NO memory of previous sessions
+- NEXT_SESSION.md contains critical handoff information
+- Log files document decisions and context you MUST know
+- Skipping this causes confusion, repeated work, and mistakes
+
+**THIS IS THE #1 RULE - NEVER FORGET THIS!**
 
 ---
 
@@ -183,196 +223,27 @@ SANSKRIT/
 
 ## 3. Database Schema
 
-### Overview
-The database is designed to support:
-- Course content hierarchy (Phase → Module → Lesson)
-- Vocabulary management with rich metadata
-- User progress tracking at multiple levels
-- Spaced repetition flashcard system
-- Exercise/quiz results and analytics
-- Achievement and gamification system
+**📄 Full Details:** See [docs/DATABASE_SCHEMA.md](docs/DATABASE_SCHEMA.md)
 
-### Core Tables
+**Quick Overview:**
+- PostgreSQL database with Prisma ORM
+- 15+ models covering all application features
+- Core tables: users, phases, modules, lessons, vocabulary, exercises, flashcards, progress
+- SM-2 spaced repetition system built-in
+- Comprehensive progress tracking and analytics
+- Achievement/gamification system
 
-#### User Management
-```
-users
-- id (cuid)
-- email (unique)
-- name
-- passwordHash
-- createdAt
-- lastLogin
-```
+**Key Systems:**
+- **Course Structure:** Phase → Module → Lesson hierarchy
+- **Vocabulary:** Rich metadata with audio, difficulty, frequency
+- **SRS Flashcards:** User-specific review scheduling
+- **Exercises:** Flexible JSON-based question system
+- **Progress:** Lesson, module, and daily tracking
+- **Achievements:** Criteria-based reward system
 
-#### Course Structure
-```
-phases
-- id (integer, 1-4)
-- name
-- description
-- durationMonths
-- orderIndex
-
-modules
-- id (cuid)
-- phaseId (FK to phases)
-- month (1-24)
-- week (1-4)
-- title
-- description
-- learningObjectives (JSON)
-- orderIndex
-
-lessons
-- id (cuid)
-- moduleId (FK to modules)
-- title
-- type (video, text, interactive, exercise)
-- content (JSON - structured lesson content)
-- durationMinutes
-- orderIndex
-```
-
-#### Vocabulary System
-```
-vocabulary
-- id (cuid)
-- sanskrit (romanized)
-- devanagari (Sanskrit script)
-- transliteration (IAST)
-- english (meaning)
-- partOfSpeech
-- gender (masculine/feminine/neuter)
-- declensionType
-- exampleSentence
-- audioUrl
-- difficultyLevel (1-5)
-- frequencyRank
-- tags (JSON array)
-```
-
-#### Exercise System
-```
-exercises
-- id (cuid)
-- moduleId (FK)
-- type (multiple-choice, fill-blank, matching, etc.)
-- title
-- instructions
-- content (JSON)
-- difficultyLevel
-- points
-- timeLimitSeconds
-
-exercise_questions
-- id (cuid)
-- exerciseId (FK)
-- questionData (JSON - flexible question structure)
-- correctAnswer (JSON)
-- explanation
-- orderIndex
-```
-
-#### Flashcard & SRS System
-```
-user_flashcards
-- id (cuid)
-- userId (FK)
-- vocabularyId (FK)
-- easeFactor (float, default 2.5)
-- intervalDays (integer)
-- repetitions (integer)
-- lastReviewed (timestamp)
-- nextReview (timestamp)
-- status (new, learning, review, relearning)
-
-flashcard_reviews
-- id (cuid)
-- userFlashcardId (FK)
-- userId (FK)
-- reviewedAt (timestamp)
-- quality (0-5 rating for SM-2 algorithm)
-- timeSpentSeconds
-```
-
-#### Progress Tracking
-```
-user_progress
-- userId (FK)
-- moduleId (FK)
-- status (not-started, in-progress, completed)
-- progressPercentage (0-100)
-- startedAt
-- completedAt
-
-user_lesson_progress
-- userId (FK)
-- lessonId (FK)
-- completed (boolean)
-- timeSpentSeconds
-- lastAccessed
-
-user_daily_stats
-- userId (FK)
-- date
-- studyMinutes
-- lessonsCompleted
-- exercisesCompleted
-- flashcardsReviewed
-- streakActive (boolean)
-```
-
-#### Quiz Results
-```
-quiz_attempts
-- id (cuid)
-- userId (FK)
-- exerciseId (FK)
-- score
-- maxScore
-- percentage
-- timeSpentSeconds
-- completedAt
-
-quiz_answers
-- id (cuid)
-- attemptId (FK)
-- questionId (FK)
-- userAnswer (JSON)
-- isCorrect (boolean)
-- timeSpentSeconds
-```
-
-#### Achievements
-```
-achievements
-- id (cuid)
-- name
-- description
-- icon
-- criteria (JSON - defines earning conditions)
-
-user_achievements
-- userId (FK)
-- achievementId (FK)
-- earnedAt
-```
-
-### Key Relationships
-- User → Many Progress Records → Modules
-- User → Many Flashcards → Vocabulary
-- Module → Many Lessons
-- Module → Many Exercises → Many Questions
-- User → Many Quiz Attempts → Many Answers
-
-### Indexes
-Critical indexes for performance:
-- `user_flashcards(userId, nextReview)` - For SRS scheduling
-- `user_progress(userId, status)` - For progress queries
-- `modules(phaseId, month, week)` - For navigation
-- `vocabulary(difficultyLevel)` - For filtering
-- `quiz_attempts(userId, exerciseId)` - For analytics
+**Implementation:**
+- Schema: `packages/database/prisma/schema.prisma`
+- See DATABASE_SCHEMA.md for complete table definitions
 
 ---
 
@@ -566,447 +437,64 @@ Content Focus: Nouns, cases, first 20 vocabulary words
 
 ## 6. Content Structure
 
-### Curriculum Mapping
+**📄 Full Details:** See [docs/CONTENT_STRUCTURE.md](docs/CONTENT_STRUCTURE.md)
 
-The source curriculum (`classical_sanskrit_course.md`) is a comprehensive 24-month course divided into 4 phases. Here's how it maps to our application:
+**Curriculum Overview:**
+- 24-month course divided into 4 phases
+- Source: `classical_sanskrit_course.md`
+- Phase 1 (Months 1-6): Foundation - Script, basic grammar, 500+ vocab
+- Phase 2 (Months 7-12): Intermediate - Advanced grammar, 1500+ vocab
+- Phase 3 (Months 13-18): Advanced - Literary texts, 3000+ vocab
+- Phase 4 (Months 19-24): Mastery - Specialization, 4000+ vocab
 
-#### Phase 1: Foundation (Months 1-6)
-**Goal:** Devanagari script, basic grammar, 500+ vocabulary words
+**Content Data Formats:**
+- **Lessons:** JSON with structured sections (text, audio, exercises)
+- **Vocabulary:** Rich metadata (Devanagari, IAST, audio, difficulty, tags)
+- **Exercises:** Flexible JSON supporting multiple question types
+- **Metadata:** Phase/Month/Week meta.json files for structure
 
-**Month 1: The Devanagari Script**
-- Week 1-2: Vowels and Basic Consonants (14 vowels, 10 consonants)
-- Week 3-4: Remaining Consonants and Special Characters (23 more consonants, conjuncts)
-
-**Month 2: Basic Grammar Foundations**
-- Week 1: Nouns - Introduction to Cases (8 cases, masculine a-stems)
-- Week 2: Verbs - Present Tense Introduction
-- Week 3-4: Basic Sentence Construction (SOV word order)
-
-**Month 3: Expanding Grammar**
-- Week 1-2: Feminine and Neuter Nouns
-- Week 3-4: Adjectives and Agreement
-
-**Month 4: Verb System Expansion**
-- Week 1-2: Past Tense (Imperfect)
-- Week 3-4: Future Tense
-
-**Month 5: Complex Grammar Introduction**
-- Week 1-2: Compound Words (Samasa)
-- Week 3-4: Pronouns and Demonstratives
-
-**Month 6: Reading and Writing Practice**
-- Week 1-2: First Simple Texts (Hitopadesha, Panchatantra, Subhashitas)
-- Week 3-4: Composition Practice
-
-#### Phase 2: Intermediate (Months 7-12)
-**Goal:** Advanced declensions, verb classes, 1500+ vocabulary
-
-**Month 7:** Advanced Noun Declensions (I-stems, U-stems, consonant stems)
-**Month 8:** Verb System Deep Dive (10 verb classes, perfect tense, moods)
-**Month 9:** Participles and Infinitives
-**Month 10:** Sandhi Rules (vowel, consonant, internal)
-**Month 11:** Syntax and Advanced Grammar
-**Month 12:** Reading Fluency Development
-
-#### Phase 3: Advanced (Months 13-18)
-**Goal:** Literary texts, composition, conversation, 3000+ vocabulary
-
-**Months 13-14:** Classical Literature Introduction
-**Month 15:** Poetics and Prosody (meters, figures of speech)
-**Month 16:** Philosophical Texts
-**Month 17:** Drama and Conversation
-**Month 18:** Composition and Style
-
-#### Phase 4: Mastery (Months 19-24)
-**Goal:** Mastery level, specialization, 4000+ vocabulary
-
-**Months 19-20:** Advanced Literature
-**Month 21:** Specialized Study (choice of focus)
-**Months 22-23:** Fluency Consolidation
-**Month 24:** Mastery Assessment and Future Planning
-
-### Content Data Structure
-
-Each piece of content follows a structured JSON format:
-
-#### Lesson Structure
-```json
-{
-  "id": "phase-1-m1-w1-l1",
-  "moduleId": "module-uuid",
-  "title": "Devanagari Vowels: अ आ इ ई",
-  "type": "interactive",
-  "orderIndex": 1,
-  "durationMinutes": 30,
-  "content": {
-    "sections": [
-      {
-        "id": "intro",
-        "type": "text",
-        "title": "Introduction to Sanskrit Vowels",
-        "content": "Sanskrit has 14 vowels..."
-      },
-      {
-        "id": "vowel-a",
-        "type": "devanagari",
-        "title": "The vowel अ (a)",
-        "content": "अ",
-        "audioUrl": "/audio/phonemes/a.mp3",
-        "metadata": {
-          "romanization": "a",
-          "ipa": "ə",
-          "description": "Short neutral vowel"
-        }
-      },
-      {
-        "id": "practice",
-        "type": "exercise",
-        "content": {
-          "exerciseId": "exercise-uuid",
-          "type": "audio-recognition"
-        }
-      }
-    ]
-  }
-}
-```
-
-#### Vocabulary Entry Structure
-```json
-{
-  "id": "vocab-uuid",
-  "sanskrit": "narah",
-  "devanagari": "नरः",
-  "transliteration": "naraḥ",
-  "english": "man, person",
-  "partOfSpeech": "noun",
-  "gender": "masculine",
-  "declensionType": "a-stem",
-  "exampleSentence": "नरः गच्छति। (The man goes.)",
-  "audioUrl": "/audio/words/narah.mp3",
-  "difficultyLevel": 1,
-  "frequencyRank": 15,
-  "tags": ["phase-1", "month-2", "basic-vocabulary", "masculine-nouns"]
-}
-```
-
-#### Exercise Structure
-```json
-{
-  "id": "exercise-uuid",
-  "moduleId": "module-uuid",
-  "type": "multiple-choice",
-  "title": "Vowel Recognition",
-  "instructions": "Listen to the audio and select the correct vowel.",
-  "difficultyLevel": 1,
-  "points": 10,
-  "content": {
-    "questions": [
-      {
-        "id": "q1",
-        "audioUrl": "/audio/phonemes/aa.mp3",
-        "devanagari": "?",
-        "options": ["अ", "आ", "इ", "ई"],
-        "correctAnswer": "आ",
-        "explanation": "This is the long 'ā' sound (आ), which is held twice as long as short 'a' (अ)."
-      }
-    ]
-  }
-}
-```
-
-### Content Organization
-
+**Content Directory:**
 ```
 content/
-├── phases/
-│   └── phase-1/
-│       ├── meta.json                    # Phase metadata
-│       └── month-1/
-│           ├── meta.json                # Month metadata
-│           ├── week-1/
-│           │   ├── meta.json            # Week metadata
-│           │   ├── lessons/
-│           │   │   ├── lesson-1.json
-│           │   │   ├── lesson-2.json
-│           │   │   └── lesson-3.json
-│           │   ├── vocabulary.json      # Week's vocabulary list
-│           │   └── exercises/
-│           │       ├── exercise-1.json
-│           │       └── exercise-2.json
-│           └── week-2/
-│               └── ...
-│
-└── shared/
-    ├── vocabulary/
-    │   └── all-vocabulary.json          # Master vocabulary list
-    ├── grammar/
-    │   ├── declensions.json
-    │   ├── conjugations.json
-    │   └── sandhi-rules.json
-    └── references/
-        └── devanagari-chart.json
+├── phases/phase-1/month-1/week-1/
+│   ├── lessons/ exercises/ vocabulary.json
+└── shared/vocabulary/ grammar/ references/
 ```
 
-### Metadata Files
-
-Each level has a `meta.json` describing structure and objectives:
-
-**Phase meta.json:**
-```json
-{
-  "id": 1,
-  "name": "Foundation",
-  "description": "Devanagari script, basic grammar, essential vocabulary",
-  "durationMonths": 6,
-  "totalVocabulary": 500,
-  "objectives": [
-    "Master Devanagari script",
-    "Understand basic grammar",
-    "Build 500-word vocabulary",
-    "Read simple texts"
-  ]
-}
-```
+See CONTENT_STRUCTURE.md for complete JSON schemas and curriculum mapping.
 
 ---
 
 ## 7. Audio Strategy
 
-### Audio Requirements
+**📄 Full Details:** See [docs/AUDIO_STRATEGY.md](docs/AUDIO_STRATEGY.md)
 
-The Sanskrit learning platform requires audio for three main categories:
-
-1. **Phonemes** - Individual sounds (vowels, consonants, conjuncts)
-2. **Vocabulary** - Word pronunciations
+**Audio Categories:**
+1. **Phonemes** - Vowels (14), Consonants (33), Conjuncts (50-100)
+2. **Vocabulary** - Word pronunciations (500+ for Phase 1)
 3. **Sentences** - Example sentences and phrases
 
-### Phased Audio Approach
+**Phased Approach:**
+- **Phase 1A (Month 1, Week 1-2):** ~150 phoneme audio files (PRIORITY)
+- **Phase 1B (Month 1, Week 3-4):** 50 vocabulary words + 20-30 sentences
+- **Phase 1C (Months 2-6):** +100 words/month → ~500-600 total
 
-#### Phase 1A: Critical Phonetic Elements (Priority 1)
-**Needed for Month 1, Week 1-2**
+**Sourcing Strategy:**
+1. **Professional Recording (Recommended):** Hire Sanskrit speaker ($2000-5000)
+2. **Existing Resources:** Free/licensed educational content
+3. **TTS (Fallback):** Google Cloud TTS/Amazon Polly for placeholders
 
-**Vowels (14 sounds):**
-- अ आ इ ई उ ऊ ऋ ॠ ऌ ॡ ए ऐ ओ औ
-- File naming: `a.mp3`, `aa.mp3`, `i.mp3`, etc.
-- Location: `/public/audio/phonemes/vowels/`
+**Audio Specs:**
+- Format: MP3 (128kbps, 44.1kHz) + WebM alternative
+- Directory: `public/audio/phonemes/ words/ sentences/`
+- Playback: Howler.js via AudioPlayer component
 
-**Consonants (33 sounds):**
-- क ख ग घ ङ (velar)
-- च छ ज झ ञ (palatal)
-- ट ठ ड ढ ण (retroflex)
-- त थ द ध न (dental)
-- प फ ब भ म (labial)
-- य र ल व (semivowels)
-- श ष स ह (sibilants and h)
-- File naming: `ka.mp3`, `kha.mp3`, etc.
-- Location: `/public/audio/phonemes/consonants/`
+**Development Strategy:**
+- Use TTS placeholders initially
+- Track status in database: "placeholder" vs. "professional"
+- Replace incrementally as professional audio becomes available
 
-**Common Conjuncts (50-100 combinations):**
-- क्त क्र क्ष त्र ज्ञ, etc.
-- Location: `/public/audio/phonemes/conjuncts/`
-
-**Total: ~150 audio files**
-
-#### Phase 1B: Month 1 Vocabulary (Priority 2)
-**Needed for Month 1, Weeks 3-4**
-
-**First 50 vocabulary words:**
-- Core nouns (नरः, गजः, वृक्षः, etc.)
-- Basic verbs (गच्छति, पठति, etc.)
-- Common adjectives
-- Location: `/public/audio/words/month-1/`
-
-**Example sentences (20-30):**
-- Simple sentence constructions
-- Location: `/public/audio/sentences/month-1/`
-
-#### Phase 1C: Months 2-6 Vocabulary
-**Incremental addition as we build**
-
-- Month 2: +100 words (cases, verbs)
-- Month 3: +100 words (feminine/neuter nouns, adjectives)
-- Month 4: +100 words (verb tenses)
-- Month 5: +100 words (compounds, pronouns)
-- Month 6: +100 words (reading texts)
-
-**Total Phase 1: ~500-600 vocabulary words**
-
-### Audio Sourcing Strategy
-
-#### Option 1: Professional Recording (Recommended)
-**Approach:** Hire fluent Sanskrit speaker for recording sessions
-
-**Pros:**
-- Highest quality and authenticity
-- Consistent voice across all content
-- Professional pronunciation
-- Can re-record if needed
-
-**Cons:**
-- Cost: $2000-5000 for full set
-- Requires scheduling and coordination
-- Need proper recording equipment/studio
-
-**Best For:** Phonemes and core vocabulary (first 500 words)
-
-#### Option 2: Existing Resources
-**Approach:** Source from free/licensed Sanskrit educational content
-
-**Resources:**
-- Sanskrit learning websites (sanskritdocuments.org)
-- University courses (MIT, Harvard open courseware)
-- Vedic chanting recordings (public domain)
-- Sanskrit radio broadcasts
-
-**Pros:**
-- Free or low cost
-- Immediately available
-- Often high quality
-
-**Cons:**
-- Inconsistent voices
-- Licensing concerns
-- May not have exact words needed
-- Quality varies
-
-**Best For:** Supplemental content, example sentences, classical texts
-
-#### Option 3: Text-to-Speech (Fallback)
-**Approach:** Use TTS for missing content
-
-**Services:**
-- Google Cloud TTS (Hindi voice): $4 per 1M characters
-- Amazon Polly (Hindi voice): Similar pricing
-- Azure TTS: Similar pricing
-
-**Pros:**
-- Instant generation
-- No recording needed
-- Good for placeholder during development
-
-**Cons:**
-- Lower quality than native speakers
-- Hindi approximation (not pure Sanskrit)
-- Lacks natural prosody
-- May mispronounce
-
-**Best For:** Development placeholders, less critical content, user-generated sentences
-
-### Audio File Specifications
-
-**Format:**
-- Primary: MP3 (128kbps, 44.1kHz)
-- Alternative: WebM (Opus codec, for web optimization)
-
-**Naming Convention:**
-```
-phonemes:   [character].mp3           (e.g., ka.mp3, aa.mp3)
-words:      [transliteration].mp3     (e.g., narah.mp3, gacchati.mp3)
-sentences:  [id].mp3                  (e.g., ex-001.mp3, sent-m1w1-01.mp3)
-```
-
-**Directory Structure:**
-```
-public/audio/
-├── phonemes/
-│   ├── vowels/
-│   │   ├── a.mp3
-│   │   ├── aa.mp3
-│   │   └── ...
-│   ├── consonants/
-│   │   ├── ka.mp3
-│   │   ├── kha.mp3
-│   │   └── ...
-│   └── conjuncts/
-│       ├── kta.mp3
-│       ├── tra.mp3
-│       └── ...
-├── words/
-│   ├── month-1/
-│   │   ├── narah.mp3
-│   │   ├── gacchati.mp3
-│   │   └── ...
-│   ├── month-2/
-│   └── ...
-└── sentences/
-    ├── month-1/
-    │   ├── ex-001.mp3
-    │   └── ...
-    └── month-2/
-```
-
-### Audio Integration in Components
-
-**AudioPlayer Component:**
-```typescript
-interface AudioPlayerProps {
-  src: string;
-  autoPlay?: boolean;
-  showControls?: boolean;
-  onComplete?: () => void;
-}
-```
-
-**Usage Examples:**
-```tsx
-// In lesson
-<AudioPlayer src="/audio/phonemes/vowels/a.mp3" showControls />
-
-// In flashcard
-<AudioPlayer
-  src={vocabulary.audioUrl}
-  autoPlay={false}
-  onComplete={handleAudioComplete}
-/>
-
-// In exercise
-<AudioPlayer
-  src={question.audioUrl}
-  showControls={false}
-/>
-```
-
-### Audio Recording Guidelines (For Hired Speaker)
-
-**Recording Requirements:**
-1. **Environment:** Quiet room, minimal echo
-2. **Equipment:** Quality USB microphone (Blue Yeti or similar)
-3. **Format:** WAV (uncompressed), 44.1kHz, 16-bit
-4. **Style:** Clear, moderate pace, neutral tone
-5. **Consistency:** Same equipment, environment, and distance throughout
-
-**Recording Script:**
-- Provide organized spreadsheet with:
-  - Devanagari text
-  - Romanization
-  - Context (vowel, consonant, word, sentence)
-  - Any special pronunciation notes
-
-**Post-Processing:**
-- Normalize volume levels
-- Remove silence from beginning/end
-- Convert to MP3 (128kbps)
-- Generate WebM alternative
-
-### Placeholder Strategy During Development
-
-While sourcing professional audio:
-1. Use TTS for initial development
-2. Mark files as "placeholder" in database
-3. Replace with professional recordings in batches
-4. Maintain version tracking (placeholder vs. professional)
-
-**Database field:**
-```prisma
-model Vocabulary {
-  audioUrl       String?
-  audioStatus    String? // "placeholder", "professional", "missing"
-  audioRecordedAt DateTime?
-}
-```
-
-This allows development to proceed while audio is being sourced/recorded incrementally.
+See AUDIO_STRATEGY.md for complete sourcing options, file structure, and recording guidelines.
 
 ---
 
@@ -1109,9 +597,16 @@ The following guidelines are split into separate documents for better organizati
 
 ## 10. Quick Start for Claude Code
 
+**🚨 FIRST: Follow the "MANDATORY SESSION START PROTOCOL" at the top of this document! 🚨**
+
 When starting a session:
 
-1. **⚠️ CRITICAL: Context Reading Protocol** ⚠️
+1. **⚠️ MANDATORY: Read session context AUTOMATICALLY (see top of this document):**
+   - `NEXT_SESSION.md` - Immediate context and next steps (read FIRST)
+   - Latest log file in `logs/` directory (e.g., `logs/PHASE0_FOUNDATION_LOG.md`)
+   - **DO THIS AUTOMATICALLY - Don't wait for user to ask!**
+
+2. **⚠️ CRITICAL: Context Reading Protocol** ⚠️
    - **When user says "read X for context":**
      1. **Read the ENTIRE file(s) requested**
         - If a file is too large to read in one operation (>25,000 tokens), **AUTOMATICALLY read it in chunks**
@@ -1126,10 +621,6 @@ When starting a session:
    - **NEVER stop reading partway through a file - always read the ENTIRE file**
    - **Context reading ≠ permission to act**
    - **This rule applies EVERY TIME, without exception**
-
-2. **Read session context first (MANDATORY):**
-   - `NEXT_SESSION.md` - Immediate context and next steps (read FIRST)
-   - Latest log file in `logs/` directory (e.g., `logs/PHASE0_FOUNDATION_LOG.md`)
 
 3. **Check current todos**: TodoWrite tool for active session tasks
 

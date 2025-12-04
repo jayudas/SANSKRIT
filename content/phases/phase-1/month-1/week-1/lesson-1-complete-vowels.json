@@ -1,0 +1,346 @@
+{
+  "lessonId": "p1-m1-w1-l1-vowels",
+  "title": "The 14 Vowels of Sanskrit (स्वराः)",
+  "order": 1,
+  "estimatedMinutes": 45,
+  "objectives": [
+    "Master all 14 Sanskrit vowels in Devanagari script with classical pronunciation",
+    "Understand the distinction between short (hrasva) and long (dīrgha) vowels",
+    "Learn reconstructed classical pronunciation using IPA (not modern Indian)",
+    "Recognize that vowel length changes meaning in Sanskrit"
+  ],
+  "sections": [
+    {
+      "type": "introduction",
+      "title": "Introduction to Sanskrit Vowels",
+      "content": "Sanskrit has 14 primary vowels (स्वराः), systematically organized in pairs of short (hrasva) and long (dīrgha) vowels. Unlike English, the length of a vowel in Sanskrit is phonemically significant—changing the vowel length changes the word's meaning. This course teaches CLASSICAL (reconstructed) pronunciation as it would have been spoken ~500 BCE-500 CE, NOT modern Indian tradition influenced by Hindi/regional languages. Each vowel has two forms: an independent form (when starting a word or syllable) and a dependent form called mātṛkā (मात्रा) when following a consonant.",
+      "order": 1
+    },
+    {
+      "type": "content",
+      "title": "Simple Vowels - Short (Hrasva)",
+      "content": "The five short vowels are fundamental to Sanskrit pronunciation. Each is held for one mātrā (unit of time). Classical pronunciation maintains full vowel quality in all positions—no schwa deletion like modern Hindi.",
+      "order": 2,
+      "items": [
+        {
+          "devanagari": "अ",
+          "iast": "a",
+          "ipa": "/ɐ/",
+          "pronunciation": "Like 'u' in 'cup' or 'hut' (open-mid central unrounded vowel, NOT schwa)",
+          "audioFile": "/audio/phonemes/vowels/a.mp3",
+          "category": "short-vowel",
+          "note": "This is the inherent vowel in every consonant unless modified by a mātṛkā. Classical: /ɐ/ or /ʌ/. Modern Indian traditions often pronounce this as schwa /ə/, but classical pronunciation was more open.",
+          "examples": [
+            {
+              "word": "अग्नि",
+              "iast": "agni",
+              "meaning": "fire",
+              "audioFile": "/audio/words/agni.mp3"
+            },
+            {
+              "word": "अन्न",
+              "iast": "anna",
+              "meaning": "food",
+              "audioFile": "/audio/words/anna.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "इ",
+          "iast": "i",
+          "ipa": "/i/",
+          "pronunciation": "Like 'i' in 'machine' or 'pin' (short, tense)",
+          "audioFile": "/audio/phonemes/vowels/i.mp3",
+          "category": "short-vowel",
+          "note": "Classical: short /i/ (not lax /ɪ/ as in English 'bit'). Quality is same as long ī, just shorter duration.",
+          "examples": [
+            {
+              "word": "इष्ट",
+              "iast": "iṣṭa",
+              "meaning": "desired, beloved",
+              "audioFile": "/audio/words/ishta.mp3"
+            },
+            {
+              "word": "इति",
+              "iast": "iti",
+              "meaning": "thus, in this way",
+              "audioFile": "/audio/words/iti.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "उ",
+          "iast": "u",
+          "ipa": "/u/",
+          "pronunciation": "Like 'oo' in 'food' (short, tense, NOT like 'put')",
+          "audioFile": "/audio/phonemes/vowels/u.mp3",
+          "category": "short-vowel",
+          "note": "Classical: short /u/ (not lax /ʊ/ as in English 'put'). Quality is same as long ū, just shorter duration.",
+          "examples": [
+            {
+              "word": "उत्तम",
+              "iast": "uttama",
+              "meaning": "best, excellent",
+              "audioFile": "/audio/words/uttama.mp3"
+            },
+            {
+              "word": "उप",
+              "iast": "upa",
+              "meaning": "near, towards",
+              "audioFile": "/audio/words/upa.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ऋ",
+          "iast": "ṛ",
+          "ipa": "/r̩/",
+          "pronunciation": "Syllabic r—like American English 'bird' without the 'd', or 'ri' with very faint 'i'",
+          "audioFile": "/audio/phonemes/vowels/ri.mp3",
+          "category": "short-vowel",
+          "note": "This is a vocalic (syllabic) r, functioning as a vowel. The tongue is in retroflex position. Classical: /r̩/. NOT pronounced as 'ri' with full /i/ vowel (modern mistake).",
+          "examples": [
+            {
+              "word": "ऋषि",
+              "iast": "ṛṣi",
+              "meaning": "sage, seer",
+              "audioFile": "/audio/words/rishi.mp3"
+            },
+            {
+              "word": "ऋत",
+              "iast": "ṛta",
+              "meaning": "truth, cosmic order",
+              "audioFile": "/audio/words/rita.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ऌ",
+          "iast": "ḷ",
+          "ipa": "/l̩/",
+          "pronunciation": "Syllabic l—like saying 'l' as a full vowel sound",
+          "audioFile": "/audio/phonemes/vowels/li.mp3",
+          "category": "short-vowel",
+          "note": "This vowel is extremely rare, appearing in only a handful of words in classical Sanskrit (e.g., कॢप्त kḷpta). It's a vocalic (syllabic) l.",
+          "examples": []
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Simple Vowels - Long (Dīrgha)",
+      "content": "The long vowels are held for two mātrās (twice the length of short vowels). In classical pronunciation, ONLY duration changes—quality stays the same. Vowel length is phonemically significant in Sanskrit.",
+      "order": 3,
+      "items": [
+        {
+          "devanagari": "आ",
+          "iast": "ā",
+          "ipa": "/aː/",
+          "pronunciation": "Like 'a' in 'father' (long, open front unrounded)",
+          "audioFile": "/audio/phonemes/vowels/aa.mp3",
+          "category": "long-vowel",
+          "note": "Classical: /aː/ (open front, like Italian or Spanish 'a'). NOT the central [ɑː] of American 'father'. This contrasts with short /ɐ/.",
+          "examples": [
+            {
+              "word": "आत्मा",
+              "iast": "ātmā",
+              "meaning": "soul, self",
+              "audioFile": "/audio/words/aatma.mp3"
+            },
+            {
+              "word": "आकाश",
+              "iast": "ākāśa",
+              "meaning": "sky, space",
+              "audioFile": "/audio/words/aakaasha.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ई",
+          "iast": "ī",
+          "ipa": "/iː/",
+          "pronunciation": "Like 'ee' in 'see' (long, held twice as long as short i)",
+          "audioFile": "/audio/phonemes/vowels/ii.mp3",
+          "category": "long-vowel",
+          "note": "Classical: long /iː/. Same quality as short /i/, just longer duration.",
+          "examples": [
+            {
+              "word": "नदी",
+              "iast": "nadī",
+              "meaning": "river",
+              "audioFile": "/audio/words/nadi.mp3"
+            },
+            {
+              "word": "प्रीति",
+              "iast": "prīti",
+              "meaning": "love, affection",
+              "audioFile": "/audio/words/priti.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ऊ",
+          "iast": "ū",
+          "ipa": "/uː/",
+          "pronunciation": "Like 'oo' in 'food' (long, held twice as long as short u)",
+          "audioFile": "/audio/phonemes/vowels/uu.mp3",
+          "category": "long-vowel",
+          "note": "Classical: long /uː/. Same quality as short /u/, just longer duration.",
+          "examples": [
+            {
+              "word": "भूमि",
+              "iast": "bhūmi",
+              "meaning": "earth, ground",
+              "audioFile": "/audio/words/bhumi.mp3"
+            },
+            {
+              "word": "सूर्य",
+              "iast": "sūrya",
+              "meaning": "sun",
+              "audioFile": "/audio/words/surya.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ॠ",
+          "iast": "ṝ",
+          "ipa": "/r̩ː/",
+          "pronunciation": "Long syllabic r (rare)—like ṛ but held twice as long",
+          "audioFile": "/audio/phonemes/vowels/rii.mp3",
+          "category": "long-vowel",
+          "note": "Very rare in Sanskrit, appearing in a few grammatical forms and derivatives.",
+          "examples": [
+            {
+              "word": "कॄति",
+              "iast": "kṝti",
+              "meaning": "mention, praise",
+              "audioFile": "/audio/words/kirti.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ॡ",
+          "iast": "ḹ",
+          "ipa": "/l̩ː/",
+          "pronunciation": "Long syllabic l (extremely rare)",
+          "audioFile": "/audio/phonemes/vowels/lii.mp3",
+          "category": "long-vowel",
+          "note": "This is the rarest vowel in Sanskrit, found only in certain grammatical discussions. Some scholars debate whether it ever appeared in actual usage.",
+          "examples": []
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Compound Vowels (Diphthongs)",
+      "content": "The four compound vowels (saṃyuktākṣara) are always considered long (two mātrās). Historically they were true diphthongs, but in classical pronunciation they are typically monophthongized.",
+      "order": 4,
+      "items": [
+        {
+          "devanagari": "ए",
+          "iast": "e",
+          "ipa": "/eː/",
+          "pronunciation": "Like French 'é' in 'café' or 'ay' in 'say' (always long, monophthong)",
+          "audioFile": "/audio/phonemes/vowels/e.mp3",
+          "category": "diphthong",
+          "note": "Classical: /eː/ (long close-mid front). Historically from a + i, but pronounced as a single long vowel, NOT a diphthong /ei/. No short version exists.",
+          "examples": [
+            {
+              "word": "देव",
+              "iast": "deva",
+              "meaning": "god, deity",
+              "audioFile": "/audio/words/deva.mp3"
+            },
+            {
+              "word": "एक",
+              "iast": "eka",
+              "meaning": "one",
+              "audioFile": "/audio/words/eka.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ऐ",
+          "iast": "ai",
+          "ipa": "/aːi/",
+          "pronunciation": "Like 'ai' in 'aisle' or 'i' in 'ice' (diphthong: a + i)",
+          "audioFile": "/audio/phonemes/vowels/ai.mp3",
+          "category": "diphthong",
+          "note": "Classical: /aːi/ or /ai/. This is a true diphthong, starting at /a/ and gliding to /i/. Always long.",
+          "examples": [
+            {
+              "word": "वैदिक",
+              "iast": "vaidika",
+              "meaning": "Vedic, relating to the Vedas",
+              "audioFile": "/audio/words/vaidika.mp3"
+            },
+            {
+              "word": "कैलास",
+              "iast": "kailāsa",
+              "meaning": "Mount Kailash",
+              "audioFile": "/audio/words/kailaasa.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ओ",
+          "iast": "o",
+          "ipa": "/oː/",
+          "pronunciation": "Like 'o' in 'go' (always long, monophthong)",
+          "audioFile": "/audio/phonemes/vowels/o.mp3",
+          "category": "diphthong",
+          "note": "Classical: /oː/ (long close-mid back rounded). Historically from a + u, but pronounced as a single long vowel, NOT a diphthong /ou/. No short version exists.",
+          "examples": [
+            {
+              "word": "योग",
+              "iast": "yoga",
+              "meaning": "union, practice",
+              "audioFile": "/audio/words/yoga.mp3"
+            },
+            {
+              "word": "ओम्",
+              "iast": "om",
+              "meaning": "the sacred syllable",
+              "audioFile": "/audio/words/om.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "औ",
+          "iast": "au",
+          "ipa": "/aːu/",
+          "pronunciation": "Like 'ou' in 'house' or 'ow' in 'cow' (diphthong: a + u)",
+          "audioFile": "/audio/phonemes/vowels/au.mp3",
+          "category": "diphthong",
+          "note": "Classical: /aːu/ or /au/. This is a true diphthong, starting at /a/ and gliding to /u/. Always long.",
+          "examples": [
+            {
+              "word": "पौत्र",
+              "iast": "pautra",
+              "meaning": "grandson",
+              "audioFile": "/audio/words/pautra.mp3"
+            },
+            {
+              "word": "कौशल",
+              "iast": "kauśala",
+              "meaning": "skill, cleverness",
+              "audioFile": "/audio/words/kaushala.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "title": "Summary: The Complete Classical Vowel System",
+      "content": "You have now learned all 14 Sanskrit vowels with CLASSICAL (reconstructed) pronunciation! Remember: 5 short simple vowels (अ इ उ ऋ ऌ), 5 long simple vowels (आ ई ऊ ॠ ॡ), and 4 compound vowels (ए ऐ ओ औ). KEY DIFFERENCES from modern pronunciation: short 'a' is /ɐ/ (NOT schwa /ə/), i/ī and u/ū are tense /i/ /u/ (NOT lax), all vowels are fully pronounced (no schwa deletion), and ṛ is syllabic /r̩/ (NOT 'ri'). The distinction between short and long vowels is crucial—it changes word meanings. Practice writing each vowel 20 times and focus on authentic classical pronunciation.",
+      "order": 5
+    },
+    {
+      "type": "practice",
+      "title": "Practice Exercises",
+      "content": "Daily Practice (30 minutes): 1) Write each vowel in Devanagari 20 times. 2) Listen to each vowel's classical pronunciation 5 times and repeat aloud (focus on /ɐ/ for 'a', tense /i/ /u/, and syllabic /r̩/). 3) Practice distinguishing between short and long pairs (a/ā, i/ī, u/ū)—remember, only duration changes, not quality. 4) Copy the example words and practice authentic classical pronunciation (no schwa deletion—pronounce every vowel fully). 5) Try writing your name using Sanskrit vowels with proper classical sounds.",
+      "order": 6
+    }
+  ]
+}

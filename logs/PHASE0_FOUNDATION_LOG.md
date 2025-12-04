@@ -958,3 +958,284 @@ User requested that the course teach RECONSTRUCTED CLASSICAL Sanskrit pronunciat
 
 **Branch Status:** feature/ui-components (2 commits, all pushed)
 **Next Session:** Continue with consonants and more Month 1 content
+
+## Session 7: First 10 Consonants & Complete Navigation System - December 4, 2024
+
+### Duration
+~2 hours
+
+### Major Accomplishments
+
+✅ **First 10 Consonants Lesson Complete:**
+- Created comprehensive lesson-2-consonants.json with classical pronunciation
+- Ka-varga (velars): क ख ग घ ङ with accurate classical IPA
+- Ca-varga (palatals): च छ ज झ ञ with accurate classical IPA
+- All pronunciation notes explain classical vs. modern differences
+- Example words with IAST transliteration for each consonant
+- Proper aspiration, voicing, and articulation documented
+
+✅ **Complete Navigation System Implemented:**
+- Site-wide Header component with Home/Lessons links
+- LessonNavigation component (Previous/Next/All Lessons buttons)
+- Lesson list page showing all available lessons
+- Dynamic lesson detail pages with navigation
+- All navigation styled with clear visual affordances
+- Consistent button styling across all components
+
+✅ **UI/UX Improvements:**
+- AudioPlayer placeholder state improved (amber icon vs. gray)
+- Tooltip updated: "Audio not yet available (placeholder)"
+- Consistent secondary button styling for navigation links
+- Hover effects make clickable elements obvious
+- Header shadow added for better visual separation
+
+✅ **Database Cleanup:**
+- Removed duplicate vowel lessons (3 old versions deleted)
+- Removed unused module entries (5 deleted)
+- Clean database state: 2 lessons, 1 module
+- No orphaned data
+
+✅ **Testing Complete:**
+- All 6 testing levels completed and passed
+- User browser testing confirmed in Safari
+- No regressions in vowel lesson
+- Comprehensive test documentation created
+
+### Technical Implementation
+
+**Content Created:**
+- `lesson-2-consonants.json` - 10 consonants with classical pronunciation
+  - 5 Ka-varga consonants (velar stops + nasal)
+  - 5 Ca-varga consonants (palatal stops + nasal)
+  - Systematic organization matching CLASSICAL_PHONEME_INVENTORY.md
+  - All IPA values accurate
+  - Pronunciation notes explain aspiration, voicing, palatalization
+
+**Components Created:**
+1. `LessonNavigation.tsx` - Lesson-level navigation
+   - Previous lesson button (left)
+   - All Lessons button (center)
+   - Next lesson button (right)
+   - Conditional display based on position in sequence
+   
+2. `Header.tsx` - Site-wide navigation
+   - Logo with Devanagari text
+   - Home and Lessons navigation links
+   - Consistent secondary button styling
+   - Shadow for visual separation
+
+3. `layout/index.ts` - Layout component exports
+
+**Pages Modified:**
+1. `lessons/page.tsx` - Changed from single lesson to lesson list
+   - Shows all lessons as clickable cards
+   - Displays module descriptions
+   - Estimated time for each lesson
+
+2. `lessons/[id]/page.tsx` - Dynamic lesson detail page
+   - Fetches lesson by ID
+   - Determines previous/next lessons
+   - Includes LessonNavigation component
+
+**Components Updated:**
+1. `AudioPlayer.tsx` - Improved placeholder state
+   - Amber background (bg-amber-50)
+   - Amber border and text (amber-500)
+   - Speaker icon with X for "not available"
+   - Clear tooltip message
+
+2. `layout.tsx` - Added Header to root layout
+
+### Git Activity
+
+**Branch:** feature/ui-components
+
+**Commit:** c152f92
+```
+feat: add first 10 consonants lesson with navigation system
+
+Implemented comprehensive consonants lesson covering ka-varga and ca-varga 
+with classical pronunciation. Added full navigation system for better UX.
+```
+
+**Files Changed:** 35 files
+- New: 6 files (lesson, components, test docs)
+- Modified: 4 files (pages, components)
+- Total changes: 831 insertions, 9 deletions
+
+**Media Files Added:** 
+- 17 Devanagari handwriting practice images
+- 8 instructional videos for vowels and consonants
+
+**Pushed to GitHub:** ✅ Yes
+
+### Testing Results
+
+**All 6 Testing Levels - PASSED:**
+
+1. ✅ **Level 1: Build Compilation**
+   - `npm run build` - Successful
+   - All TypeScript compiled without errors
+   
+2. ✅ **Level 2: Dev Server Startup**
+   - Server started successfully on localhost:3000
+   - Responded to HTTP requests
+
+3. ✅ **Level 3: Runtime Error Check**
+   - No TypeScript errors
+   - No console errors in browser
+   - All imports resolved
+
+4. ✅ **Level 4: Component/Feature Testing** (User confirmed in Safari)
+   - Lesson list displays both lessons correctly
+   - Consonants lesson content accurate
+   - All 10 consonants visible with classical IPA
+   - Navigation controls functional
+   - Audio placeholders show proper state
+
+5. ✅ **Level 5: Integration Testing**
+   - Navigation flow works (Home → Lessons → Detail → Back)
+   - Database integration correct
+   - UI components integrate properly
+   - No regressions in vowel lesson
+
+6. ✅ **Level 6: Documentation**
+   - CONSONANTS_LESSON_TEST_RESULTS.md created (comprehensive)
+   - All test results documented
+   - Issues found and resolved documented
+
+### Issues Found and Resolved
+
+**Issue 1: Duplicate Vowel Lessons**
+- **Problem:** Three versions of vowel lesson showing in list
+- **Root Cause:** Multiple import runs created duplicates
+- **Fix:** Deleted old lessons from database
+- **Status:** ✅ RESOLVED
+
+**Issue 2: AudioPlayer Unclear Placeholder State**
+- **Problem:** Gray circle with X looked like generic error
+- **Root Cause:** Error state styling too neutral
+- **Fix:** Changed to amber theme with speaker icon, updated tooltip
+- **Status:** ✅ RESOLVED
+
+**Issue 3: Missing Navigation Controls**
+- **Problem:** No way to navigate between lessons or back to list
+- **Root Cause:** Lesson page only showed content, no navigation
+- **Fix:** Created LessonNavigation component and Header
+- **Status:** ✅ RESOLVED
+
+**Issue 4: Navigation Links Looked Like Plain Text**
+- **Problem:** Home/Lessons links not obviously clickable
+- **Root Cause:** No background or visual affordances
+- **Fix:** Added button styling (background, border, hover effects)
+- **Status:** ✅ RESOLVED
+
+**Issue 5: Inconsistent Navigation Button Styling**
+- **Problem:** Home button gray, Lessons button blue (confusing hierarchy)
+- **Root Cause:** Inconsistent styling choices
+- **Fix:** Made both secondary buttons with same styling
+- **Status:** ✅ RESOLVED
+
+### Database State After Session
+
+```sql
+SELECT * FROM lessons ORDER BY "orderIndex";
+```
+
+Result: 2 lessons
+1. The 14 Vowels of Sanskrit (स्वराः) - orderIndex 1
+2. First 10 Consonants of Sanskrit (व्यञ्जनानि) - orderIndex 2
+
+```sql
+SELECT * FROM modules;
+```
+
+Result: 1 module
+- Introduction to Devanagari Script - Vowels and Basic Consonants
+
+### Classical Pronunciation Verification
+
+**All consonants verified against CLASSICAL_PHONEME_INVENTORY.md:**
+
+**Ka-varga (Velars):**
+- क /k/ ✅ Correct
+- ख /kʰ/ ✅ Correct (aspirated)
+- ग /g/ ✅ Correct
+- घ /gʰ/ ✅ Correct (voiced aspirated)
+- ङ /ŋ/ ✅ Correct (velar nasal)
+
+**Ca-varga (Palatals):**
+- च /c/ or /tɕ/ ✅ Correct (true palatal, not English 'ch')
+- छ /cʰ/ or /tɕʰ/ ✅ Correct (aspirated palatal)
+- ज /ɟ/ or /dʑ/ ✅ Correct (voiced palatal)
+- झ /ɟʰ/ or /dʑʰ/ ✅ Correct (voiced aspirated palatal)
+- ञ /ɲ/ ✅ Correct (palatal nasal)
+
+**Key Classical Features Documented:**
+- Aspiration explained (strong puff of air)
+- Palatal articulation (no lip rounding)
+- Systematic varga organization
+- Voicing distinctions
+- Classical vs. modern notes
+
+### Lessons Learned
+
+1. **Navigation is critical UX** - Users expect navigation on all pages
+2. **Visual affordances matter** - Buttons must look clickable without hover
+3. **Consistency important** - Equal navigation items need same visual weight
+4. **Database cleanup needed** - Multiple imports can create duplicates
+5. **Placeholder states should be clear** - Amber communicates "coming soon" better than gray
+6. **User feedback invaluable** - Multiple rounds of testing improved UX significantly
+
+### Next Steps (For Session 8)
+
+**Immediate Priority: Remaining 23 Consonants**
+
+1. **Lesson 3: Middle Consonants** (15 consonants)
+   - Ṭa-varga (retroflexes): ट ठ ड ढ ण
+   - Ta-varga (dentals): त थ द ध न
+   - Pa-varga (labials): प फ ब भ म
+
+2. **Lesson 4: Final Consonants** (8 consonants)
+   - Approximants: य र ल व
+   - Sibilants: श ष स
+   - Glottal: ह
+
+**Critical Points for Next Session:**
+- Retroflex vs. dental distinction crucial
+- फ /pʰ/ NOT /f/ (common mistake)
+- Three-way sibilant distinction (श ष स)
+- All must follow CLASSICAL_PHONEME_INVENTORY.md
+
+### Status After Session 7
+
+**Phase 1A Progress:** ~30% complete
+
+**Completed:**
+- ✅ Infrastructure
+- ✅ Database setup
+- ✅ UI components
+- ✅ Navigation system (complete)
+- ✅ 14 vowels (classical)
+- ✅ 10 consonants (ka-varga + ca-varga)
+
+**In Progress:**
+- 🔄 Consonants (10 of 33)
+
+**Not Started:**
+- ⏳ 23 remaining consonants
+- ⏳ Vowel marks
+- ⏳ Conjunct consonants
+- ⏳ Exercises
+- ⏳ Vocabulary
+- ⏳ Audio files
+
+---
+
+**Session 7 Complete!** ✅
+
+**Major Achievement:** Complete navigation system + first 10 consonants with classical pronunciation
+
+**Branch Status:** feature/ui-components (1 commit this session, all pushed)
+**Next Session:** Continue with remaining 23 consonants (3 more vargas + approximants + sibilants + glottal)
+

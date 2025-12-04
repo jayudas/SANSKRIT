@@ -1,0 +1,15 @@
+{
+  "week": 1,
+  "month": 1,
+  "phase": 1,
+  "title": "Introduction to Devanagari Script - Vowels and Basic Consonants",
+  "description": "Learn the 14 vowels and first 10 consonants of the Devanagari script, along with their pronunciation and basic writing.",
+  "objectives": [
+    "Recognize and pronounce all 14 vowels (short and long)",
+    "Recognize and pronounce the first 10 consonants (ka-varga)",
+    "Understand vowel marks (mātras) and how they modify consonants",
+    "Begin basic character writing practice"
+  ],
+  "estimatedHours": 8,
+  "order": 1
+}

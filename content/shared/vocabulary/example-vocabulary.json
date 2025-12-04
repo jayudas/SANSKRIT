@@ -1,0 +1,115 @@
+{
+  "vocabulary": [
+    {
+      "id": "vocab-001",
+      "devanagari": "अग्नि",
+      "iast": "agni",
+      "ipa": "/ɐgni/",
+      "meaning": "fire",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "difficulty": 1,
+      "frequency": "high",
+      "etymology": "From Proto-Indo-European *h₁n̥gʷnis (fire)",
+      "audioFile": "/audio/words/agni.mp3",
+      "tags": ["nature", "elements", "vedic"],
+      "examples": [
+        {
+          "sentence": "अग्निः प्रकाशते",
+          "iast": "agniḥ prakāśate",
+          "translation": "Fire shines",
+          "audioFile": "/audio/sentences/agnih-prakashate.mp3"
+        }
+      ],
+      "relatedWords": [
+        {
+          "word": "अग्निमान्",
+          "iast": "agnimān",
+          "relation": "adjective",
+          "meaning": "having fire, fiery"
+        }
+      ],
+      "culturalNotes": "Agni is also the name of the Vedic god of fire, one of the most important deities in the Rigveda.",
+      "moduleId": "p1-m1",
+      "weekIntroduced": 1
+    },
+    {
+      "id": "vocab-002",
+      "devanagari": "देव",
+      "iast": "deva",
+      "ipa": "/deːʋɐ/",
+      "meaning": "god, deity",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "difficulty": 1,
+      "frequency": "very-high",
+      "etymology": "From Proto-Indo-European *deywós (celestial)",
+      "audioFile": "/audio/words/deva.mp3",
+      "tags": ["religion", "spirituality", "vedic"],
+      "examples": [
+        {
+          "sentence": "देवः सर्वत्र अस्ति",
+          "iast": "devaḥ sarvatra asti",
+          "translation": "God is everywhere",
+          "audioFile": "/audio/sentences/devah-sarvatra-asti.mp3"
+        }
+      ],
+      "relatedWords": [
+        {
+          "word": "देवी",
+          "iast": "devī",
+          "relation": "feminine",
+          "meaning": "goddess"
+        },
+        {
+          "word": "दिव्य",
+          "iast": "divya",
+          "relation": "adjective",
+          "meaning": "divine"
+        }
+      ],
+      "culturalNotes": "The word 'deva' is cognate with Latin 'deus' and English 'divine'. In Hinduism, devas are celestial beings or gods.",
+      "moduleId": "p1-m1",
+      "weekIntroduced": 1
+    },
+    {
+      "id": "vocab-003",
+      "devanagari": "योग",
+      "iast": "yoga",
+      "ipa": "/joːgɐ/",
+      "meaning": "union, joining; yoga",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "difficulty": 1,
+      "frequency": "very-high",
+      "etymology": "From root √yuj (to yoke, join, unite)",
+      "audioFile": "/audio/words/yoga.mp3",
+      "tags": ["philosophy", "spirituality", "practice"],
+      "examples": [
+        {
+          "sentence": "योगः चित्तवृत्तिनिरोधः",
+          "iast": "yogaḥ cittavṛttinirodhaḥ",
+          "translation": "Yoga is the cessation of the fluctuations of the mind (Yoga Sutras 1.2)",
+          "audioFile": "/audio/sentences/yogah-chitta-vritti.mp3"
+        }
+      ],
+      "relatedWords": [
+        {
+          "word": "युज्",
+          "iast": "yuj",
+          "relation": "root",
+          "meaning": "to join, unite"
+        },
+        {
+          "word": "योगिन्",
+          "iast": "yogin",
+          "relation": "agent-noun",
+          "meaning": "one who practices yoga"
+        }
+      ],
+      "culturalNotes": "Yoga is one of the six orthodox schools of Hindu philosophy (darśanas). The word has been adopted into English.",
+      "moduleId": "p1-m1",
+      "weekIntroduced": 1
+    }
+  ]
+}

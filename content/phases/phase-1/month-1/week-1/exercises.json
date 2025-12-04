@@ -1,0 +1,219 @@
+{
+  "exercises": [
+    {
+      "exerciseId": "p1-m1-w1-e1-vowel-recognition",
+      "title": "Vowel Recognition Practice",
+      "type": "multiple-choice",
+      "difficulty": "beginner",
+      "estimatedMinutes": 10,
+      "instructions": "Listen to the vowel sound and select the correct Devanagari character.",
+      "questions": [
+        {
+          "id": "q1",
+          "questionText": "Which vowel makes the sound 'ah' (as in 'but')?",
+          "audioFile": "/audio/phonemes/vowels/a.mp3",
+          "questionType": "audio-to-character",
+          "options": [
+            {
+              "id": "a",
+              "text": "अ",
+              "isCorrect": true
+            },
+            {
+              "id": "b",
+              "text": "आ",
+              "isCorrect": false
+            },
+            {
+              "id": "c",
+              "text": "इ",
+              "isCorrect": false
+            },
+            {
+              "id": "d",
+              "text": "उ",
+              "isCorrect": false
+            }
+          ],
+          "explanation": "अ (a) is the short 'a' vowel, pronounced like 'u' in 'but'. आ (ā) is the long version.",
+          "points": 10
+        },
+        {
+          "id": "q2",
+          "questionText": "Which is the long version of इ (i)?",
+          "questionType": "character-matching",
+          "options": [
+            {
+              "id": "a",
+              "text": "ई",
+              "isCorrect": true
+            },
+            {
+              "id": "b",
+              "text": "ऐ",
+              "isCorrect": false
+            },
+            {
+              "id": "c",
+              "text": "ए",
+              "isCorrect": false
+            },
+            {
+              "id": "d",
+              "text": "उ",
+              "isCorrect": false
+            }
+          ],
+          "explanation": "ई (ī) is the long version of इ (i). It is held for twice the duration.",
+          "points": 10
+        },
+        {
+          "id": "q3",
+          "questionText": "Listen to this vowel. Is it short or long?",
+          "audioFile": "/audio/phonemes/vowels/aa.mp3",
+          "questionType": "audio-classification",
+          "options": [
+            {
+              "id": "a",
+              "text": "Short vowel",
+              "isCorrect": false
+            },
+            {
+              "id": "b",
+              "text": "Long vowel",
+              "isCorrect": true
+            }
+          ],
+          "explanation": "This is आ (ā), a long vowel. You can hear it being held for a longer duration.",
+          "points": 10
+        }
+      ],
+      "passingScore": 70,
+      "tags": ["vowels", "recognition", "audio"]
+    },
+    {
+      "exerciseId": "p1-m1-w1-e2-vowel-pairs",
+      "title": "Match Short and Long Vowel Pairs",
+      "type": "matching",
+      "difficulty": "beginner",
+      "estimatedMinutes": 5,
+      "instructions": "Match each short vowel with its corresponding long vowel.",
+      "pairs": [
+        {
+          "id": "pair1",
+          "left": {
+            "text": "अ",
+            "audioFile": "/audio/phonemes/vowels/a.mp3"
+          },
+          "right": {
+            "text": "आ",
+            "audioFile": "/audio/phonemes/vowels/aa.mp3"
+          }
+        },
+        {
+          "id": "pair2",
+          "left": {
+            "text": "इ",
+            "audioFile": "/audio/phonemes/vowels/i.mp3"
+          },
+          "right": {
+            "text": "ई",
+            "audioFile": "/audio/phonemes/vowels/ii.mp3"
+          }
+        },
+        {
+          "id": "pair3",
+          "left": {
+            "text": "उ",
+            "audioFile": "/audio/phonemes/vowels/u.mp3"
+          },
+          "right": {
+            "text": "ऊ",
+            "audioFile": "/audio/phonemes/vowels/uu.mp3"
+          }
+        },
+        {
+          "id": "pair4",
+          "left": {
+            "text": "ऋ",
+            "audioFile": "/audio/phonemes/vowels/ri.mp3"
+          },
+          "right": {
+            "text": "ॠ",
+            "audioFile": "/audio/phonemes/vowels/rii.mp3"
+          }
+        }
+      ],
+      "explanation": "Each short vowel has a corresponding long vowel that is held for twice the duration.",
+      "passingScore": 100,
+      "tags": ["vowels", "matching", "pairs"]
+    },
+    {
+      "exerciseId": "p1-m1-w1-e3-fill-blank",
+      "title": "Fill in the Missing Vowel",
+      "type": "fill-in-blank",
+      "difficulty": "beginner",
+      "estimatedMinutes": 8,
+      "instructions": "Listen to the word and fill in the missing vowel character.",
+      "questions": [
+        {
+          "id": "q1",
+          "sentence": "_ग्नि",
+          "blankPosition": 0,
+          "audioFile": "/audio/words/agni.mp3",
+          "correctAnswer": "अ",
+          "acceptedAnswers": ["अ", "a"],
+          "hint": "This is the short 'a' sound",
+          "explanation": "The word is अग्नि (agni), meaning 'fire'. It starts with the short vowel अ.",
+          "points": 10
+        },
+        {
+          "id": "q2",
+          "sentence": "द_व",
+          "blankPosition": 1,
+          "audioFile": "/audio/words/deva.mp3",
+          "correctAnswer": "े",
+          "acceptedAnswers": ["े", "e"],
+          "hint": "This is the diphthong 'e' (vowel mark form)",
+          "explanation": "The word is देव (deva), meaning 'god'. The middle sound is े (e).",
+          "points": 10
+        }
+      ],
+      "passingScore": 70,
+      "tags": ["vowels", "fill-blank", "application"]
+    },
+    {
+      "exerciseId": "p1-m1-w1-e4-writing-practice",
+      "title": "Vowel Writing Practice",
+      "type": "canvas-drawing",
+      "difficulty": "beginner",
+      "estimatedMinutes": 15,
+      "instructions": "Practice writing each vowel character. Follow the stroke order shown.",
+      "characters": [
+        {
+          "character": "अ",
+          "strokeOrder": [
+            { "path": "M 50 20 Q 70 20 70 40", "order": 1 },
+            { "path": "M 70 40 L 70 80", "order": 2 },
+            { "path": "M 30 50 L 90 50", "order": 3 }
+          ],
+          "referenceImage": "/images/stroke-order/vowel-a.svg",
+          "audioFile": "/audio/phonemes/vowels/a.mp3"
+        },
+        {
+          "character": "आ",
+          "strokeOrder": [
+            { "path": "M 50 20 Q 70 20 70 40", "order": 1 },
+            { "path": "M 70 40 L 70 80", "order": 2 },
+            { "path": "M 30 50 L 90 50", "order": 3 },
+            { "path": "M 15 20 L 15 80", "order": 4 }
+          ],
+          "referenceImage": "/images/stroke-order/vowel-aa.svg",
+          "audioFile": "/audio/phonemes/vowels/aa.mp3"
+        }
+      ],
+      "passingCriteria": "Complete all characters with reasonable accuracy",
+      "tags": ["vowels", "writing", "practice"]
+    }
+  ]
+}

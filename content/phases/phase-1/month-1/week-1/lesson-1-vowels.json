@@ -1,0 +1,262 @@
+{
+  "lessonId": "p1-m1-w1-l1",
+  "title": "The 14 Vowels of Sanskrit",
+  "order": 1,
+  "estimatedMinutes": 45,
+  "objectives": [
+    "Learn to recognize all 14 Sanskrit vowels in Devanagari script",
+    "Understand the difference between short and long vowels",
+    "Practice pronunciation with audio examples"
+  ],
+  "sections": [
+    {
+      "type": "introduction",
+      "title": "Introduction to Sanskrit Vowels",
+      "content": "Sanskrit has 14 primary vowels, organized in pairs of short and long vowels. Unlike English, the length of a vowel is phonemically significant in Sanskrit - changing the length changes the meaning of a word.",
+      "order": 1
+    },
+    {
+      "type": "content",
+      "title": "Short Vowels (Hrasva)",
+      "content": "The five short vowels form the foundation of Sanskrit pronunciation.",
+      "order": 2,
+      "items": [
+        {
+          "devanagari": "अ",
+          "iast": "a",
+          "ipa": "/ə/",
+          "pronunciation": "Like 'u' in 'but' or 'a' in 'about'",
+          "audioFile": "/audio/phonemes/vowels/a.mp3",
+          "category": "short-vowel",
+          "examples": [
+            {
+              "word": "अग्नि",
+              "iast": "agni",
+              "meaning": "fire",
+              "audioFile": "/audio/words/agni.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "इ",
+          "iast": "i",
+          "ipa": "/i/",
+          "pronunciation": "Like 'i' in 'bit' or 'pin'",
+          "audioFile": "/audio/phonemes/vowels/i.mp3",
+          "category": "short-vowel",
+          "examples": [
+            {
+              "word": "इष्ट",
+              "iast": "iṣṭa",
+              "meaning": "desired",
+              "audioFile": "/audio/words/ishta.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "उ",
+          "iast": "u",
+          "ipa": "/u/",
+          "pronunciation": "Like 'u' in 'put' or 'pull'",
+          "audioFile": "/audio/phonemes/vowels/u.mp3",
+          "category": "short-vowel",
+          "examples": [
+            {
+              "word": "उत्तम",
+              "iast": "uttama",
+              "meaning": "best",
+              "audioFile": "/audio/words/uttama.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ऋ",
+          "iast": "ṛ",
+          "ipa": "/r̩/",
+          "pronunciation": "Like 'ri' in 'Krishna' (vocalic r)",
+          "audioFile": "/audio/phonemes/vowels/ri.mp3",
+          "category": "short-vowel",
+          "examples": [
+            {
+              "word": "ऋषि",
+              "iast": "ṛṣi",
+              "meaning": "sage",
+              "audioFile": "/audio/words/rishi.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ऌ",
+          "iast": "ḷ",
+          "ipa": "/l̩/",
+          "pronunciation": "Vocalic l (very rare in Sanskrit)",
+          "audioFile": "/audio/phonemes/vowels/li.mp3",
+          "category": "short-vowel",
+          "note": "This vowel is extremely rare and appears in only a few words."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Long Vowels (Dīrgha)",
+      "content": "Each short vowel (except ḷ) has a corresponding long vowel that is held for twice the duration.",
+      "order": 3,
+      "items": [
+        {
+          "devanagari": "आ",
+          "iast": "ā",
+          "ipa": "/ɑː/",
+          "pronunciation": "Like 'a' in 'father' (held longer)",
+          "audioFile": "/audio/phonemes/vowels/aa.mp3",
+          "category": "long-vowel",
+          "examples": [
+            {
+              "word": "आत्मा",
+              "iast": "ātmā",
+              "meaning": "soul, self",
+              "audioFile": "/audio/words/aatma.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ई",
+          "iast": "ī",
+          "ipa": "/iː/",
+          "pronunciation": "Like 'ee' in 'see' (held longer)",
+          "audioFile": "/audio/phonemes/vowels/ii.mp3",
+          "category": "long-vowel",
+          "examples": [
+            {
+              "word": "नदी",
+              "iast": "nadī",
+              "meaning": "river",
+              "audioFile": "/audio/words/nadi.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ऊ",
+          "iast": "ū",
+          "ipa": "/uː/",
+          "pronunciation": "Like 'oo' in 'boot' (held longer)",
+          "audioFile": "/audio/phonemes/vowels/uu.mp3",
+          "category": "long-vowel",
+          "examples": [
+            {
+              "word": "भूमि",
+              "iast": "bhūmi",
+              "meaning": "earth, land",
+              "audioFile": "/audio/words/bhumi.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ॠ",
+          "iast": "ṝ",
+          "ipa": "/r̩ː/",
+          "pronunciation": "Long vocalic r (rare)",
+          "audioFile": "/audio/phonemes/vowels/rii.mp3",
+          "category": "long-vowel",
+          "note": "This vowel is rare in Sanskrit texts."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Diphthongs (Saṃyukta Svara)",
+      "content": "Sanskrit has four diphthongs, which are combinations of vowels pronounced as a single sound.",
+      "order": 4,
+      "items": [
+        {
+          "devanagari": "ए",
+          "iast": "e",
+          "ipa": "/eː/",
+          "pronunciation": "Like 'ay' in 'say' (always long)",
+          "audioFile": "/audio/phonemes/vowels/e.mp3",
+          "category": "diphthong",
+          "examples": [
+            {
+              "word": "देव",
+              "iast": "deva",
+              "meaning": "god",
+              "audioFile": "/audio/words/deva.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ऐ",
+          "iast": "ai",
+          "ipa": "/aːi/",
+          "pronunciation": "Like 'ai' in 'aisle'",
+          "audioFile": "/audio/phonemes/vowels/ai.mp3",
+          "category": "diphthong",
+          "examples": [
+            {
+              "word": "वैदिक",
+              "iast": "vaidika",
+              "meaning": "Vedic",
+              "audioFile": "/audio/words/vaidika.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ओ",
+          "iast": "o",
+          "ipa": "/oː/",
+          "pronunciation": "Like 'o' in 'go' (always long)",
+          "audioFile": "/audio/phonemes/vowels/o.mp3",
+          "category": "diphthong",
+          "examples": [
+            {
+              "word": "योग",
+              "iast": "yoga",
+              "meaning": "union, yoga",
+              "audioFile": "/audio/words/yoga.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "औ",
+          "iast": "au",
+          "ipa": "/aːu/",
+          "pronunciation": "Like 'ow' in 'cow'",
+          "audioFile": "/audio/phonemes/vowels/au.mp3",
+          "category": "diphthong",
+          "examples": [
+            {
+              "word": "पौत्र",
+              "iast": "pautra",
+              "meaning": "grandson",
+              "audioFile": "/audio/words/pautra.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "practice",
+      "title": "Pronunciation Practice",
+      "content": "Listen to each vowel and repeat after the audio. Pay attention to the difference between short and long vowels.",
+      "order": 5,
+      "exerciseId": "p1-m1-w1-e1-vowel-recognition"
+    },
+    {
+      "type": "summary",
+      "title": "Summary",
+      "content": "You've learned all 14 vowels of Sanskrit:\n- 5 short vowels: a, i, u, ṛ, ḷ\n- 4 long vowels: ā, ī, ū, ṝ\n- 4 diphthongs: e, ai, o, au\n\nIn the next lesson, you'll learn how these vowels combine with consonants using vowel marks (mātras).",
+      "order": 6
+    }
+  ],
+  "resources": [
+    {
+      "type": "reference",
+      "title": "Vowel Chart",
+      "url": "/resources/vowel-chart.pdf"
+    },
+    {
+      "type": "practice",
+      "title": "Vowel Writing Practice Sheet",
+      "url": "/resources/vowel-practice.pdf"
+    }
+  ]
+}

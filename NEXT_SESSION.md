@@ -1,9 +1,9 @@
 # NEXT SESSION - Handoff Document
 
 **Last Updated:** December 4, 2024 (Session 7 - Consonants & Navigation Complete)
-**Current Phase:** Phase 1A - Month 1, Weeks 1-2 Implementation (IN PROGRESS - 20 consonants remaining)
+**Current Phase:** Month 1, Module A Implementation (IN PROGRESS - 20 consonants remaining)
 **Next Phase:** Complete remaining consonants (Ṭa-varga, Ta-varga dental, Pa-varga)
-**Latest Log:** `logs/M1W1_LOG.md` (see Sessions 6-7)
+**Latest Log:** `logs/M1A_LOG.md` (see Sessions 6-7)
 
 ---
 
@@ -232,7 +232,7 @@ npx tsc --noEmit
 ### Content Structure
 
 ```
-content/phases/phase-1/month-1/week-1/
+content/phases/phase-1/month-1/module-a/
 ├── meta.json
 ├── lesson-1-complete-vowels.json (✅ COMPLETE)
 ├── lesson-2-consonants.json (✅ COMPLETE - first 10)
@@ -306,7 +306,7 @@ If running, ask user whether to use existing or restart.
 ## 📚 Files to Review Before Starting
 
 1. **NEXT_SESSION.md** (this file) - Start here
-2. **logs/M1W1_LOG.md** - Sessions 6-7 details (current log file)
+2. **logs/M1A_LOG.md** - Sessions 6-7 details (current log file)
 3. **docs/CLASSICAL_PHONEME_INVENTORY.md** - Remaining consonants reference
 4. **docs/PRONUNCIATION_PHILOSOPHY.md** - Classical pronunciation rationale
 5. **content/phases/phase-1/month-1/week-1/lesson-2-consonants.json** - Template for new lessons

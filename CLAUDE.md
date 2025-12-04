@@ -49,15 +49,16 @@ Read CLAUDE.md
 2. **Current log file based on development phase** (AUTOMATIC - determined from NEXT_SESSION.md)
    ```
    After reading NEXT_SESSION.md, check "Latest Log:" field
-   Read that specific log file (e.g., logs/M1W1_LOG.md)
+   Read that specific log file (e.g., logs/M1A_LOG.md)
 
    Log file naming convention:
    - Phase 0 (Infrastructure): PHASE0_FOUNDATION_LOG.md
-   - Month-based development: M1W1_LOG.md, M1W3_LOG.md, M2W1_LOG.md, etc.
-     Format: M{month}W{week-start}_LOG.md
-     - M1W1 = Month 1, Weeks 1-2
-     - M1W3 = Month 1, Weeks 3-4
-     - M2W1 = Month 2, Weeks 1-2
+   - Month-based development: M1A_LOG.md, M1B_LOG.md, M2A_LOG.md, etc.
+     Format: M{month}{module}_LOG.md where module is A, B, C, D...
+     - M1A = Month 1, Module A (typically weeks 1-2)
+     - M1B = Month 1, Module B (typically weeks 3-4)
+     - M2A = Month 2, Module A
+     - M2B = Month 2, Module B
    ```
 
    **IMPORTANT:** Always use the log file specified in NEXT_SESSION.md - it tells you which phase you're in!
@@ -779,16 +780,17 @@ GO BACK AND COMPLETE THE MISSING STEP
 
 **Naming Convention:**
 - **Phase-based:** `PHASE0_FOUNDATION_LOG.md`, `PHASE1_SETUP_LOG.md`
-- **Month-based:** `M1W1_LOG.md` (Month 1, Weeks 1-2), `M1W3_LOG.md` (Month 1, Weeks 3-4)
-- **Format:** Short, descriptive, chronological
+- **Month-based:** `M1A_LOG.md` (Month 1, Module A), `M1B_LOG.md` (Month 1, Module B)
+- **Format:** M{month}{module}_LOG.md where module is A, B, C, D...
 
 **Examples:**
 ```
 logs/
-├── PHASE0_FOUNDATION_LOG.md      # Infrastructure and planning (current)
-├── M1W1_LOG.md                   # Month 1, Weeks 1-2 development
-├── M1W3_LOG.md                   # Month 1, Weeks 3-4 development
-├── M2W1_LOG.md                   # Month 2, Weeks 1-2 development
+├── PHASE0_FOUNDATION_LOG.md      # Infrastructure and planning
+├── M1A_LOG.md                    # Month 1, Module A development
+├── M1B_LOG.md                    # Month 1, Module B development
+├── M2A_LOG.md                    # Month 2, Module A development
+├── M2B_LOG.md                    # Month 2, Module B development
 └── ...
 ```
 
@@ -912,9 +914,9 @@ logs/
    - **IMPORTANT:** Use the correct log file for current development phase:
      - Check NEXT_SESSION.md "Latest Log:" field to determine which file
      - Phase 0: PHASE0_FOUNDATION_LOG.md
-     - Month 1 Weeks 1-2: M1W1_LOG.md
-     - Month 1 Weeks 3-4: M1W3_LOG.md
-     - Month 2 Weeks 1-2: M2W1_LOG.md (etc.)
+     - Month 1 Module A: M1A_LOG.md
+     - Month 1 Module B: M1B_LOG.md
+     - Month 2 Module A: M2A_LOG.md (etc.)
    - Append to existing log file for current phase
    - Document what was accomplished
    - Note decisions and learnings

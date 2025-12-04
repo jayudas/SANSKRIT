@@ -10,7 +10,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "downlevelIteration": true
   },
   "include": ["./**/*"],
   "exclude": ["node_modules", "dist"]

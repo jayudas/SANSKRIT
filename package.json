@@ -15,7 +15,9 @@
     "import:content": "ts-node scripts/import-content.ts"
   },
   "devDependencies": {
+    "@types/node": "^24.10.1",
     "prettier": "^3.1.0",
+    "ts-node": "^10.9.2",
     "turbo": "^1.11.0",
     "typescript": "^5.3.0"
   },

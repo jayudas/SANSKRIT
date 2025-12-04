@@ -1,0 +1,235 @@
+{
+  "lessonId": "p1-m1-w1-l4-final-consonants",
+  "title": "Final 8 Consonants of Sanskrit (व्यञ्जनानि)",
+  "order": 4,
+  "estimatedMinutes": 50,
+  "objectives": [
+    "Master the final 8 Sanskrit consonants: approximants (ya, ra, la, va), sibilants (śa, ṣa, sa), and glottal (ha)",
+    "Understand the THREE-WAY sibilant distinction: palatal /ɕ/, retroflex /ʂ/, and alveolar /s/",
+    "Learn that Sanskrit has THREE different 'sh' sounds, NOT one",
+    "Master the voiced glottal fricative ह /ɦ/ (different from English /h/)",
+    "Complete the full inventory of all 33 classical Sanskrit consonants"
+  ],
+  "sections": [
+    {
+      "type": "introduction",
+      "title": "Introduction to Approximants, Sibilants, and Glottal",
+      "content": "This lesson completes the Sanskrit consonant system with 8 remaining sounds that don't fit the varga pattern. These include: (1) APPROXIMANTS (antaḥsthāḥ 'between sounds')—semi-vowels that flow more than stops: य र ल व; (2) SIBILANTS (ūṣmāṇaḥ 'heated sounds')—three fricatives that are DISTINCT in classical Sanskrit but often merged in modern pronunciation: श /ɕ/, ष /ʂ/, स /s/; (3) GLOTTAL—ह /ɦ/, a VOICED glottal fricative (unlike voiceless English /h/). The three-way sibilant distinction is CRITICAL for sandhi rules and classical pronunciation. After this lesson, you will have mastered all 33 consonants of the Sanskrit alphabet!",
+      "order": 1
+    },
+    {
+      "type": "content",
+      "title": "Approximants (अन्तःस्थाः Antaḥsthāḥ)",
+      "content": "The four approximants are called antaḥsthāḥ (literally 'between sounds' or 'in-between'), because they are intermediate between vowels and consonants. They are sonorants—the airflow is relatively unobstructed compared to stops. They function as consonants but have vowel-like acoustic properties. These are also called semi-vowels. All four are VOICED (vocal cords vibrate).",
+      "order": 2,
+      "items": [
+        {
+          "devanagari": "य",
+          "iast": "ya",
+          "ipa": "/j/",
+          "pronunciation": "Like 'y' in 'yes' (palatal approximant)",
+          "audioFile": "/audio/phonemes/consonants/ya.mp3",
+          "category": "palatal-approximant",
+          "note": "Classical: voiced palatal approximant /j/. The FRONT-MIDDLE of tongue approaches the hard palate (palatal), but doesn't make complete contact. Very similar to English 'y' in 'yes' or 'yoga'. Note: IPA /j/ = English 'y' sound. This is the semi-vowel counterpart of vowel इ /i/. Common in Sanskrit, especially in diphthongs and sandhi.",
+          "examples": [
+            {
+              "word": "योग",
+              "iast": "yoga",
+              "meaning": "union, yoking; yoga",
+              "audioFile": "/audio/words/yoga.mp3"
+            },
+            {
+              "word": "युद्ध",
+              "iast": "yuddha",
+              "meaning": "war, battle",
+              "audioFile": "/audio/words/yuddha.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "र",
+          "iast": "ra",
+          "ipa": "/r/",
+          "pronunciation": "Rolled 'r' like Spanish/Italian (alveolar trill) OR retroflex tap",
+          "audioFile": "/audio/phonemes/consonants/ra.mp3",
+          "category": "alveolar-trill-or-retroflex-tap",
+          "note": "Classical: This sound is DEBATED among scholars. Ancient texts describe it as involving tongue vibration. Two main reconstructions: (1) ALVEOLAR TRILL /r/ (rolled 'r' like Spanish 'perro'), or (2) RETROFLEX TAP/FLAP [ɽ] (tongue flaps once against retroflex position). Either is acceptable for classical pronunciation. Both are VERY different from American English 'r' (which is actually a retroflex approximant [ɻ]). Spanish/Italian rolled 'r' is the most common modern interpretation. NOT like English 'r' in 'red'.",
+          "examples": [
+            {
+              "word": "राम",
+              "iast": "rāma",
+              "meaning": "Rama (hero of Ramayana)",
+              "audioFile": "/audio/words/rama.mp3"
+            },
+            {
+              "word": "धर्म",
+              "iast": "dharma",
+              "meaning": "duty, righteousness",
+              "audioFile": "/audio/words/dharma-ra.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ल",
+          "iast": "la",
+          "ipa": "/l/",
+          "pronunciation": "Like 'l' in 'love' (dental lateral approximant)",
+          "audioFile": "/audio/phonemes/consonants/la.mp3",
+          "category": "dental-lateral",
+          "note": "Classical: voiced dental lateral approximant /l/. Tongue touches the TEETH (dental position, like dental त), but air flows around the SIDES of the tongue (lateral). Very similar to English 'l', except the tongue position is DENTAL (at teeth) rather than alveolar (at ridge). This is the semi-vowel counterpart of vocalic ऌ /l̩/ (syllabic l).",
+          "examples": [
+            {
+              "word": "लोक",
+              "iast": "loka",
+              "meaning": "world, realm",
+              "audioFile": "/audio/words/loka.mp3"
+            },
+            {
+              "word": "फल",
+              "iast": "phala",
+              "meaning": "fruit, result",
+              "audioFile": "/audio/words/phala-la.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "व",
+          "iast": "va",
+          "ipa": "/ʋ/",
+          "pronunciation": "Between 'v' and 'w' (labio-dental approximant)",
+          "audioFile": "/audio/phonemes/consonants/va.mp3",
+          "category": "labio-dental-approximant",
+          "note": "Classical: voiced labio-dental approximant /ʋ/. This sound is BETWEEN English 'v' and 'w'. The LOWER LIP approaches the UPPER TEETH, but doesn't create as much friction as English 'v'. Think of a soft, gentle 'v' sound. Some scholars reconstruct this as labio-velar /w/ (like English 'w' in 'wine'). Either pronunciation is acceptable. This is the semi-vowel counterpart of vowel उ /u/. Modern Hindi often pronounces this as full /v/ or even /w/.",
+          "examples": [
+            {
+              "word": "वेद",
+              "iast": "veda",
+              "meaning": "knowledge; the Vedas",
+              "audioFile": "/audio/words/veda-va.mp3"
+            },
+            {
+              "word": "विद्या",
+              "iast": "vidyā",
+              "meaning": "knowledge, learning",
+              "audioFile": "/audio/words/vidya.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Sibilants (ऊष्माणः Ūṣmāṇaḥ) - THREE DISTINCT 'SH' SOUNDS",
+      "content": "The three sibilants are called ūṣmāṇaḥ (literally 'heated sounds') because air creates friction and heat as it passes through the narrow opening. This is CRITICALLY IMPORTANT: Classical Sanskrit has THREE DIFFERENT sibilant sounds: श /ɕ/ (palatal), ष /ʂ/ (retroflex), and स /s/ (alveolar). In MODERN Indian pronunciation, श and ष have MERGED into one sound /ʃ/ (like English 'sh'), but in CLASSICAL pronunciation they were DISTINCT. Understanding this distinction is essential for sandhi rules, where different sibilants trigger different changes. All three are VOICELESS fricatives.",
+      "order": 3,
+      "items": [
+        {
+          "devanagari": "श",
+          "iast": "śa",
+          "ipa": "/ɕ/",
+          "pronunciation": "PALATAL sibilant—like German 'ich' or soft 'sh'",
+          "audioFile": "/audio/phonemes/consonants/sha.mp3",
+          "category": "palatal-sibilant",
+          "note": "Classical: voiceless palatal sibilant /ɕ/. This is articulated at the HARD PALATE (like च /c/), with the tongue body raised toward the palate. It sounds like a 'sh' that is MORE FRONTED than English 'sh' (which is post-alveolar /ʃ/). Think of German 'ich' or Swedish 'sj'. This sound is DISTINCT from ष /ʂ/ (retroflex) and स /s/ (alveolar). In Devanagari, notice the distinctive shape (looks like a '7'). This appears before/after palatal consonants (च, छ, ज, झ, ञ) in sandhi.",
+          "examples": [
+            {
+              "word": "शान्ति",
+              "iast": "śānti",
+              "meaning": "peace, tranquility",
+              "audioFile": "/audio/words/shanti.mp3"
+            },
+            {
+              "word": "श्रुति",
+              "iast": "śruti",
+              "meaning": "hearing; revealed scripture",
+              "audioFile": "/audio/words/shruti.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ष",
+          "iast": "ṣa",
+          "ipa": "/ʂ/",
+          "pronunciation": "RETROFLEX sibilant—'sh' with tongue curled BACK",
+          "audioFile": "/audio/phonemes/consonants/Sha.mp3",
+          "category": "retroflex-sibilant",
+          "note": "Classical: voiceless retroflex sibilant /ʂ/. CURL YOUR TONGUE BACKWARD into retroflex position (like ट /ʈ/), and produce a 'sh' sound with air hissing over the curled tongue. This is the most RETRACTED of the three sibilants. It sounds 'darker' or 'heavier' than श /ɕ/ or स /s/. English has NO retroflex sibilant—this is unique to Indo-Aryan languages. This appears after/before retroflex consonants (ट, ठ, ड, ढ, ण) or र in sandhi. IAST: note the dot under 's' (ṣ).",
+          "examples": [
+            {
+              "word": "षट्",
+              "iast": "ṣaṭ",
+              "meaning": "six",
+              "audioFile": "/audio/words/shat.mp3"
+            },
+            {
+              "word": "कृष्ण",
+              "iast": "kṛṣṇa",
+              "meaning": "Krishna; black",
+              "audioFile": "/audio/words/krishna-sha.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "स",
+          "iast": "sa",
+          "ipa": "/s/",
+          "pronunciation": "ALVEOLAR sibilant—like 's' in 'see'",
+          "audioFile": "/audio/phonemes/consonants/sa.mp3",
+          "category": "alveolar-sibilant",
+          "note": "Classical: voiceless alveolar sibilant /s/. Tongue tip approaches the ALVEOLAR RIDGE (area behind upper teeth), creating a hissing sound. This is IDENTICAL to English 's' in 'see' or 'Sanskrit'. This is the most FRONTED of the three sibilants. It contrasts with palatal श /ɕ/ and retroflex ष /ʂ/. This is the default sibilant, most common in Sanskrit. Appears before/after dental consonants (त, थ, द, ध, न) in sandhi. This is the ONLY sibilant that survives unchanged in many modern pronunciations.",
+          "examples": [
+            {
+              "word": "सत्य",
+              "iast": "satya",
+              "meaning": "truth",
+              "audioFile": "/audio/words/satya-sa.mp3"
+            },
+            {
+              "word": "सूर्य",
+              "iast": "sūrya",
+              "meaning": "sun, sun god",
+              "audioFile": "/audio/words/surya.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Glottal Fricative (ह Ha)",
+      "content": "The final consonant stands alone: ह /ɦ/, the voiced glottal fricative. This completes the alphabet at 33 consonants. While it resembles English 'h', it is technically VOICED in classical pronunciation (vocal cords vibrate), unlike English /h/ which is voiceless. In practice, the difference is subtle, and even native Sanskrit speakers sometimes produce it as voiceless [h]. Some classify this as an ūṣman (sibilant/fricative), others as a separate category.",
+      "order": 4,
+      "items": [
+        {
+          "devanagari": "ह",
+          "iast": "ha",
+          "ipa": "/ɦ/",
+          "pronunciation": "Voiced glottal fricative (like 'h' but with vocal cord vibration)",
+          "audioFile": "/audio/phonemes/consonants/ha.mp3",
+          "category": "glottal-fricative",
+          "note": "Classical: voiced glottal fricative /ɦ/. Air passes through the GLOTTIS (opening between vocal cords) with friction, while vocal cords vibrate (voiced). To produce it: say 'h' as in 'hello', but add gentle voicing—touch your throat and feel vibration. The difference from English /h/ is subtle. English /h/ is voiceless (no vibration). Sanskrit ह should have light voicing. In modern pronunciation, many speakers produce this as voiceless [h], which is acceptable. This is the 33rd and final consonant!",
+          "examples": [
+            {
+              "word": "हरि",
+              "iast": "hari",
+              "meaning": "Vishnu; yellow-green",
+              "audioFile": "/audio/words/hari.mp3"
+            },
+            {
+              "word": "अहं",
+              "iast": "ahaṃ",
+              "meaning": "I (first person singular)",
+              "audioFile": "/audio/words/aham.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "title": "Summary: Complete Consonant System",
+      "content": "Congratulations! You have now mastered ALL 33 CONSONANTS of Classical Sanskrit! Let's review the complete system: (1) FIVE VARGAS (25 stops): Ka (velar), Ca (palatal), Ṭa (retroflex), Ta (dental), Pa (labial)—each with 5 consonants (voiceless, voiceless aspirated, voiced, voiced aspirated, nasal). (2) FOUR APPROXIMANTS: ya /j/, ra /r/, la /l/, va /ʋ/—semi-vowels, sonorant. (3) THREE SIBILANTS: śa /ɕ/ (palatal), ṣa /ʂ/ (retroflex), sa /s/ (alveolar)—DISTINCT in classical Sanskrit! (4) ONE GLOTTAL: ha /ɦ/ (voiced glottal fricative). CRITICAL TAKEAWAYS: (a) Retroflex vs. dental distinction is fundamental; (b) Aspiration is phonemic throughout; (c) Three-way sibilant distinction crucial for sandhi; (d) Classical pronunciation differs significantly from modern. NEXT STEPS: You're ready to learn vowel marks (mātṛkās)—how these consonants combine with vowels to form syllables and words. Then: vocabulary, sandhi rules, and reading real Sanskrit!",
+      "order": 5
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "lessonId": "p1-m1-w1-l3-middle-consonants",
+  "title": "Middle 15 Consonants of Sanskrit (व्यञ्जनानि)",
+  "order": 3,
+  "estimatedMinutes": 75,
+  "objectives": [
+    "Master 15 additional Sanskrit consonants: Ṭa-varga (retroflexes), Ta-varga (dentals), and Pa-varga (labials)",
+    "Understand the CRITICAL distinction between retroflex and dental consonants",
+    "Learn proper articulation of retroflex consonants (tongue curled back)",
+    "Master dental consonants (tongue at teeth, NOT alveolar like English)",
+    "Learn that फ /pʰ/ is aspirated /p/, NOT the fricative /f/"
+  ],
+  "sections": [
+    {
+      "type": "introduction",
+      "title": "Introduction to Retroflexes, Dentals, and Labials",
+      "content": "This lesson covers THREE complete vargas totaling 15 consonants. This includes two of Sanskrit's most distinctive features: (1) TRUE RETROFLEX consonants (Ṭa-varga), where the tongue curls back to contact the roof of mouth, and (2) TRUE DENTAL consonants (Ta-varga), where the tongue touches the TEETH (not the alveolar ridge like English). The distinction between ट /ʈ/ (retroflex) and त /t̪/ (dental) is CRITICAL—confusing them changes meaning. English has neither true retroflexes nor true dentals. Finally, we cover Pa-varga (labials), which are closer to English but with one key difference: फ is aspirated /pʰ/ (like 'p' + breath), NOT the fricative /f/. Classical pronunciation standard throughout.",
+      "order": 1
+    },
+    {
+      "type": "content",
+      "title": "Ṭa-varga (टवर्ग) - Retroflex Consonants",
+      "content": "The Ṭa-varga consists of 5 RETROFLEX consonants produced by CURLING THE TONGUE TIP BACKWARD to contact the hard palate or post-alveolar region. These are called mūrdhanya (cerebral/retroflex). The tongue tip is bent backward and up. English has NO true retroflex consonants—this is one of Sanskrit's most distinctive phonetic features. Mastering retroflexes is essential, as they contrast with dentals: ḍaṇḍa (staff) vs. danda would be meaningless confusion.",
+      "order": 2,
+      "items": [
+        {
+          "devanagari": "ट",
+          "iast": "ṭa",
+          "ipa": "/ʈ/",
+          "pronunciation": "Voiceless retroflex stop—curl tongue tip BACK to roof of mouth",
+          "audioFile": "/audio/phonemes/consonants/Ta.mp3",
+          "category": "retroflex-stop",
+          "note": "Classical: true retroflex /ʈ/. CURL your tongue tip backward and UP until it touches the hard palate from behind. There is NO equivalent in English. The tongue position is BEHIND and HIGHER than English 't'. This sound contrasts with त /t̪/ (dental—tongue at teeth). Practice: hold tongue in retroflex position, then release with no aspiration.",
+          "examples": [
+            {
+              "word": "टङ्क",
+              "iast": "ṭaṅka",
+              "meaning": "chisel, ax",
+              "audioFile": "/audio/words/tanka.mp3"
+            },
+            {
+              "word": "कटु",
+              "iast": "kaṭu",
+              "meaning": "pungent, bitter",
+              "audioFile": "/audio/words/katu.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ठ",
+          "iast": "ṭha",
+          "ipa": "/ʈʰ/",
+          "pronunciation": "Aspirated retroflex stop—ट with STRONG breath",
+          "audioFile": "/audio/phonemes/consonants/Tha.mp3",
+          "category": "retroflex-stop",
+          "note": "Classical: aspirated retroflex /ʈʰ/. Same tongue position as ट (curled back), but with a STRONG puff of air on release. Hold hand in front of mouth—you should feel the breath. This aspirated version contrasts with unaspirated ट.",
+          "examples": [
+            {
+              "word": "ठक्कुर",
+              "iast": "ṭhakkura",
+              "meaning": "deity, lord",
+              "audioFile": "/audio/words/thakkura.mp3"
+            },
+            {
+              "word": "कठिन",
+              "iast": "kaṭhina",
+              "meaning": "hard, difficult",
+              "audioFile": "/audio/words/kathina.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ड",
+          "iast": "ḍa",
+          "ipa": "/ɖ/",
+          "pronunciation": "Voiced retroflex stop—curl tongue back, add voicing",
+          "audioFile": "/audio/phonemes/consonants/Da.mp3",
+          "category": "retroflex-stop",
+          "note": "Classical: voiced retroflex /ɖ/. Tongue curled back in retroflex position, vocal cords vibrate. Touch your throat to feel vibration. No English equivalent—English 'd' is alveolar, not retroflex. This contrasts with dental द /d̪/.",
+          "examples": [
+            {
+              "word": "डमरु",
+              "iast": "ḍamaru",
+              "meaning": "small drum (Shiva's drum)",
+              "audioFile": "/audio/words/damaru.mp3"
+            },
+            {
+              "word": "खाडी",
+              "iast": "khāḍī",
+              "meaning": "canyon, ravine",
+              "audioFile": "/audio/words/khadi.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ढ",
+          "iast": "ḍha",
+          "ipa": "/ɖʰ/",
+          "pronunciation": "Voiced aspirated retroflex—ड with breath",
+          "audioFile": "/audio/phonemes/consonants/Dha.mp3",
+          "category": "retroflex-stop",
+          "note": "Classical: voiced aspirated retroflex /ɖʰ/. Tongue curled back (retroflex), vocal cords vibrate (voiced), AND strong puff of air (aspirated). This combines all three features. Very rare in world languages.",
+          "examples": [
+            {
+              "word": "ढक्का",
+              "iast": "ḍhakkā",
+              "meaning": "push, shove",
+              "audioFile": "/audio/words/dhakka.mp3"
+            },
+            {
+              "word": "गढ",
+              "iast": "gaḍha",
+              "meaning": "fort, stronghold",
+              "audioFile": "/audio/words/gadha.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ण",
+          "iast": "ṇa",
+          "ipa": "/ɳ/",
+          "pronunciation": "Retroflex nasal—'n' with tongue curled back",
+          "audioFile": "/audio/phonemes/consonants/Na.mp3",
+          "category": "retroflex-nasal",
+          "note": "Classical: retroflex nasal /ɳ/. Tongue curled back in retroflex position, air flows through nose. This contrasts with dental nasal न /n̪/. Sanskrit sandhi rules often convert न to ण after retroflex consonants or र. Appears frequently in Sanskrit.",
+          "examples": [
+            {
+              "word": "गण",
+              "iast": "gaṇa",
+              "meaning": "group, troop",
+              "audioFile": "/audio/words/gana.mp3"
+            },
+            {
+              "word": "कृष्ण",
+              "iast": "kṛṣṇa",
+              "meaning": "Krishna; black, dark",
+              "audioFile": "/audio/words/krishna.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Ta-varga (तवर्ग) - Dental Consonants",
+      "content": "The Ta-varga consists of 5 DENTAL consonants produced by touching the tongue to the BACK OF THE UPPER FRONT TEETH. These are called dantya (dental). This is DIFFERENT from English 't/d', which are ALVEOLAR (tongue touches the alveolar ridge behind teeth). Sanskrit dentals are like Spanish or French 't/d'—tongue touches the teeth themselves. The dental vs. retroflex distinction (त vs. ट) is FUNDAMENTAL to Sanskrit and must be mastered. Confusing them will make you unintelligible to Sanskrit speakers.",
+      "order": 3,
+      "items": [
+        {
+          "devanagari": "त",
+          "iast": "ta",
+          "ipa": "/t̪/",
+          "pronunciation": "Voiceless dental stop—tongue touches TEETH (not alveolar ridge)",
+          "audioFile": "/audio/phonemes/consonants/ta.mp3",
+          "category": "dental-stop",
+          "note": "Classical: true dental /t̪/ (note the diacritic under 't'). Place your tongue against the BACK OF YOUR UPPER FRONT TEETH and release without aspiration. This is DIFFERENT from: (1) English 't' (alveolar—tongue at ridge behind teeth), and (2) retroflex ट (tongue curled back). Spanish/French 't' is closer. This dental articulation is critical.",
+          "examples": [
+            {
+              "word": "तप",
+              "iast": "tapa",
+              "meaning": "heat, austerity",
+              "audioFile": "/audio/words/tapa.mp3"
+            },
+            {
+              "word": "सत्य",
+              "iast": "satya",
+              "meaning": "truth",
+              "audioFile": "/audio/words/satya.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "थ",
+          "iast": "tha",
+          "ipa": "/t̪ʰ/",
+          "pronunciation": "Aspirated dental stop—त with STRONG breath",
+          "audioFile": "/audio/phonemes/consonants/tha.mp3",
+          "category": "dental-stop",
+          "note": "Classical: aspirated dental /t̪ʰ/. Same tongue position as त (at teeth), but with strong puff of air on release. Feel the breath on your hand. Contrasts with unaspirated त and with retroflex ठ /ʈʰ/.",
+          "examples": [
+            {
+              "word": "पथ",
+              "iast": "patha",
+              "meaning": "path, way, road",
+              "audioFile": "/audio/words/patha.mp3"
+            },
+            {
+              "word": "स्थान",
+              "iast": "sthāna",
+              "meaning": "place, position",
+              "audioFile": "/audio/words/sthana.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "द",
+          "iast": "da",
+          "ipa": "/d̪/",
+          "pronunciation": "Voiced dental stop—tongue at teeth, vocal cords vibrate",
+          "audioFile": "/audio/phonemes/consonants/da.mp3",
+          "category": "dental-stop",
+          "note": "Classical: voiced dental /d̪/. Tongue touches teeth (dental), vocal cords vibrate (voiced). This contrasts with: (1) English 'd' (alveolar), (2) retroflex ड /ɖ/, and (3) voiceless त /t̪/. Touch throat to feel vibration.",
+          "examples": [
+            {
+              "word": "दान",
+              "iast": "dāna",
+              "meaning": "giving, charity",
+              "audioFile": "/audio/words/dana.mp3"
+            },
+            {
+              "word": "वेद",
+              "iast": "veda",
+              "meaning": "knowledge; the Vedas",
+              "audioFile": "/audio/words/veda.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ध",
+          "iast": "dha",
+          "ipa": "/d̪ʰ/",
+          "pronunciation": "Voiced aspirated dental—द with breath",
+          "audioFile": "/audio/phonemes/consonants/dha.mp3",
+          "category": "dental-stop",
+          "note": "Classical: voiced aspirated dental /d̪ʰ/. Tongue at teeth (dental), vocal cords vibrate (voiced), AND strong breath (aspirated). This three-way combination is rare in world languages. Contrasts with ढ /ɖʰ/ (retroflex).",
+          "examples": [
+            {
+              "word": "धन",
+              "iast": "dhana",
+              "meaning": "wealth, riches",
+              "audioFile": "/audio/words/dhana.mp3"
+            },
+            {
+              "word": "धर्म",
+              "iast": "dharma",
+              "meaning": "duty, righteousness, law",
+              "audioFile": "/audio/words/dharma.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "न",
+          "iast": "na",
+          "ipa": "/n̪/",
+          "pronunciation": "Dental nasal—'n' with tongue at teeth",
+          "audioFile": "/audio/phonemes/consonants/na.mp3",
+          "category": "dental-nasal",
+          "note": "Classical: dental nasal /n̪/. Tongue touches teeth, air flows through nose. This is the MOST COMMON nasal in Sanskrit. Contrasts with retroflex ण /ɳ/, palatal ञ /ɲ/, and velar ङ /ŋ/. Sanskrit has FIVE different nasal sounds, each matching the place of articulation of its varga.",
+          "examples": [
+            {
+              "word": "नर",
+              "iast": "nara",
+              "meaning": "man, human",
+              "audioFile": "/audio/words/nara.mp3"
+            },
+            {
+              "word": "अन्न",
+              "iast": "anna",
+              "meaning": "food, grain",
+              "audioFile": "/audio/words/anna.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Pa-varga (पवर्ग) - Labial Consonants",
+      "content": "The Pa-varga consists of 5 LABIAL (or bilabial) consonants produced by using BOTH LIPS. These are called oṣṭhya (labial). English has similar sounds, making this varga easier for English speakers. CRITICAL EXCEPTION: The consonant फ /pʰ/ is ASPIRATED /p/ (like 'p' in 'pin' with strong breath), NOT the fricative /f/ (like 'f' in 'fun'). This is a very common error—modern Indian speakers often pronounce फ as /f/, but classical pronunciation is /pʰ/. The lips do NOT create friction; they simply release with a puff of air.",
+      "order": 4,
+      "items": [
+        {
+          "devanagari": "प",
+          "iast": "pa",
+          "ipa": "/p/",
+          "pronunciation": "Like 'p' in 'spin' (voiceless, NO aspiration)",
+          "audioFile": "/audio/phonemes/consonants/pa.mp3",
+          "category": "labial-stop",
+          "note": "Classical: unaspirated /p/. Both lips come together and release without breath. Like English 'p' in 'spin' (NO aspiration). English 'p' at beginning of words ('pin') IS aspirated [pʰ], but Sanskrit प is unaspirated. Put hand in front of mouth—minimal breath should escape.",
+          "examples": [
+            {
+              "word": "पथ",
+              "iast": "patha",
+              "meaning": "path, way",
+              "audioFile": "/audio/words/patha-pa.mp3"
+            },
+            {
+              "word": "पुत्र",
+              "iast": "putra",
+              "meaning": "son",
+              "audioFile": "/audio/words/putra.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "फ",
+          "iast": "pha",
+          "ipa": "/pʰ/",
+          "pronunciation": "ASPIRATED /p/ with strong breath—NOT the fricative /f/",
+          "audioFile": "/audio/phonemes/consonants/pha.mp3",
+          "category": "labial-stop",
+          "note": "Classical: aspirated bilabial stop /pʰ/ (NOT fricative /f/). CRITICAL: This is NOT 'f' in 'fun'. This is 'p' + 'h' with STRONG breath, like English 'p' in 'pin' but MORE breath. Your lips do NOT create friction—they close completely, then release with a puff of air. Common modern error: pronouncing as /f/. Classical Sanskrit had NO /f/ sound. Example: phala (fruit) is /pʰɐlɐ/, not /fɐlɐ/.",
+          "examples": [
+            {
+              "word": "फल",
+              "iast": "phala",
+              "meaning": "fruit, result",
+              "audioFile": "/audio/words/phala.mp3"
+            },
+            {
+              "word": "स्फूर्ति",
+              "iast": "sphūrti",
+              "meaning": "throbbing, inspiration",
+              "audioFile": "/audio/words/sphurti.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "ब",
+          "iast": "ba",
+          "ipa": "/b/",
+          "pronunciation": "Like 'b' in 'bin' (voiced, NO aspiration)",
+          "audioFile": "/audio/phonemes/consonants/ba.mp3",
+          "category": "labial-stop",
+          "note": "Classical: voiced /b/. Lips come together, vocal cords vibrate, release without aspiration. Very similar to English 'b'. Touch throat to feel vibration. This is the voiced counterpart of प /p/.",
+          "examples": [
+            {
+              "word": "बल",
+              "iast": "bala",
+              "meaning": "strength, power",
+              "audioFile": "/audio/words/bala.mp3"
+            },
+            {
+              "word": "बुद्ध",
+              "iast": "buddha",
+              "meaning": "awakened; Buddha",
+              "audioFile": "/audio/words/buddha.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "भ",
+          "iast": "bha",
+          "ipa": "/bʰ/",
+          "pronunciation": "Like 'b' + 'h' as in 'clubhouse' (voiced AND aspirated)",
+          "audioFile": "/audio/phonemes/consonants/bha.mp3",
+          "category": "labial-stop",
+          "note": "Classical: voiced aspirated /bʰ/. Lips together, vocal cords vibrate (voiced), AND strong puff of air (aspirated). English approximation: 'b' + 'h' in compound words like 'clubhouse'. This sound is common in Sanskrit but not in simple English words.",
+          "examples": [
+            {
+              "word": "भव",
+              "iast": "bhava",
+              "meaning": "becoming, existence",
+              "audioFile": "/audio/words/bhava.mp3"
+            },
+            {
+              "word": "भारत",
+              "iast": "bhārata",
+              "meaning": "India (Bharata)",
+              "audioFile": "/audio/words/bharata.mp3"
+            }
+          ]
+        },
+        {
+          "devanagari": "म",
+          "iast": "ma",
+          "ipa": "/m/",
+          "pronunciation": "Like 'm' in 'mom' (bilabial nasal)",
+          "audioFile": "/audio/phonemes/consonants/ma.mp3",
+          "category": "labial-nasal",
+          "note": "Classical: bilabial nasal /m/. Lips together, air flows through nose. Identical to English 'm'. This is the labial nasal, completing the Pa-varga. Very common in Sanskrit—appears at end of many neuter nouns and in sandhi.",
+          "examples": [
+            {
+              "word": "मन",
+              "iast": "mana",
+              "meaning": "mind, heart",
+              "audioFile": "/audio/words/mana.mp3"
+            },
+            {
+              "word": "धर्मं",
+              "iast": "dharmaṃ",
+              "meaning": "duty (accusative)",
+              "audioFile": "/audio/words/dharmam.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "title": "Summary: Critical Distinctions",
+      "content": "You have now learned 25 of Sanskrit's 33 consonants (10 in Lesson 2 + 15 in this lesson). The most critical concepts: (1) RETROFLEX vs. DENTAL: ट /ʈ/ (tongue curled back) is completely different from त /t̪/ (tongue at teeth). English has NEITHER. Spanish/French 't' is dental; English 't' is alveolar. (2) ASPIRATION matters: क vs. ख, त vs. थ, प vs. फ—these pairs differ ONLY in aspiration, but aspiration is PHONEMIC (changes meaning). (3) फ is /pʰ/ NOT /f/: Your lips close completely and release with breath—NO friction. (4) FIVE places of articulation: velar (back), palatal (mid), retroflex (curled back), dental (teeth), labial (lips). Each has the same 5-consonant pattern. Remaining: 8 consonants (ya, ra, la, va, śa, ṣa, sa, ha)—next lesson!",
+      "order": 5
+    }
+  ]
+}

@@ -1,8 +1,20 @@
-# Pre-Commit Checklist - MANDATORY Before Every Git Commit
+# ⛔️ ABSOLUTE BLOCKER: Pre-Commit Checklist ⛔️
 
-**Status:** ⚠️ **MANDATORY** - Must be completed before EVERY git commit
+**Status:** 🚨 **ABSOLUTE BLOCKER** - STOP before EVERY git commit
 **Created:** November 25, 2025
-**Last Updated:** November 25, 2025
+**Last Updated:** December 3, 2024
+
+---
+
+## 🚨 STOP - READ THIS BEFORE TYPING `git commit` 🚨
+
+**YOU ARE ABOUT TO COMMIT CODE. BEFORE YOU DO:**
+
+1. **STOP** - Do not proceed with commit yet
+2. **READ** this entire checklist
+3. **VERIFY** every single item is checked
+4. **IF ANY ITEM IS UNCHECKED** → Stop, complete it, then return
+5. **ONLY WHEN ALL ITEMS CHECKED** → Proceed with commit
 
 ---
 
@@ -10,9 +22,61 @@
 
 **This checklist exists to prevent commits that violate the testing workflow.**
 
-**Why it was created:** Week 6 Session 6 - Claude Code skipped mandatory user browser testing and committed untested frontend code (ErrorBoundary, toast notifications). This violated the testing workflow and could have introduced production bugs.
+**Why it was created:**
+- **Session 6 (SMS):** Claude Code skipped mandatory user browser testing and committed untested frontend code
+- **Session 5 (SANSKRIT):** Claude Code committed content structure WITHOUT running ANY of the 6 testing levels
+- These violations required remediation and wasted time
 
-**Rule:** Before running `git commit`, Claude Code MUST explicitly check every item on this list.
+**Absolute Rule:** Before running `git commit`, Claude Code MUST answer "YES" to EVERY question below.
+
+---
+
+## ⛔️ MANDATORY PRE-COMMIT GATE - ANSWER EVERY QUESTION ⛔️
+
+**Type "YES" or "NO" for each question. If ANY answer is "NO", DO NOT COMMIT.**
+
+```
+QUESTION 1: Did I complete Level 1 (Build Compilation)?
+            (npm run build / pytest / tsc)
+Answer: ____
+
+QUESTION 2: Did I complete Level 2 (Dev Server Startup)?
+            (Verified server starts without errors)
+Answer: ____
+
+QUESTION 3: Did I complete Level 3 (Runtime Error Check)?
+            (Checked console, no errors on load)
+Answer: ____
+
+QUESTION 4: Did I complete Level 4 (Component/Feature Testing)?
+            (ALL features tested and working)
+            For frontend: USER confirmed browser testing passed
+Answer: ____
+
+QUESTION 5: Did I complete Level 5 (Integration Testing)?
+            (No regressions, works with existing code)
+Answer: ____
+
+QUESTION 6: Did I complete Level 6 (Documentation)?
+            (Test results documented)
+Answer: ____
+
+QUESTION 7: For frontend code: Did USER explicitly confirm testing passed?
+            (If not frontend code, answer YES)
+Answer: ____
+
+QUESTION 8: Did I read this entire Pre-Commit Checklist document?
+Answer: ____
+
+---
+
+COUNT YOUR "YES" ANSWERS: ____
+
+REQUIRED "YES" COUNT: 8
+
+IF COUNT < 8: STOP - DO NOT COMMIT
+IF COUNT = 8: PROCEED WITH COMMIT
+```
 
 ---
 

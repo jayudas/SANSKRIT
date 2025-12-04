@@ -651,7 +651,13 @@ When starting a session:
 
 3. **Check current todos**: TodoWrite tool for active session tasks
 
-4. **Follow mandatory workflows**:
+4. **⛔️ BEFORE EVERY COMMIT - ABSOLUTE BLOCKER ⛔️**
+   - **STOP** - Before typing `git commit`, scroll down to "ABSOLUTE BLOCKER" section
+   - **READ** the 8-question checklist
+   - **VERIFY** ALL answers are "YES"
+   - **IF ANY "NO"** → Do NOT commit, complete missing step first
+
+5. **Follow mandatory workflows**:
    - **Testing**: MANDATORY for ALL code (see [Testing Workflow](docs/guidelines/TESTING_WORKFLOW.md)) ⭐ **READ BEFORE EVERY COMMIT**
    - **Test Failures**: ⚠️ **WHEN ANY TEST FAILS/ERRORS** → IMMEDIATELY follow [Test Failure Protocol](docs/guidelines/TEST_FAILURE_PROTOCOL.md) 🔴 **CRITICAL - NO EXCEPTIONS**
    - **Pre-Commit**: Review checklist before EVERY git commit (see [Pre-Commit Checklist](docs/guidelines/PRE_COMMIT_CHECKLIST.md)) ⭐ **MANDATORY**
@@ -659,7 +665,7 @@ When starting a session:
    - **Documentation**: Document all features and errors (see [Documentation Standards](docs/guidelines/DOCUMENTATION_STANDARDS.md))
    - **Todos**: Use TodoWrite to track progress (see [Todo Management](docs/guidelines/TODO_MANAGEMENT.md))
 
-5. **Monitor token usage**: Alert at 15% remaining (see [Session Management](docs/guidelines/SESSION_MANAGEMENT.md))
+6. **Monitor token usage**: Alert at 15% remaining (see [Session Management](docs/guidelines/SESSION_MANAGEMENT.md))
 
 ### ⚠️ CRITICAL: Auto-Compact Warning Protocol ⚠️
 
@@ -708,16 +714,44 @@ User should notify Claude by saying:
 **Why This Matters:**
 Auto-compaction can compress or lose nuanced context. Proper documentation before compaction ensures continuity.
 
-### 🚨 CRITICAL: Before EVERY Git Commit 🚨
+### 🚨 ABSOLUTE BLOCKER: STOP BEFORE EVERY GIT COMMIT 🚨
 
-**Claude Code MUST:**
-1. ✅ Review [Pre-Commit Checklist](docs/guidelines/PRE_COMMIT_CHECKLIST.md)
-2. ✅ Complete ALL 6 testing levels
-3. ✅ For frontend code: **WAIT for user browser testing confirmation**
-4. ✅ NEVER commit frontend code without user verification
-5. ✅ If ANY checklist item incomplete: **STOP and complete it first**
+**⛔️ DO NOT PROCEED WITH `git commit` UNTIL YOU ANSWER "YES" TO EVERY QUESTION:**
 
-**No exceptions. No shortcuts. User testing is MANDATORY for frontend code.**
+```
+MANDATORY PRE-COMMIT VERIFICATION CHECKLIST:
+
+[ ] 1. Did I complete Level 1: Build Compilation? (npm run build / pytest)
+[ ] 2. Did I complete Level 2: Dev Server Startup? (verify server starts)
+[ ] 3. Did I complete Level 3: Runtime Error Check? (no console errors)
+[ ] 4. Did I complete Level 4: Component/Feature Testing? (ALL features work)
+[ ] 5. Did I complete Level 5: Integration Testing? (no regressions)
+[ ] 6. Did I complete Level 6: Documentation? (test results documented)
+[ ] 7. For frontend code: Did USER confirm browser testing passed?
+[ ] 8. Did I read the Pre-Commit Checklist document?
+
+IF ANY ANSWER IS "NO" → STOP IMMEDIATELY
+DO NOT TYPE "git commit"
+DO NOT CREATE ANY COMMITS
+GO BACK AND COMPLETE THE MISSING STEP
+```
+
+**🚨 THIS IS AN ABSOLUTE RULE - NO EXCEPTIONS EVER 🚨**
+
+**What to do RIGHT NOW before typing `git commit`:**
+1. **STOP** - Do not proceed
+2. **READ** [Pre-Commit Checklist](docs/guidelines/PRE_COMMIT_CHECKLIST.md) completely
+3. **READ** [Testing Workflow](docs/guidelines/TESTING_WORKFLOW.md) completely
+4. **VERIFY** all 6 testing levels completed
+5. **DOCUMENT** test results
+6. **ONLY THEN** proceed with commit
+
+**Why this exists:**
+- Session 5 (SANSKRIT project): Claude committed content structure without ANY testing
+- This caused protocol violation and required remediation
+- This blocker prevents future violations
+
+**No exceptions. No shortcuts. No "I'll test it later". Test FIRST, commit SECOND.**
 
 ---
 

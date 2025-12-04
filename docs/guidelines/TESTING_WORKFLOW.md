@@ -55,6 +55,54 @@ This document defines the **mandatory testing workflow** that must be followed f
 
 ---
 
+## 🚨 UNIVERSAL RULE: NEVER ASSUME A TEST PASSED 🚨
+
+**This rule applies to EVERY testing level (1-6), EVERY command, EVERY test.**
+
+### When Running ANY Test Command:
+
+**❌ NEVER do this:**
+- Assume a test passed because another test passed
+- Skip investigating when output looks wrong/unexpected
+- Rationalize why a failure "doesn't matter"
+- Move on without seeing clear success indicators
+- Guess that something worked without verification
+
+**✅ ALWAYS do this:**
+- Run the test command and WAIT for output
+- READ the output carefully
+- If output is unexpected (help text, error, silence when you expect output) → **INVESTIGATE**
+- If test fails → **FIX IT IMMEDIATELY**
+- If you don't understand the output → **FIGURE IT OUT** (check docs, test files, ask user)
+- Only mark test as PASSED when you see **CLEAR SUCCESS INDICATORS**
+
+### Clear Success Indicators by Test Type:
+
+| Test Type | Success Looks Like |
+|-----------|-------------------|
+| `npm run build` | "✓ Compiled successfully" |
+| `tsc --noEmit` | NO output (silent = success) |
+| `pytest` | "X passed" with no failures |
+| Server startup | "Server running on port X" |
+| Browser test | User confirms "all tests passed" |
+
+### If Output is Unexpected:
+
+1. **STOP** - Do not proceed to next test
+2. **READ** error message / unexpected output carefully
+3. **IDENTIFY** why output is wrong (wrong directory? missing config? syntax error?)
+4. **INVESTIGATE** the root cause (check file locations, read docs, verify setup)
+5. **FIX** the issue properly (not with workarounds)
+6. **RE-RUN** the test to verify fix
+7. **DOCUMENT** what was wrong and how you fixed it
+8. **ONLY THEN** proceed to next test level
+
+### The Golden Rule:
+
+> **"Unexpected output = Something is wrong. NEVER assume otherwise."**
+
+---
+
 ## Mandatory Testing Levels
 
 Every code change must pass **ALL** of these testing levels before committing:
@@ -75,18 +123,47 @@ pytest --collect-only  # Verify tests can be collected
 # Frontend (React)
 cd frontend
 npm run build
+
+# For TypeScript projects (MANDATORY):
+# - Run TypeScript type checking explicitly
+# - For monorepo projects, specify the project path
+npx tsc --noEmit  # Single project
+# OR for monorepo:
+npx tsc --project apps/web --noEmit  # Specify project path
 ```
+
+**⚠️ CRITICAL: If Any Command Shows Unexpected Output**
+- If a command shows HELP text instead of running → INVESTIGATE
+- If a command fails with an error → READ THE ERROR, FIX IT
+- If a command produces no output when you expect output → VERIFY it ran correctly
+- **NEVER assume a test passed if you didn't see clear success indicators**
+- **NEVER skip a test because it "seems difficult" - figure out the correct way to run it**
 
 **Pass Criteria:**
 - ✅ No compilation errors
 - ✅ No TypeScript/linting errors
 - ✅ Build completes successfully
+- ✅ `tsc --noEmit` (or equivalent) produces NO output (meaning no errors)
+- ✅ ALL commands ran correctly (not showing help/error text)
 
 **If Failed:**
 - ❌ DO NOT commit
+- ❌ DO NOT proceed to next level
+- ❌ DO NOT assume it passed based on a different test
 - Fix errors immediately
 - Re-run build
 - Only commit when build passes
+- **Remember:** Follow the "UNIVERSAL RULE: NEVER ASSUME A TEST PASSED" above
+
+**If Command Doesn't Work As Expected:**
+- STOP and investigate why
+- Check if you're in the right directory
+- Check if config files exist (tsconfig.json, etc.)
+- Read error messages carefully
+- Look up correct syntax for monorepo/specific setup
+- Test alternative approaches until you find the right one
+- DOCUMENT the correct command for future reference
+- **Remember:** "Unexpected output = Something is wrong. NEVER assume otherwise."
 
 ---
 
@@ -142,6 +219,7 @@ npm run dev
 - Fix runtime errors
 - Re-run server
 - Only commit when server starts cleanly
+- **Remember:** Follow the "UNIVERSAL RULE: NEVER ASSUME A TEST PASSED" (see above)
 
 ---
 
@@ -169,6 +247,7 @@ npm run dev
 - Fix issues (imports, dependencies, syntax)
 - Restart server
 - Only commit when runtime is clean
+- **Remember:** Follow the "UNIVERSAL RULE: NEVER ASSUME A TEST PASSED" (see above)
 
 ---
 
@@ -229,6 +308,7 @@ pytest --cov=app tests/
 - Debug and fix issues based on user feedback
 - Re-test until user confirms all tests pass
 - Only commit when user confirms feature works correctly
+- **Remember:** Follow the "UNIVERSAL RULE: NEVER ASSUME A TEST PASSED" (see above)
 
 ---
 
@@ -279,6 +359,7 @@ pytest --cov=app tests/
 - Fix integration issues
 - Re-run all tests
 - Only commit when integration is clean
+- **Remember:** Follow the "UNIVERSAL RULE: NEVER ASSUME A TEST PASSED" (see above)
 
 ---
 

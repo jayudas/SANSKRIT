@@ -1,0 +1,954 @@
+{
+  "lessonId": "p1-m1-w1-l6-conjunct-consonants",
+  "title": "Conjunct Consonants (संयुक्ताक्षर Saṃyuktākṣara)",
+  "order": 6,
+  "estimatedMinutes": 70,
+  "objectives": [
+    "Understand what conjunct consonants are and why Sanskrit uses them",
+    "Learn how consonant clusters are formed using the halanta (virama) mark",
+    "Master the 20-30 most common conjunct forms",
+    "Recognize that conjuncts can be STACKED, SIDE-BY-SIDE, or SPECIAL FORMS",
+    "Read words containing conjunct consonants fluently"
+  ],
+  "sections": [
+    {
+      "type": "introduction",
+      "title": "When Consonants Meet: Consonant Clusters",
+      "content": "You've learned all the vowels, all the consonants, and all the vowel marks. You can now read simple Sanskrit words! But you'll often encounter consonant clusters—sequences where two or more consonants appear WITHOUT a vowel between them. For example, in the word प्रिय (priya 'dear'), the consonants प (p) and र (r) combine directly before the vowel इ. Or in धर्म (dharma 'duty'), the consonants ध (dh) and र (r) combine, then म (m) follows. These are called CONJUNCT CONSONANTS or SAMYUKTĀKṢARA (संयुक्ताक्षर 'joined letters'). Sanskrit script represents consonant clusters in a special way: by removing the inherent 'a' vowel from all consonants EXCEPT THE LAST one, and combining them into a single visual unit. This lesson teaches you how conjuncts are formed and how to recognize the most common ones. This is the FINAL piece of Devanagari mastery—after this, you can read any Sanskrit text!",
+      "order": 1
+    },
+    {
+      "type": "content",
+      "title": "How Conjuncts Are Formed: The Halanta (विराम Virāma) Mark",
+      "content": "Remember: every consonant letter has an INHERENT 'a' vowel. क = ka, न = na, त = ta. To remove that inherent vowel and write just the consonant sound alone, you add a HALANTA mark (्), also called VIRĀMA. The halanta is a diagonal stroke below the consonant: क् = k (no vowel), न् = n (no vowel), त् = t (no vowel). When you want to write a consonant cluster, you: (1) Take the first consonant, (2) Add halanta to remove its vowel, (3) Attach it to the next consonant, (4) The combination may appear stacked vertically, side-by-side, or as a special ligature. Example: स् + त = स्त (sta); न् + त = न्त (nta); प् + र = प्र (pra). The LAST consonant in the cluster keeps its inherent vowel (or takes a vowel mark). Let's look at the three main types of conjunct forms:",
+      "order": 2
+    },
+    {
+      "type": "content",
+      "title": "Type 1: Stacked Forms (Vertical Combination)",
+      "content": "Many conjuncts are formed by STACKING consonants vertically. The first consonant (with halanta) goes on TOP, and the second consonant goes BELOW. The combined form is read as a single unit. Here are the most common stacked conjuncts:",
+      "order": 3,
+      "items": [
+        {
+          "conjunct": "क्क",
+          "components": "क् + क",
+          "iast": "kka",
+          "pronunciation": "/kːa/",
+          "note": "Geminate (doubled) k. The top क is condensed. Pronounced as a held /k/ sound.",
+          "audioFile": "/audio/phonemes/conjuncts/kka.mp3",
+          "examples": [
+            {
+              "word": "लक्का",
+              "iast": "lakkā",
+              "meaning": "example word",
+              "audioFile": "/audio/words/lakka.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "क्त",
+          "components": "क् + त",
+          "iast": "kta",
+          "pronunciation": "/kta/",
+          "note": "Very common. क on top, त below. Found in past participles.",
+          "audioFile": "/audio/phonemes/conjuncts/kta.mp3",
+          "examples": [
+            {
+              "word": "मुक्त",
+              "iast": "mukta",
+              "meaning": "liberated, freed",
+              "audioFile": "/audio/words/mukta.mp3"
+            },
+            {
+              "word": "युक्त",
+              "iast": "yukta",
+              "meaning": "joined, connected",
+              "audioFile": "/audio/words/yukta.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "क्ष",
+          "components": "क् + ष",
+          "iast": "kṣa",
+          "pronunciation": "/kʂa/",
+          "note": "EXTREMELY COMMON. Considered almost like a separate letter. क on top, ष below (condensed).",
+          "audioFile": "/audio/phonemes/conjuncts/ksha.mp3",
+          "examples": [
+            {
+              "word": "क्षत्रिय",
+              "iast": "kṣatriya",
+              "meaning": "warrior class",
+              "audioFile": "/audio/words/kshatriya.mp3"
+            },
+            {
+              "word": "अक्षर",
+              "iast": "akṣara",
+              "meaning": "letter, syllable; imperishable",
+              "audioFile": "/audio/words/akshara.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ग्ध",
+          "components": "ग् + ध",
+          "iast": "gdha",
+          "pronunciation": "/gdʱa/",
+          "note": "ग on top, ध below. Two voiced sounds together.",
+          "audioFile": "/audio/phonemes/conjuncts/gdha.mp3",
+          "examples": [
+            {
+              "word": "मुग्ध",
+              "iast": "mugdha",
+              "meaning": "bewildered, charmed",
+              "audioFile": "/audio/words/mugdha.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ङ्क",
+          "components": "ङ् + क",
+          "iast": "ṅka",
+          "pronunciation": "/ŋka/",
+          "note": "Velar nasal + velar stop. ङ condensed on top, क below.",
+          "audioFile": "/audio/phonemes/conjuncts/ngka.mp3",
+          "examples": [
+            {
+              "word": "अङ्क",
+              "iast": "aṅka",
+              "meaning": "number, mark, lap",
+              "audioFile": "/audio/words/anka.mp3"
+            },
+            {
+              "word": "शङ्कर",
+              "iast": "śaṅkara",
+              "meaning": "name of Shiva; causing happiness",
+              "audioFile": "/audio/words/shankara.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ङ्ग",
+          "components": "ङ् + ग",
+          "iast": "ṅga",
+          "pronunciation": "/ŋga/",
+          "note": "Very common. Velar nasal + voiced velar. ङ on top, ग below.",
+          "audioFile": "/audio/phonemes/conjuncts/ngga.mp3",
+          "examples": [
+            {
+              "word": "गङ्गा",
+              "iast": "gaṅgā",
+              "meaning": "the Ganges river",
+              "audioFile": "/audio/words/ganga.mp3"
+            },
+            {
+              "word": "अङ्ग",
+              "iast": "aṅga",
+              "meaning": "limb, body part",
+              "audioFile": "/audio/words/anga.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "च्च",
+          "components": "च् + च",
+          "iast": "cca",
+          "pronunciation": "/cːa/",
+          "note": "Geminate (doubled) च. Palatal stop held longer.",
+          "audioFile": "/audio/phonemes/conjuncts/cca.mp3",
+          "examples": [
+            {
+              "word": "सच्च",
+              "iast": "sacca",
+              "meaning": "truth (in some contexts)",
+              "audioFile": "/audio/words/sacca.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ञ्च",
+          "components": "ञ् + च",
+          "iast": "ñca",
+          "pronunciation": "/ɲca/",
+          "note": "Palatal nasal + palatal stop. ञ on top (condensed), च below.",
+          "audioFile": "/audio/phonemes/conjuncts/ncha.mp3",
+          "examples": [
+            {
+              "word": "पञ्च",
+              "iast": "pañca",
+              "meaning": "five",
+              "audioFile": "/audio/words/pancha.mp3"
+            },
+            {
+              "word": "अञ्चल",
+              "iast": "añcala",
+              "meaning": "border, edge, hem",
+              "audioFile": "/audio/words/anchala.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ञ्ज",
+          "components": "ञ् + ज",
+          "iast": "ñja",
+          "pronunciation": "/ɲɟa/",
+          "note": "Palatal nasal + voiced palatal. ञ on top, ज below.",
+          "audioFile": "/audio/phonemes/conjuncts/nja.mp3",
+          "examples": [
+            {
+              "word": "गञ्ज",
+              "iast": "gañja",
+              "meaning": "market, granary",
+              "audioFile": "/audio/words/ganja.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ट्ट",
+          "components": "ट् + ट",
+          "iast": "ṭṭa",
+          "pronunciation": "/ʈːa/",
+          "note": "Geminate (doubled) retroflex stop. Top ट condensed.",
+          "audioFile": "/audio/phonemes/conjuncts/tta.mp3",
+          "examples": [
+            {
+              "word": "पट्ट",
+              "iast": "paṭṭa",
+              "meaning": "cloth, board, tablet",
+              "audioFile": "/audio/words/patta.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ण्ड",
+          "components": "ण् + ड",
+          "iast": "ṇḍa",
+          "pronunciation": "/ɳɖa/",
+          "note": "Retroflex nasal + voiced retroflex stop. ण on top, ड below.",
+          "audioFile": "/audio/phonemes/conjuncts/nda-retro.mp3",
+          "examples": [
+            {
+              "word": "दण्ड",
+              "iast": "daṇḍa",
+              "meaning": "stick, staff, punishment",
+              "audioFile": "/audio/words/danda.mp3"
+            },
+            {
+              "word": "खण्ड",
+              "iast": "khaṇḍa",
+              "meaning": "section, fragment",
+              "audioFile": "/audio/words/khanda.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "त्त",
+          "components": "त् + त",
+          "iast": "tta",
+          "pronunciation": "/t̪ːa/",
+          "note": "Geminate (doubled) dental stop. Very common.",
+          "audioFile": "/audio/phonemes/conjuncts/tta-dental.mp3",
+          "examples": [
+            {
+              "word": "सत्त्व",
+              "iast": "sattva",
+              "meaning": "being, reality, goodness (a guṇa)",
+              "audioFile": "/audio/words/sattva.mp3"
+            },
+            {
+              "word": "उत्तर",
+              "iast": "uttara",
+              "meaning": "north, upper, answer",
+              "audioFile": "/audio/words/uttara.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "त्य",
+          "components": "त् + य",
+          "iast": "tya",
+          "pronunciation": "/tja/",
+          "note": "Dental stop + य. Very common conjunct.",
+          "audioFile": "/audio/phonemes/conjuncts/tya.mp3",
+          "examples": [
+            {
+              "word": "सत्य",
+              "iast": "satya",
+              "meaning": "truth, reality",
+              "audioFile": "/audio/words/satya.mp3"
+            },
+            {
+              "word": "नित्य",
+              "iast": "nitya",
+              "meaning": "eternal, constant",
+              "audioFile": "/audio/words/nitya.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "त्व",
+          "components": "त् + व",
+          "iast": "tva",
+          "pronunciation": "/tʋa/",
+          "note": "Dental stop + व. Forms abstract nouns (-tva = -ness).",
+          "audioFile": "/audio/phonemes/conjuncts/tva.mp3",
+          "examples": [
+            {
+              "word": "देवत्व",
+              "iast": "devatva",
+              "meaning": "divinity, godhood",
+              "audioFile": "/audio/words/devatva.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "न्त",
+          "components": "न् + त",
+          "iast": "nta",
+          "pronunciation": "/n̪t̪a/",
+          "note": "EXTREMELY COMMON. Dental nasal + dental stop. Found in present participles.",
+          "audioFile": "/audio/phonemes/conjuncts/nta.mp3",
+          "examples": [
+            {
+              "word": "सन्त",
+              "iast": "santa",
+              "meaning": "being, saint (present participle of 'to be')",
+              "audioFile": "/audio/words/santa.mp3"
+            },
+            {
+              "word": "शान्त",
+              "iast": "śānta",
+              "meaning": "peaceful, calm",
+              "audioFile": "/audio/words/shanta.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "न्द",
+          "components": "न् + द",
+          "iast": "nda",
+          "pronunciation": "/n̪d̪a/",
+          "note": "Very common. Dental nasal + voiced dental stop.",
+          "audioFile": "/audio/phonemes/conjuncts/nda-dental.mp3",
+          "examples": [
+            {
+              "word": "आनन्द",
+              "iast": "ānanda",
+              "meaning": "bliss, joy",
+              "audioFile": "/audio/words/ananda.mp3"
+            },
+            {
+              "word": "वन्द",
+              "iast": "vanda",
+              "meaning": "praise, worship (root)",
+              "audioFile": "/audio/words/vanda.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "न्ध",
+          "components": "न् + ध",
+          "iast": "ndha",
+          "pronunciation": "/n̪d̪ʱa/",
+          "note": "Dental nasal + voiced aspirated dental.",
+          "audioFile": "/audio/phonemes/conjuncts/ndha.mp3",
+          "examples": [
+            {
+              "word": "बन्ध",
+              "iast": "bandha",
+              "meaning": "binding, bond",
+              "audioFile": "/audio/words/bandha.mp3"
+            },
+            {
+              "word": "गन्ध",
+              "iast": "gandha",
+              "meaning": "smell, fragrance",
+              "audioFile": "/audio/words/gandha.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "न्न",
+          "components": "न् + न",
+          "iast": "nna",
+          "pronunciation": "/nːa/",
+          "note": "Geminate (doubled) dental nasal. Held longer.",
+          "audioFile": "/audio/phonemes/conjuncts/nna.mp3",
+          "examples": [
+            {
+              "word": "अन्न",
+              "iast": "anna",
+              "meaning": "food, grain",
+              "audioFile": "/audio/words/anna.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "प्त",
+          "components": "प् + त",
+          "iast": "pta",
+          "pronunciation": "/pta/",
+          "note": "Labial stop + dental stop. Common in past participles.",
+          "audioFile": "/audio/phonemes/conjuncts/pta.mp3",
+          "examples": [
+            {
+              "word": "गुप्त",
+              "iast": "gupta",
+              "meaning": "hidden, protected",
+              "audioFile": "/audio/words/gupta.mp3"
+            },
+            {
+              "word": "कॢप्त",
+              "iast": "kḷpta",
+              "meaning": "arranged, prepared",
+              "audioFile": "/audio/words/klipta.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "म्प",
+          "components": "म् + प",
+          "iast": "mpa",
+          "pronunciation": "/mpa/",
+          "note": "Labial nasal + labial stop.",
+          "audioFile": "/audio/phonemes/conjuncts/mpa.mp3",
+          "examples": [
+            {
+              "word": "सम्पूर्ण",
+              "iast": "sampūrṇa",
+              "meaning": "complete, whole",
+              "audioFile": "/audio/words/sampurna.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "म्ब",
+          "components": "म् + ब",
+          "iast": "mba",
+          "pronunciation": "/mba/",
+          "note": "Labial nasal + voiced labial stop.",
+          "audioFile": "/audio/phonemes/conjuncts/mba.mp3",
+          "examples": [
+            {
+              "word": "अम्ब",
+              "iast": "amba",
+              "meaning": "mother",
+              "audioFile": "/audio/words/amba.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "म्भ",
+          "components": "म् + भ",
+          "iast": "mbha",
+          "pronunciation": "/mbʱa/",
+          "note": "Labial nasal + voiced aspirated labial.",
+          "audioFile": "/audio/phonemes/conjuncts/mbha.mp3",
+          "examples": [
+            {
+              "word": "शम्भु",
+              "iast": "śambhu",
+              "meaning": "name of Shiva; source of happiness",
+              "audioFile": "/audio/words/shambhu.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Type 2: Side-by-Side Forms (Horizontal Combination)",
+      "content": "Some conjuncts are written SIDE-BY-SIDE (horizontally) rather than stacked. This often happens with र (ra) and with certain other consonants. The forms can look quite different from the original letters:",
+      "order": 4,
+      "items": [
+        {
+          "conjunct": "त्र",
+          "components": "त् + र",
+          "iast": "tra",
+          "pronunciation": "/tra/",
+          "note": "VERY COMMON. Dental stop + ra. The र appears as a diagonal stroke attached to the right of त.",
+          "audioFile": "/audio/phonemes/conjuncts/tra.mp3",
+          "examples": [
+            {
+              "word": "मन्त्र",
+              "iast": "mantra",
+              "meaning": "sacred formula, hymn",
+              "audioFile": "/audio/words/mantra.mp3"
+            },
+            {
+              "word": "पुत्र",
+              "iast": "putra",
+              "meaning": "son",
+              "audioFile": "/audio/words/putra.mp3"
+            },
+            {
+              "word": "मित्र",
+              "iast": "mitra",
+              "meaning": "friend",
+              "audioFile": "/audio/words/mitra.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "स्त",
+          "components": "स् + त",
+          "iast": "sta",
+          "pronunciation": "/sta/",
+          "note": "Sibilant + dental stop. Very common. The त appears below-right of condensed स.",
+          "audioFile": "/audio/phonemes/conjuncts/sta.mp3",
+          "examples": [
+            {
+              "word": "नमस्ते",
+              "iast": "namaste",
+              "meaning": "salutation (bow to you)",
+              "audioFile": "/audio/words/namaste.mp3"
+            },
+            {
+              "word": "वस्तु",
+              "iast": "vastu",
+              "meaning": "thing, object, reality",
+              "audioFile": "/audio/words/vastu.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "स्थ",
+          "components": "स् + थ",
+          "iast": "stha",
+          "pronunciation": "/stʰa/",
+          "note": "Sibilant + aspirated dental. Common in verbs meaning 'to stand'.",
+          "audioFile": "/audio/phonemes/conjuncts/stha.mp3",
+          "examples": [
+            {
+              "word": "स्थान",
+              "iast": "sthāna",
+              "meaning": "place, position",
+              "audioFile": "/audio/words/sthana.mp3"
+            },
+            {
+              "word": "स्थिर",
+              "iast": "sthira",
+              "meaning": "firm, steady, stable",
+              "audioFile": "/audio/words/sthira.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ष्ट",
+          "components": "ष् + ट",
+          "iast": "ṣṭa",
+          "pronunciation": "/ʂʈa/",
+          "note": "Retroflex sibilant + retroflex stop. Common combination.",
+          "audioFile": "/audio/phonemes/conjuncts/shta.mp3",
+          "examples": [
+            {
+              "word": "दृष्ट",
+              "iast": "dṛṣṭa",
+              "meaning": "seen (past participle of 'to see')",
+              "audioFile": "/audio/words/drishta.mp3"
+            },
+            {
+              "word": "कृष्ट",
+              "iast": "kṛṣṭa",
+              "meaning": "drawn, plowed",
+              "audioFile": "/audio/words/krishta.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ष्ठ",
+          "components": "ष् + ठ",
+          "iast": "ṣṭha",
+          "pronunciation": "/ʂʈʰa/",
+          "note": "Retroflex sibilant + aspirated retroflex stop.",
+          "audioFile": "/audio/phonemes/conjuncts/shtha.mp3",
+          "examples": [
+            {
+              "word": "निष्ठा",
+              "iast": "niṣṭhā",
+              "meaning": "devotion, faithfulness",
+              "audioFile": "/audio/words/nishtha.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ष्ण",
+          "components": "ष् + ण",
+          "iast": "ṣṇa",
+          "pronunciation": "/ʂɳa/",
+          "note": "Retroflex sibilant + retroflex nasal. Found in Krishna's name.",
+          "audioFile": "/audio/phonemes/conjuncts/shna.mp3",
+          "examples": [
+            {
+              "word": "कृष्ण",
+              "iast": "kṛṣṇa",
+              "meaning": "Krishna; dark, black",
+              "audioFile": "/audio/words/krishna.mp3"
+            },
+            {
+              "word": "तृष्णा",
+              "iast": "tṛṣṇā",
+              "meaning": "thirst, craving",
+              "audioFile": "/audio/words/trishna.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "श्च",
+          "components": "श् + च",
+          "iast": "śca",
+          "pronunciation": "/ɕca/",
+          "note": "Palatal sibilant + palatal stop. Both same place of articulation.",
+          "audioFile": "/audio/phonemes/conjuncts/shcha.mp3",
+          "examples": [
+            {
+              "word": "पश्चात्",
+              "iast": "paścāt",
+              "meaning": "after, behind",
+              "audioFile": "/audio/words/paschat.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "श्व",
+          "components": "श् + व",
+          "iast": "śva",
+          "pronunciation": "/ɕʋa/",
+          "note": "Palatal sibilant + labio-dental approximant.",
+          "audioFile": "/audio/phonemes/conjuncts/shva.mp3",
+          "examples": [
+            {
+              "word": "अश्व",
+              "iast": "aśva",
+              "meaning": "horse",
+              "audioFile": "/audio/words/ashva.mp3"
+            },
+            {
+              "word": "विश्व",
+              "iast": "viśva",
+              "meaning": "universe, all",
+              "audioFile": "/audio/words/vishva.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ह्म",
+          "components": "ह् + म",
+          "iast": "hma",
+          "pronunciation": "/ɦma/",
+          "note": "Glottal fricative + labial nasal.",
+          "audioFile": "/audio/phonemes/conjuncts/hma.mp3",
+          "examples": [
+            {
+              "word": "ब्रह्म",
+              "iast": "brahma",
+              "meaning": "Brahman, ultimate reality; Brahma the creator",
+              "audioFile": "/audio/words/brahma.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ह्य",
+          "components": "ह् + य",
+          "iast": "hya",
+          "pronunciation": "/ɦja/",
+          "note": "Glottal fricative + palatal approximant.",
+          "audioFile": "/audio/phonemes/conjuncts/hya.mp3",
+          "examples": [
+            {
+              "word": "वाह्य",
+              "iast": "vāhya",
+              "meaning": "external, outer",
+              "audioFile": "/audio/words/vahya.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Type 3: Special Forms (Repha and Other Ligatures)",
+      "content": "Some conjuncts have SPECIAL FORMS that don't look like either original letter. The most important is REPHA—when र (ra) comes BEFORE another consonant:",
+      "order": 5,
+      "items": [
+        {
+          "conjunct": "र् + consonant",
+          "name": "Repha (र्)",
+          "visual": "Small hook above the following consonant",
+          "iast": "r + consonant",
+          "note": "When र् (r with halanta) comes BEFORE another consonant, it's written as a small diagonal hook (repha) ABOVE the following consonant. This is very common and important to recognize.",
+          "audioFile": "/audio/phonemes/conjuncts/repha-explanation.mp3",
+          "examples": [
+            {
+              "word": "धर्म",
+              "visual": "ध + repha above + म",
+              "iast": "dharma",
+              "meaning": "duty, righteousness, cosmic law",
+              "note": "The र appears as a hook above ध. Read as: dhar-ma.",
+              "audioFile": "/audio/words/dharma.mp3"
+            },
+            {
+              "word": "कर्म",
+              "visual": "क + repha above + म",
+              "iast": "karma",
+              "meaning": "action, deed, fate",
+              "note": "The र appears as a hook above क. Read as: kar-ma.",
+              "audioFile": "/audio/words/karma.mp3"
+            },
+            {
+              "word": "वर्ग",
+              "visual": "व + repha above + ग",
+              "iast": "varga",
+              "meaning": "group, class, category",
+              "note": "The र appears as a hook above व. Read as: var-ga.",
+              "audioFile": "/audio/words/varga.mp3"
+            },
+            {
+              "word": "सर्व",
+              "visual": "स + repha above + व",
+              "iast": "sarva",
+              "meaning": "all, every, whole",
+              "note": "The र appears as a hook above स. Read as: sar-va.",
+              "audioFile": "/audio/words/sarva.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ज्ञ",
+          "components": "ज् + ञ",
+          "iast": "jña",
+          "pronunciation": "/ɟɲa/",
+          "note": "SPECIAL LIGATURE. Very common. Looks like a unique character. Classical pronunciation: /ɟɲa/ (palatal stop + palatal nasal, NOT /gj/). Modern often /gy/.",
+          "audioFile": "/audio/phonemes/conjuncts/jnya.mp3",
+          "examples": [
+            {
+              "word": "ज्ञान",
+              "iast": "jñāna",
+              "meaning": "knowledge, wisdom",
+              "audioFile": "/audio/words/jnana.mp3"
+            },
+            {
+              "word": "विज्ञान",
+              "iast": "vijñāna",
+              "meaning": "science, discriminative knowledge",
+              "audioFile": "/audio/words/vijnana.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "क्र",
+          "components": "क् + र",
+          "iast": "kra",
+          "pronunciation": "/kra/",
+          "note": "Special form. क with र attached as a diagonal stroke below-right.",
+          "audioFile": "/audio/phonemes/conjuncts/kra.mp3",
+          "examples": [
+            {
+              "word": "चक्र",
+              "iast": "cakra",
+              "meaning": "wheel, disc, circle",
+              "audioFile": "/audio/words/chakra.mp3"
+            },
+            {
+              "word": "विक्रम",
+              "iast": "vikrama",
+              "meaning": "valor, prowess; stride",
+              "audioFile": "/audio/words/vikrama.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "प्र",
+          "components": "प् + र",
+          "iast": "pra",
+          "pronunciation": "/pra/",
+          "note": "Very common. Special ligature form.",
+          "audioFile": "/audio/phonemes/conjuncts/pra.mp3",
+          "examples": [
+            {
+              "word": "प्रेम",
+              "iast": "prema",
+              "meaning": "love, affection",
+              "audioFile": "/audio/words/prema.mp3"
+            },
+            {
+              "word": "प्रकाश",
+              "iast": "prakāśa",
+              "meaning": "light, brightness, manifestation",
+              "audioFile": "/audio/words/prakasha.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "श्र",
+          "components": "श् + र",
+          "iast": "śra",
+          "pronunciation": "/ɕra/",
+          "note": "Special form. श with र attached.",
+          "audioFile": "/audio/phonemes/conjuncts/shra.mp3",
+          "examples": [
+            {
+              "word": "श्रीः",
+              "iast": "śrīḥ",
+              "meaning": "beauty, prosperity, goddess Lakshmi",
+              "audioFile": "/audio/words/shri.mp3"
+            },
+            {
+              "word": "श्रुति",
+              "iast": "śruti",
+              "meaning": "hearing, Vedic revelation",
+              "audioFile": "/audio/words/shruti.mp3"
+            }
+          ]
+        },
+        {
+          "conjunct": "ह्व",
+          "components": "ह् + व",
+          "iast": "hva",
+          "pronunciation": "/ɦʋa/",
+          "note": "Special form. ह with व attached.",
+          "audioFile": "/audio/phonemes/conjuncts/hva.mp3",
+          "examples": [
+            {
+              "word": "आह्वान",
+              "iast": "āhvāna",
+              "meaning": "invocation, calling",
+              "audioFile": "/audio/words/ahvana.mp3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Complex Conjuncts: Three or More Consonants",
+      "content": "Sometimes three or more consonants combine in a single syllable. These follow the same principles: remove the inherent vowel from all but the last consonant. Read them in sequence. Here are some important examples:",
+      "order": 6,
+      "items": [
+        {
+          "word": "तत्त्व",
+          "iast": "tattva",
+          "breakdown": "त् + त् + व = तत्त्व",
+          "syllables": "tat-tva",
+          "meaning": "reality, principle, truth, 'that-ness'",
+          "note": "Triple consonant: two त with halanta, then व. Stacked form.",
+          "audioFile": "/audio/words/tattva.mp3"
+        },
+        {
+          "word": "स्त्री",
+          "iast": "strī",
+          "breakdown": "स् + त् + र + ी = स्त्री",
+          "syllables": "strī (single syllable!)",
+          "meaning": "woman",
+          "note": "Triple consonant cluster: स् + त् + र, then ī vowel mark. Single syllable!",
+          "audioFile": "/audio/words/stri.mp3"
+        },
+        {
+          "word": "नक्ष्त्र",
+          "iast": "nakṣtra",
+          "breakdown": "न + क् + ष् + त् + र = नक्ष्त्र",
+          "syllables": "nak-ṣtra",
+          "meaning": "star, constellation, lunar mansion",
+          "note": "Complex: न with inherent a, then क्ष्त्र cluster (four consonants!). Two syllables.",
+          "audioFile": "/audio/words/nakshatra.mp3"
+        },
+        {
+          "word": "शास्त्र",
+          "iast": "śāstra",
+          "breakdown": "श + ा + स् + त् + र = शास्त्र",
+          "syllables": "śā-stra",
+          "meaning": "scripture, treatise, science",
+          "note": "श with ā mark = शा, then स्त्र conjunct (three consonants).",
+          "audioFile": "/audio/words/shastra.mp3"
+        },
+        {
+          "word": "राष्ट्र",
+          "iast": "rāṣṭra",
+          "breakdown": "र + ा + ष् + ट् + र = राष्ट्र",
+          "syllables": "rā-ṣṭra",
+          "meaning": "nation, kingdom, realm",
+          "note": "र with ā mark = रा, then ष्ट्र conjunct (three consonants).",
+          "audioFile": "/audio/words/rashtra.mp3"
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Reading Practice: Common Words with Conjuncts",
+      "content": "Let's practice reading common Sanskrit words that contain conjuncts. These words appear frequently in texts. Try to identify the conjunct forms and pronounce each word:",
+      "order": 7,
+      "items": [
+        {
+          "word": "संस्कृत",
+          "iast": "saṃskṛta",
+          "breakdown": "स + ं + स् + क् + ृ + त = संस्कृत",
+          "meaning": "Sanskrit; perfected, refined",
+          "note": "Anusvāra, then स्क्ृ conjunct (three components: स्, क्, ृ mark), then त.",
+          "audioFile": "/audio/words/samskrita.mp3"
+        },
+        {
+          "word": "भारत",
+          "iast": "bhārata",
+          "breakdown": "भ + ा + र + त = भारत",
+          "meaning": "India, descendant of Bharata",
+          "note": "No conjuncts here—just भा + र + त. Simple word for practice.",
+          "audioFile": "/audio/words/bharata.mp3"
+        },
+        {
+          "word": "अध्याय",
+          "iast": "adhyāya",
+          "breakdown": "अ + ध् + य + ा + य = अध्याय",
+          "meaning": "chapter, lesson",
+          "note": "Starts with अ (independent vowel), then ध्य conjunct, then ा mark, then य.",
+          "audioFile": "/audio/words/adhyaya.mp3"
+        },
+        {
+          "word": "प्राण",
+          "iast": "prāṇa",
+          "breakdown": "प् + र + ा + ण = प्राण",
+          "meaning": "breath, life force, vital energy",
+          "note": "Starts with प्र conjunct (special form), then ा mark, then ण.",
+          "audioFile": "/audio/words/prana.mp3"
+        },
+        {
+          "word": "आत्मन्",
+          "iast": "ātman",
+          "breakdown": "आ + त् + म + न् = आत्मन्",
+          "meaning": "self, soul, essence",
+          "note": "Independent आ, then त्म conjunct, then न् with halanta (final consonant without vowel).",
+          "audioFile": "/audio/words/atman.mp3"
+        },
+        {
+          "word": "नमस्कार",
+          "iast": "namaskāra",
+          "breakdown": "न + म + स् + क + ा + र = नमस्कार",
+          "meaning": "respectful greeting, salutation",
+          "note": "न + म + स्क conjunct + ा mark + र. Common greeting.",
+          "audioFile": "/audio/words/namaskara.mp3"
+        },
+        {
+          "word": "भक्ति",
+          "iast": "bhakti",
+          "breakdown": "भ + क् + त् + इ = भक्ति",
+          "meaning": "devotion, love, worship",
+          "note": "भ, then क्त conjunct, then इ mark. Common spiritual term.",
+          "audioFile": "/audio/words/bhakti.mp3"
+        },
+        {
+          "word": "अर्थ",
+          "iast": "artha",
+          "breakdown": "अ + र् + थ = अर्थ",
+          "meaning": "meaning, wealth, purpose",
+          "note": "Independent अ, then र् (repha) above थ. One of four puruṣārthas (life goals).",
+          "audioFile": "/audio/words/artha.mp3"
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "title": "Congratulations: You've Mastered the Devanagari Script!",
+      "content": "You have now completed your study of the Devanagari script! You've learned: (1) All 14 vowels in independent form; (2) All 33 consonants; (3) All 13 vowel marks (mātrās) that attach to consonants; (4) Special marks: anusvāra (ं) and visarga (ः); (5) Conjunct consonants (saṃyuktākṣara)—how consonant clusters are formed; (6) Three types of conjuncts: stacked, side-by-side, and special forms (including repha); (7) How to read complex multi-consonant clusters. With this foundation, you can READ ANY Sanskrit text written in Devanagari! You're ready to begin learning vocabulary, grammar, and sentence structure. The remaining months of the course will focus on USING Sanskrit—understanding and producing the language—rather than just reading the script. Well done! Your next steps: (1) Practice reading simple Sanskrit texts (subhāṣitas, Bhagavad Gita verses, simple stories); (2) Learn your first vocabulary words (nouns, verbs); (3) Study basic grammar (noun declensions, verb conjugations); (4) Begin forming simple sentences. The hard work of script mastery is behind you—now the exciting journey of language learning begins!",
+      "order": 8
+    }
+  ]
+}

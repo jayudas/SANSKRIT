@@ -1,0 +1,342 @@
+{
+  "lessonId": "p1-m1-w1-l5-vowel-marks",
+  "title": "Vowel Marks (मात्राः Mātrāḥ)",
+  "order": 5,
+  "estimatedMinutes": 60,
+  "objectives": [
+    "Understand the difference between independent vowels and dependent vowel marks",
+    "Learn that every consonant has an inherent 'a' vowel (क = /ka/ not /k/)",
+    "Master all 13 vowel marks that attach to consonants",
+    "Read consonant + vowel combinations (syllables)",
+    "Understand anusvāra (ं) and visarga (ः) as special markers"
+  ],
+  "sections": [
+    {
+      "type": "introduction",
+      "title": "From Alphabet to Words: The Critical Bridge",
+      "content": "You've mastered all 14 vowels and all 33 consonants—congratulations! But you may have noticed something puzzling: when you see क in a word, it's pronounced /ka/ (with an 'a' sound), not just /k/. And when you see words like कि or की, the vowel appears DIFFERENTLY than the independent forms इ and ई. This is because Sanskrit uses TWO FORMS for each vowel: (1) INDEPENDENT vowels (स्वर svaras)—used at the beginning of words or standalone, and (2) DEPENDENT vowel marks (मात्रा mātrās)—attached to consonants to create syllables. This lesson teaches you how vowel marks work—the ESSENTIAL skill for reading Sanskrit words. Without this knowledge, you cannot read even simple words like राम (rāma) or गीता (gītā).",
+      "order": 1
+    },
+    {
+      "type": "content",
+      "title": "The Inherent 'a' Vowel: Every Consonant Has It",
+      "content": "In Sanskrit, every consonant letter carries an INHERENT short 'a' vowel /ɐ/. When you write क, you're actually writing 'ka' (/kɐ/), not just 'k'. This is fundamental to understanding the script. To write just the consonant sound /k/ alone (without any vowel), you need a HALANTA (विराम virāma) mark: क् = k alone. But normally, consonants appear WITH their inherent 'a'. Examples: क = ka, ग = ga, च = ca, त = ta, म = ma, र = ra, व = va. When you want a consonant with a DIFFERENT vowel (not 'a'), you ADD A VOWEL MARK that replaces or modifies the inherent 'a'. Vowel marks are written BEFORE, AFTER, ABOVE, or BELOW the consonant, depending on which vowel. Think of it this way: consonant letter = consonant + 'a'; consonant letter + vowel mark = consonant + that vowel.",
+      "order": 2
+    },
+    {
+      "type": "content",
+      "title": "The 13 Vowel Marks: How Vowels Attach to Consonants",
+      "content": "Sanskrit has 14 vowels, but only 13 vowel marks—because अ (a) is already inherent in every consonant, so it needs no mark! When you want to change the inherent 'a' to another vowel, you add the corresponding mātrā (vowel mark). Here's the complete chart showing how each vowel appears independently vs. as a mark attached to the consonant क (ka):",
+      "order": 3,
+      "items": [
+        {
+          "vowel": "अ",
+          "iast": "a",
+          "ipa": "/ɐ/",
+          "independent": "अ",
+          "mark": "(none)",
+          "example": "क",
+          "exampleIast": "ka",
+          "pronunciation": "inherent in every consonant",
+          "note": "The short 'a' is BUILT-IN to every consonant. No mark needed. This is the default vowel. क = ka, not k."
+        },
+        {
+          "vowel": "आ",
+          "iast": "ā",
+          "ipa": "/aː/",
+          "independent": "आ",
+          "mark": "ा",
+          "example": "का",
+          "exampleIast": "kā",
+          "pronunciation": "vertical line after consonant",
+          "audioFile": "/audio/phonemes/vowel-marks/kaa.mp3",
+          "note": "Long 'a'. The mark ा (vertical line) goes to the RIGHT of the consonant. Examples: मा (mā), रा (rā), ता (tā)."
+        },
+        {
+          "vowel": "इ",
+          "iast": "i",
+          "ipa": "/i/",
+          "independent": "इ",
+          "mark": "ि",
+          "example": "कि",
+          "exampleIast": "ki",
+          "pronunciation": "short vertical stroke BEFORE consonant",
+          "audioFile": "/audio/phonemes/vowel-marks/ki.mp3",
+          "note": "Short 'i'. The mark ि goes to the LEFT of the consonant (unusual!). Examples: मि (mi), गि (gi). This is the ONLY vowel mark that precedes the consonant visually."
+        },
+        {
+          "vowel": "ई",
+          "iast": "ī",
+          "ipa": "/iː/",
+          "independent": "ई",
+          "mark": "ी",
+          "example": "की",
+          "exampleIast": "kī",
+          "pronunciation": "longer vertical stroke AFTER consonant",
+          "audioFile": "/audio/phonemes/vowel-marks/kii.mp3",
+          "note": "Long 'i'. The mark ी goes to the RIGHT of the consonant. Examples: गी (gī), ती (tī), री (rī)."
+        },
+        {
+          "vowel": "उ",
+          "iast": "u",
+          "ipa": "/u/",
+          "independent": "उ",
+          "mark": "ु",
+          "example": "कु",
+          "exampleIast": "ku",
+          "pronunciation": "small hook BELOW consonant",
+          "audioFile": "/audio/phonemes/vowel-marks/ku.mp3",
+          "note": "Short 'u'. The mark ु (small curved stroke) goes BELOW the consonant. Examples: गु (gu), तु (tu), सु (su)."
+        },
+        {
+          "vowel": "ऊ",
+          "iast": "ū",
+          "ipa": "/uː/",
+          "independent": "ऊ",
+          "mark": "ू",
+          "example": "कू",
+          "exampleIast": "kū",
+          "pronunciation": "longer hook BELOW consonant",
+          "audioFile": "/audio/phonemes/vowel-marks/kuu.mp3",
+          "note": "Long 'u'. The mark ू (longer curved stroke) goes BELOW the consonant. Examples: गू (gū), तू (tū), भू (bhū)."
+        },
+        {
+          "vowel": "ऋ",
+          "iast": "ṛ",
+          "ipa": "/r̩/",
+          "independent": "ऋ",
+          "mark": "ृ",
+          "example": "कृ",
+          "exampleIast": "kṛ",
+          "pronunciation": "diagonal stroke with tail BELOW",
+          "audioFile": "/audio/phonemes/vowel-marks/kri.mp3",
+          "note": "Vocalic 'r' (syllabic r). The mark ृ goes BELOW the consonant. Examples: गृ (gṛ), पृ (pṛ), तृ (tṛ). Common in words like कृष्ण (kṛṣṇa), गृह (gṛha)."
+        },
+        {
+          "vowel": "ॠ",
+          "iast": "ṝ",
+          "ipa": "/r̩ː/",
+          "independent": "ॠ",
+          "mark": "ॄ",
+          "example": "कॄ",
+          "exampleIast": "kṝ",
+          "pronunciation": "vocalic 'r' with additional stroke BELOW",
+          "audioFile": "/audio/phonemes/vowel-marks/krii.mp3",
+          "note": "Long vocalic 'r'. Extremely rare in Sanskrit. The mark ॄ goes BELOW. Almost never encountered in practice."
+        },
+        {
+          "vowel": "ऌ",
+          "iast": "ḷ",
+          "ipa": "/l̩/",
+          "independent": "ऌ",
+          "mark": "ॢ",
+          "example": "कॢ",
+          "exampleIast": "kḷ",
+          "pronunciation": "vocalic 'l' mark BELOW",
+          "audioFile": "/audio/phonemes/vowel-marks/kli.mp3",
+          "note": "Vocalic 'l' (syllabic l). Extremely rare—appears in only one word in classical literature: कॢप्त (kḷpta, a grammatical form). Included for completeness."
+        },
+        {
+          "vowel": "ॡ",
+          "iast": "ḹ",
+          "ipa": "/l̩ː/",
+          "independent": "ॡ",
+          "mark": "ॣ",
+          "example": "कॣ",
+          "exampleIast": "kḹ",
+          "pronunciation": "long vocalic 'l' mark BELOW",
+          "audioFile": "/audio/phonemes/vowel-marks/klii.mp3",
+          "note": "Long vocalic 'l'. Theoretical—does not actually occur in Sanskrit texts. Grammarians include it for systematic completeness."
+        },
+        {
+          "vowel": "ए",
+          "iast": "e",
+          "ipa": "/eː/",
+          "independent": "ए",
+          "mark": "े",
+          "example": "के",
+          "exampleIast": "ke",
+          "pronunciation": "short vertical stroke ABOVE",
+          "audioFile": "/audio/phonemes/vowel-marks/ke.mp3",
+          "note": "Long 'e' (always long in Sanskrit). The mark े goes ABOVE the consonant. Examples: मे (me), ते (te), गे (ge)."
+        },
+        {
+          "vowel": "ऐ",
+          "iast": "ai",
+          "ipa": "/aːi/",
+          "independent": "ऐ",
+          "mark": "ै",
+          "example": "कै",
+          "exampleIast": "kai",
+          "pronunciation": "horizontal stroke ABOVE",
+          "audioFile": "/audio/phonemes/vowel-marks/kai.mp3",
+          "note": "Diphthong 'ai'. The mark ै goes ABOVE the consonant. Examples: तै (tai), गै (gai), मै (mai)."
+        },
+        {
+          "vowel": "ओ",
+          "iast": "o",
+          "ipa": "/oː/",
+          "independent": "ओ",
+          "mark": "ो",
+          "example": "को",
+          "exampleIast": "ko",
+          "pronunciation": "vertical stroke AFTER with hook ABOVE",
+          "audioFile": "/audio/phonemes/vowel-marks/ko.mp3",
+          "note": "Long 'o' (always long in Sanskrit). The mark ो has TWO parts: vertical line to RIGHT + small stroke ABOVE. Examples: मो (mo), गो (go), तो (to)."
+        },
+        {
+          "vowel": "औ",
+          "iast": "au",
+          "ipa": "/aːu/",
+          "independent": "औ",
+          "mark": "ौ",
+          "example": "कौ",
+          "exampleIast": "kau",
+          "pronunciation": "vertical stroke AFTER with longer hook ABOVE",
+          "audioFile": "/audio/phonemes/vowel-marks/kau.mp3",
+          "note": "Diphthong 'au'. Similar to 'o' mark but with longer stroke above. Examples: गौ (gau - cow), तौ (tau), कौ (kau)."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Special Marks: Anusvāra (ं) and Visarga (ः)",
+      "content": "Beyond the 13 vowel marks, Sanskrit has two special diacritical marks that modify pronunciation. These are technically not vowels, but they're essential for reading Sanskrit correctly. Both are written AFTER the consonant, like vowel marks.",
+      "order": 4,
+      "items": [
+        {
+          "mark": "ं",
+          "name": "Anusvāra",
+          "iast": "ṃ",
+          "ipa": "varies: /ŋ/, /ɲ/, /ɳ/, /n/, /m/",
+          "example": "कं",
+          "exampleIast": "kaṃ",
+          "pronunciation": "nasalization - sound through nose",
+          "audioFile": "/audio/phonemes/special/kam-anusvara.mp3",
+          "note": "Anusvāra (अनुस्वार 'after-sound') is a DOT above the line after a consonant. It represents nasalization. The exact pronunciation depends on the FOLLOWING consonant: before क/ख/ग/घ it's /ŋ/ (velar), before च/छ/ज/झ it's /ɲ/ (palatal), before ट/ठ/ड/ढ it's /ɳ/ (retroflex), before त/थ/द/ध it's /n/ (dental), before प/फ/ब/भ it's /m/ (labial). In practice: it assimilates to match the place of articulation of the next consonant. Common in words like संस्कृत (saṃskṛta), गंगा (gaṃgā)."
+        },
+        {
+          "mark": "ः",
+          "name": "Visarga",
+          "iast": "ḥ",
+          "ipa": "/h/ or /ɦ/",
+          "example": "कः",
+          "exampleIast": "kaḥ",
+          "pronunciation": "breathy aspiration after vowel",
+          "audioFile": "/audio/phonemes/special/kah-visarga.mp3",
+          "note": "Visarga (विसर्ग 'emission, sending forth') is TWO DOTS vertically stacked after a consonant. It represents a voiceless glottal fricative /h/ (or sometimes voiced /ɦ/), like an echoed version of the preceding vowel with a breathy ending. The exact realization depends on the following sound and can undergo complex sandhi changes. Very common at the end of words in nominative singular masculine nouns: रामः (rāmaḥ), बालः (bālaḥ), गजः (gajaḥ). The visarga is the historical remnant of final -s or -r in Proto-Indo-European."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Reading Your First Words: Putting It All Together",
+      "content": "Now you can read Sanskrit words! Let's practice with common examples. Remember: read left to right, recognize each consonant, identify any vowel marks attached to it, and pronounce the syllables in sequence. Every consonant has an inherent 'a' unless modified by a vowel mark.",
+      "order": 5,
+      "items": [
+        {
+          "word": "राम",
+          "iast": "rāma",
+          "breakdown": "र (ra) + ा (ā mark) = रा (rā); म (ma) = म (ma)",
+          "syllables": "rā-ma",
+          "meaning": "Rama (hero of the Ramayana)",
+          "audioFile": "/audio/words/rama.mp3",
+          "note": "Two syllables. First: रा (rā) = र with ा mark. Second: म (ma) = inherent 'a', no mark."
+        },
+        {
+          "word": "गीता",
+          "iast": "gītā",
+          "breakdown": "ग (ga) + ी (ī mark) = गी (gī); त (ta) + ा (ā mark) = ता (tā)",
+          "syllables": "gī-tā",
+          "meaning": "Gita (song); the Bhagavad Gita",
+          "audioFile": "/audio/words/gita.mp3",
+          "note": "Two syllables. First: गी (gī) = ग with ी mark. Second: ता (tā) = त with ा mark."
+        },
+        {
+          "word": "गुरु",
+          "iast": "guru",
+          "breakdown": "ग (ga) + ु (u mark) = गु (gu); र (ra) + ु (u mark) = रु (ru)",
+          "syllables": "gu-ru",
+          "meaning": "teacher, spiritual guide",
+          "audioFile": "/audio/words/guru.mp3",
+          "note": "Two syllables. Both consonants have the ु mark below: गु (gu), रु (ru)."
+        },
+        {
+          "word": "कृष्ण",
+          "iast": "kṛṣṇa",
+          "breakdown": "क (ka) + ृ (ṛ mark) = कृ (kṛ); ष (ṣa) + ् (halanta) = ष् (ṣ alone); ण (ṇa) = ण (ṇa)",
+          "syllables": "kṛ-ṣṇa",
+          "meaning": "Krishna (divine figure)",
+          "audioFile": "/audio/words/krishna.mp3",
+          "note": "Three components. First: कृ (kṛ) = क with ृ mark. Second: ष् (ṣ) with halanta (no vowel). Third: ण (ṇa) with inherent 'a'. The ष् and ण combine into conjunct ष्ण."
+        },
+        {
+          "word": "धर्म",
+          "iast": "dharma",
+          "breakdown": "ध (dha) = ध (dha); र (ra) + ् (halanta) = र् (r alone); म (ma) = म (ma)",
+          "syllables": "dhar-ma",
+          "meaning": "duty, righteousness, cosmic law",
+          "audioFile": "/audio/words/dharma.mp3",
+          "note": "Two syllables. First: ध (dha) inherent + र् (r with halanta, no vowel) = conjunct धर्. Second: म (ma) inherent."
+        },
+        {
+          "word": "योग",
+          "iast": "yoga",
+          "breakdown": "य (ya) + ो (o mark) = यो (yo); ग (ga) = ग (ga)",
+          "syllables": "yo-ga",
+          "meaning": "union, yoking; yoga",
+          "audioFile": "/audio/words/yoga.mp3",
+          "note": "Two syllables. First: यो (yo) = य with ो mark (note the compound mark: line + stroke above). Second: ग (ga) inherent."
+        },
+        {
+          "word": "वेद",
+          "iast": "veda",
+          "breakdown": "व (va) + े (e mark) = वे (ve); द (da) = द (da)",
+          "syllables": "ve-da",
+          "meaning": "knowledge; the Vedas (sacred texts)",
+          "audioFile": "/audio/words/veda.mp3",
+          "note": "Two syllables. First: वे (ve) = व with े mark above. Second: द (da) inherent."
+        },
+        {
+          "word": "नमः",
+          "iast": "namaḥ",
+          "breakdown": "न (na) = न (na); म (ma) = म (ma); ः (visarga) = ः (ḥ)",
+          "syllables": "na-maḥ",
+          "meaning": "bow, salutation; homage",
+          "audioFile": "/audio/words/namah.mp3",
+          "note": "Two syllables + visarga. First: न (na) inherent. Second: म (ma) inherent. Then: ः (visarga) after final vowel."
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Practice: The Ka-varga with All Vowel Marks",
+      "content": "Here is the complete table showing क (ka) combined with each vowel mark. This pattern applies to ALL 33 consonants—you can substitute any consonant and apply the same vowel marks. Practice reading each combination aloud:",
+      "order": 6,
+      "items": [
+        { "combination": "क", "iast": "ka", "note": "inherent a" },
+        { "combination": "का", "iast": "kā", "note": "with ā mark" },
+        { "combination": "कि", "iast": "ki", "note": "with i mark (before!)" },
+        { "combination": "की", "iast": "kī", "note": "with ī mark" },
+        { "combination": "कु", "iast": "ku", "note": "with u mark (below)" },
+        { "combination": "कू", "iast": "kū", "note": "with ū mark (below)" },
+        { "combination": "कृ", "iast": "kṛ", "note": "with ṛ mark (below)" },
+        { "combination": "कॄ", "iast": "kṝ", "note": "with ṝ mark (rare)" },
+        { "combination": "कॢ", "iast": "kḷ", "note": "with ḷ mark (very rare)" },
+        { "combination": "कॣ", "iast": "kḹ", "note": "with ḹ mark (theoretical)" },
+        { "combination": "के", "iast": "ke", "note": "with e mark (above)" },
+        { "combination": "कै", "iast": "kai", "note": "with ai mark (above)" },
+        { "combination": "को", "iast": "ko", "note": "with o mark (compound)" },
+        { "combination": "कौ", "iast": "kau", "note": "with au mark (compound)" },
+        { "combination": "कं", "iast": "kaṃ", "note": "with anusvāra" },
+        { "combination": "कः", "iast": "kaḥ", "note": "with visarga" }
+      ]
+    },
+    {
+      "type": "summary",
+      "title": "Summary: You Can Now Read Sanskrit!",
+      "content": "Congratulations! You've completed the CRITICAL BRIDGE from alphabet knowledge to word reading. You now understand: (1) Every consonant has an inherent 'a' vowel—क = ka, not k; (2) Vowel marks (mātrās) REPLACE the inherent 'a' with other vowels; (3) Vowel marks attach before, after, above, or below consonants depending on the vowel; (4) Anusvāra (ं) adds nasalization; Visarga (ः) adds a breathy 'h' sound; (5) Sanskrit words are sequences of consonant+vowel syllables. With this knowledge, you can now read any Sanskrit word written in Devanagari script! The next step is to learn CONJUNCT CONSONANTS (samyuktākṣara)—how two or more consonants combine within a syllable without vowels between them (like ष्ण in कृष्ण or र्म in धर्म). This will complete your foundational knowledge of the Devanagari script. Practice reading simple words daily to build fluency. You're well on your way to reading Classical Sanskrit texts!",
+      "order": 7
+    }
+  ]
+}

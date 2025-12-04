@@ -670,6 +670,11 @@ When starting a session:
 
 5. **Follow mandatory workflows**:
    - **Testing**: MANDATORY for ALL code (see [Testing Workflow](docs/guidelines/TESTING_WORKFLOW.md)) ⭐ **READ BEFORE EVERY COMMIT**
+     - **⚠️ PROJECT-SPECIFIC TypeScript Check:** `npx tsc --project apps/web --noEmit`
+     - Must run from project root (`/Users/johnkitchin/AI/SANSKRIT`)
+     - Success = NO output (silent success means no errors)
+     - If shows help text → INVESTIGATE - command is running incorrectly
+     - This is a Turborepo monorepo - must specify project path!
    - **Test Failures**: ⚠️ **WHEN ANY TEST FAILS/ERRORS** → IMMEDIATELY follow [Test Failure Protocol](docs/guidelines/TEST_FAILURE_PROTOCOL.md) 🔴 **CRITICAL - NO EXCEPTIONS**
    - **Pre-Commit**: Review checklist before EVERY git commit (see [Pre-Commit Checklist](docs/guidelines/PRE_COMMIT_CHECKLIST.md)) ⭐ **MANDATORY**
    - **Git**: Always use feature branches (see [Git Workflow](docs/guidelines/GIT_WORKFLOW.md))

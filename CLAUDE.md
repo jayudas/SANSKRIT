@@ -46,11 +46,21 @@ Read CLAUDE.md
    Read file: /Users/johnkitchin/AI/SANSKRIT/NEXT_SESSION.md
    ```
 
-2. **Latest log file in `logs/` directory**
+2. **Current log file based on development phase** (AUTOMATIC - determined from NEXT_SESSION.md)
    ```
-   Find latest: Use Glob tool on logs/*.md
-   Read the most recent log file (e.g., logs/PHASE0_FOUNDATION_LOG.md)
+   After reading NEXT_SESSION.md, check "Latest Log:" field
+   Read that specific log file (e.g., logs/M1W1_LOG.md)
+
+   Log file naming convention:
+   - Phase 0 (Infrastructure): PHASE0_FOUNDATION_LOG.md
+   - Month-based development: M1W1_LOG.md, M1W3_LOG.md, M2W1_LOG.md, etc.
+     Format: M{month}W{week-start}_LOG.md
+     - M1W1 = Month 1, Weeks 1-2
+     - M1W3 = Month 1, Weeks 3-4
+     - M2W1 = Month 2, Weeks 1-2
    ```
+
+   **IMPORTANT:** Always use the log file specified in NEXT_SESSION.md - it tells you which phase you're in!
 
 **DO NOT:**
 - ❌ Wait for user to tell you to read these files
@@ -899,9 +909,16 @@ logs/
    - Push to GitHub
 
 2. **Update log file:**
-   - Create new log or append to existing
+   - **IMPORTANT:** Use the correct log file for current development phase:
+     - Check NEXT_SESSION.md "Latest Log:" field to determine which file
+     - Phase 0: PHASE0_FOUNDATION_LOG.md
+     - Month 1 Weeks 1-2: M1W1_LOG.md
+     - Month 1 Weeks 3-4: M1W3_LOG.md
+     - Month 2 Weeks 1-2: M2W1_LOG.md (etc.)
+   - Append to existing log file for current phase
    - Document what was accomplished
    - Note decisions and learnings
+   - **Create NEW log file** when transitioning to a new curriculum module
 
 3. **Update NEXT_SESSION.md:**
    - Current state

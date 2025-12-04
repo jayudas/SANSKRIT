@@ -794,3 +794,167 @@ Will test in next session:
 **Phase 0 Complete!** ✅
 
 Next: Choose path - UI components OR content extraction from curriculum
+
+## Session 6: UI Components & Classical Pronunciation Foundation - December 3, 2024
+
+### Duration
+~3 hours
+
+### Major Accomplishment: Classical Pronunciation System Implemented
+
+**Critical Project Direction Change:**
+User requested that the course teach RECONSTRUCTED CLASSICAL Sanskrit pronunciation (~500 BCE-500 CE), NOT modern Indian tradition influenced by Hindi and regional languages. This is a foundational decision affecting all future content.
+
+### Accomplishments
+
+✅ **Option A: Core UI Components Built**
+1. Created DevanagariText component with Noto Sans Devanagari font
+2. Created AudioPlayer component (inline and full variants)
+3. Created Card and Button UI components with variants
+4. Created LessonViewer component with comprehensive lesson display
+5. Added /lessons page with database integration
+6. All components tested in browser and working correctly
+
+✅ **Option B: Real Curriculum Content Extracted**
+1. Read classical_sanskrit_course.md Month 1, Week 1 section
+2. Extracted all 14 vowels from curriculum
+3. Created complete lesson with proper structure and examples
+4. All 14 vowels now displaying correctly (fixed "13 vowel" bug)
+
+✅ **CRITICAL: Classical Pronunciation System Established**
+1. Researched reconstructed classical Sanskrit pronunciation
+2. Updated all 14 vowels with correct classical IPA values:
+   - Short 'a' (अ): /ɐ/ not /ə/ (open-mid, like 'cup')
+   - Short i/u (इ/उ): Tense /i/ /u/ not lax /ɪ/ /ʊ/
+   - Long ā (आ): /aː/ (open front, Italian-style)
+   - Vocalic ṛ (ऋ): Syllabic /r̩/ not 'ri'
+3. Added classical vs. modern pronunciation notes for each vowel
+4. Created PRONUNCIATION_PHILOSOPHY.md (comprehensive rationale)
+5. Created CLASSICAL_PHONEME_INVENTORY.md (all 47 phonemes documented)
+
+### Key Decisions Made
+
+#### Classical Pronunciation (FOUNDATIONAL)
+**Decision:** Teach reconstructed classical pronunciation, not modern Indian tradition
+**Rationale:** 
+- Historical authenticity and accuracy
+- Preserves phonemic distinctions lost in modern pronunciation
+- Enables understanding of Pāṇini's grammar and classical texts
+- Allows comparative Indo-European study
+**Impact:** Affects ALL future content, lessons, exercises, and audio recording
+**Date:** December 3, 2024
+
+#### IAST Transliteration Confirmed
+**Decision:** Continue using proper IAST with diacritics throughout
+**Status:** Already implemented (ṛ, ā, ī, ū, ṇ, ś, ṣ, etc.)
+**Impact:** No changes needed, already using academic standard
+
+### Git Activity
+
+**Branch:** feature/ui-components
+
+**Commits:**
+1. `66cdf23` - feat: implement core UI components and lesson viewer
+2. `5a6ef57` - feat: implement classical Sanskrit pronunciation system
+
+**Files Created/Modified:**
+- UI Components: 11 files (DevanagariText, AudioPlayer, Card, Button, LessonViewer, pages)
+- Documentation: 3 files (PRONUNCIATION_PHILOSOPHY.md, CLASSICAL_PHONEME_INVENTORY.md, UI test results)
+- Content: 1 file (lesson-1-complete-vowels.json with classical pronunciation)
+- Total: 15 files, ~1,790 insertions
+
+**All code pushed to GitHub:** ✅
+
+### Testing Completed
+
+✅ **All 6 Testing Levels:**
+1. Build Compilation - PASSED
+2. Dev Server Startup - PASSED
+3. Runtime Error Check - PASSED
+4. Component/Feature Testing - PASSED (user browser tested)
+5. Integration Testing - PASSED
+6. Documentation - PASSED
+
+✅ **Browser Testing:**
+- User tested in Safari
+- All 14 vowels displaying correctly
+- Classical pronunciation notes visible
+- Audio players showing correct error state
+- Devanagari rendering properly
+- All components functional
+
+### Database Status
+
+**Database:** sanskrit_learning
+**Tables:** 16 tables active
+**Content:**
+- 1 phase (Phase 1)
+- 1 module (Month 1, Week 1)
+- 1 lesson (The 14 Vowels of Sanskrit with classical pronunciation)
+- All 14 vowels with classical IPA values
+- 4 exercises
+
+### Technical Issues Resolved
+
+1. **Missing 14th vowel:** Fixed by creating complete lesson with all vowels
+2. **Browser caching (Safari):** Resolved by deleting old lessons from database
+3. **Multiple lesson versions:** Deleted old lessons, kept only classical pronunciation version
+4. **Content not updating:** Server restart + Safari cache clear resolved
+
+### Documentation Created This Session
+
+1. **docs/testing/UI_COMPONENTS_TEST_RESULTS.md** (all 6 levels documented)
+2. **docs/PRONUNCIATION_PHILOSOPHY.md** (why classical, comparison chart, scholarly basis)
+3. **docs/CLASSICAL_PHONEME_INVENTORY.md** (complete phoneme reference, all 47 sounds)
+4. **content/phases/phase-1/month-1/week-1/lesson-1-complete-vowels.json** (updated with classical)
+
+### Key Phonological Differences (Classical vs Modern)
+
+**Vowels:**
+- Short 'a': /ɐ/ not /ə/ (more open, not schwa)
+- i/u: Tense not lax (quality same as long, only duration differs)
+- No schwa deletion (all vowels fully pronounced)
+- ṛ: Syllabic /r̩/ not 'ri' with full vowel
+
+**Consonants (documented for future):**
+- Sibilants: श /ɕ/ vs ष /ʂ/ vs स /s/ (three-way distinction maintained)
+- Retroflexes: True retroflexes with tongue curled back
+- ज्ञ: /ɟɲ/ not /gj/ (palatal, not velar)
+
+### Status After Session 6
+
+**Phase 0: Foundation** ✅ COMPLETE
+- ✅ Project structure
+- ✅ Database schema and setup
+- ✅ UI components built and tested
+- ✅ Classical pronunciation system established
+- ✅ Documentation comprehensive
+
+**Phase 1A Progress:** UI + Content started
+- ✅ All core UI components working
+- ✅ Lesson viewer functional
+- ✅ 14 vowels with classical pronunciation complete
+- 🔄 Consonants pending (next session)
+
+### Next Steps
+
+**Immediate (Next Session):**
+1. Extract first 10 consonants (क-त series) with classical pronunciation
+2. Create consonant lesson with proper IPA and notes
+3. Continue building out Month 1, Week 1 content
+
+**Future Sessions:**
+1. Complete all 33 consonants
+2. Add conjunct consonants
+3. Source/record classical pronunciation audio
+4. Build additional exercises
+5. Add progress tracking
+
+---
+
+**Session 6 Complete!** ✅
+
+**Major Achievement:** Classical pronunciation foundation established - this sets the standard for the entire course.
+
+**Branch Status:** feature/ui-components (2 commits, all pushed)
+**Next Session:** Continue with consonants and more Month 1 content

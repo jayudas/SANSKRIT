@@ -1,8 +1,8 @@
 # NEXT SESSION - Handoff Document
 
-**Last Updated:** December 3, 2024 (Session 4)
-**Current Phase:** Phase 0 - Foundation (Complete - Protocol Testing Pending)
-**Next Phase:** Protocol Validation, then Database Setup & Content Structure
+**Last Updated:** December 3, 2024 (Session 5 - Content Structure & Testing Protocol)
+**Current Phase:** Phase 0 - Foundation COMPLETE ✅
+**Next Phase:** Choose Development Path
 **Latest Log:** `logs/PHASE0_FOUNDATION_LOG.md`
 
 ---
@@ -28,297 +28,240 @@ Read CLAUDE.md
 
 ## 🎯 Where We Are
 
-### ✅ Completed This Session (Session 4 - Session Start Protocol Refinement)
-- **Critical issue identified:** Claude wasn't automatically following MANDATORY SESSION START PROTOCOL
-- **Root cause:** Claude sees CLAUDE.md in system context but doesn't explicitly READ it
-- **Solution implemented:** User now says "Read CLAUDE.md" to trigger protocol
-- **Documentation updated:**
-  - CLAUDE.md: Added "FOR USER: SESSION START COMMAND" at very top
-  - NEXT_SESSION.md: Added session start instructions (this section)
-  - Log file: Documented issue and solution
-- **Next:** Test protocol in new session to validate it works
+### ✅ Completed This Session (Session 5)
 
-### ✅ Previously Completed (Session 3 - Documentation Optimization)
-- **MANDATORY SESSION START PROTOCOL added:** At top of CLAUDE.md to ensure context files are ALWAYS read automatically
-- **CLAUDE.md optimized:** Reduced from 45.9k to 33.5k chars (27% reduction) - now under 40k threshold
-- **New documentation files created:**
-  - `docs/DATABASE_SCHEMA.md` - Complete database schema reference
-  - `docs/CONTENT_STRUCTURE.md` - Curriculum mapping and JSON schemas
-  - `docs/AUDIO_STRATEGY.md` - Audio sourcing and file specifications
-- **Git:** All changes committed (07748a2) and pushed to GitHub
-- **Testing:** Build confirmed working
+**Major Accomplishments:**
+1. ✅ **Session Start Protocol Validated** - "Read CLAUDE.md" command works perfectly
+2. ✅ **Database Setup Complete** - PostgreSQL running, all 16 tables created
+3. ✅ **Content Structure Implemented** - JSON schemas, example content, import script
+4. ✅ **Testing Workflow Violation Remediated** - Added ABSOLUTE BLOCKER to prevent future violations
+5. ✅ **Retroactive Testing Complete** - All 6 levels passed, 2 issues found and fixed
 
-### ✅ Previously Completed (Sessions 1-2)
-- Session 2: Project directory restructuring (moved to root level)
-- Session 1: Project foundation (Next.js 14, Prisma schema, TypeScript types, guidelines)
-- Git repository initialized
-- GitHub repository created: **https://github.com/jayudas/SANSKRIT**
+**Critical Event: Testing Violation & Fix:**
+- Claude committed code WITHOUT running mandatory testing (violation)
+- User identified violation immediately
+- Added ABSOLUTE BLOCKER to CLAUDE.md and PRE_COMMIT_CHECKLIST.md
+- Performed retroactive testing - found and fixed 2 issues
+- Created comprehensive test results documentation
+
+**Issues Found & Fixed During Testing:**
+1. TypeScript compilation warning → Fixed: Added `downlevelIteration: true` to scripts/tsconfig.json
+2. ts-node missing at root → Fixed: Installed ts-node and @types/node as devDependencies
 
 ### 📊 Current State
-- **Repository:** https://github.com/jayudas/SANSKRIT
-- **Branch:** main
-- **Latest Commit:** 5b99de4 (Project restructuring)
-- **All code:** Committed and pushed ✅
-- **Uncommitted work:** None
-- **Working directory:** Clean
-- **Project structure:** Root level (no more subfolder nesting)
-- **Tests:** Build ✅ | Dev server ✅
+
+**Repository:** https://github.com/jayudas/SANSKRIT
+**Branch:** feature/content-structure
+**Latest Commit:** 2af9aa4 (test: add comprehensive test results and fix import script issues)
+**Uncommitted Work:** None
+**Working Directory:** Clean
+
+**Database:**
+- Name: sanskrit_learning
+- Status: Running and operational
+- Tables: 16 tables created
+- Data: 1 phase, 1 module, 1 lesson, 4 exercises imported
+
+**Content Structure:**
+- Directory: content/phases/phase-1/month-1/week-1/
+- Example content created (vowel lesson, 4 exercises, 3 vocabulary words)
+- Import script working: `npm run import:content`
+- Documentation: content/README.md (371 lines)
+
+**Testing:**
+- All 6 levels completed and documented
+- Test results: docs/testing/CONTENT_STRUCTURE_TEST_RESULTS.md (320 lines)
+- All issues resolved
 
 ---
 
-## 🚀 Immediate Next Steps
+## 🚀 Immediate Next Steps - CHOOSE YOUR PATH
 
-### Step 1: Set Up PostgreSQL Database (30 minutes)
+You have **TWO excellent options** for next steps. Choose based on your preference:
 
-**Why:** Need database running to develop features
+### Option A: Build UI Components (Recommended for Seeing Progress)
 
-**Actions:**
-1. Check if PostgreSQL is installed:
-   ```bash
-   which psql
-   ```
+**Goal:** Create core UI components to display content
 
-2. If not installed, install PostgreSQL:
-   ```bash
-   # macOS
-   brew install postgresql@14
-   brew services start postgresql@14
-   ```
-
-3. Create database:
-   ```bash
-   createdb sanskrit_learning
-   ```
-
-4. Create environment file:
-   ```bash
-   cd /Users/johnkitchin/AI/SANSKRIT/packages/database
-   cp ../../.env.example .env
-   ```
-
-5. Edit `.env` file with database connection:
-   ```env
-   DATABASE_URL="postgresql://username:password@localhost:5432/sanskrit_learning"
-   ```
-   - Replace `username` with your PostgreSQL username (likely your macOS username)
-   - Replace `password` with your PostgreSQL password (may be empty for local dev)
-
-6. Run Prisma migrations:
-   ```bash
-   npm install
-   npm run db:generate
-   npm run db:push
-   ```
-
-7. Verify database is set up:
-   ```bash
-   npm run db:studio
-   # Opens Prisma Studio - should show empty tables
-   ```
-
-**Success Criteria:**
-- ✅ Database exists
-- ✅ All tables created from Prisma schema
-- ✅ Prisma Studio opens and shows tables
-- ✅ No connection errors
-
----
-
-### Step 2: Create Feature Branch for Content Structure (5 minutes)
-
-**Before writing ANY code, create feature branch:**
-
-```bash
-git checkout main
-git pull origin main
-git checkout -b feature/content-structure
-```
-
-**Why:** Following Git workflow - NEVER work on main directly
-
----
-
-### Step 3: Design Content Data Structure (1-2 hours)
-
-**Goal:** Define how curriculum content will be stored and imported
+**Why This Path:**
+- See visual progress quickly
+- Build foundation for lesson viewer
+- Test components in browser
+- User can interact with real UI
 
 **Tasks:**
+1. Create DevanagariText component (display Sanskrit characters)
+2. Create AudioPlayer component (play pronunciation audio)
+3. Create Card and Button components (basic UI)
+4. Create simple lesson viewer to display imported content
+5. Test in browser (MANDATORY user testing)
 
-1. **Create content directory structure:**
-   ```bash
-   mkdir -p content/phases/phase-1/month-1/week-1
-   mkdir -p content/shared/vocabulary
-   mkdir -p content/shared/grammar
-   ```
-
-2. **Design JSON schemas:**
-   - Lesson content schema
-   - Vocabulary entry schema
-   - Exercise schema
-   - Module metadata schema
-
-3. **Create example files:**
-   - `content/phases/phase-1/month-1/week-1/meta.json`
-   - `content/phases/phase-1/month-1/week-1/lesson-1.json`
-   - `content/shared/vocabulary/example.json`
-
-4. **Create import script:**
-   - `scripts/import-content.ts`
-   - Script to read JSON files and populate database
-
-**Reference:**
-- Source curriculum: `/Users/johnkitchin/AI/SANSKRIT/classical_sanskrit_course.md`
-- Start with Month 1, Week 1 content (vowels and basic consonants)
-
-**Success Criteria:**
-- ✅ Clear JSON schema defined
-- ✅ Example content files created
-- ✅ Import script can read files
-- ✅ Content populates database correctly
+**Estimated Time:** 2-3 hours
+**Deliverable:** Working UI showing the vowel lesson content
 
 ---
 
-### Step 4: Extract Month 1, Week 1 Content (2-3 hours)
+### Option B: Extract Real Curriculum Content
 
-**Source:** Classical Sanskrit Course (Month 1, Week 1-2: Vowels and Basic Consonants)
+**Goal:** Replace example content with actual curriculum from classical_sanskrit_course.md
 
-**Extract and structure:**
+**Why This Path:**
+- Build out Month 1, Week 1 properly
+- Plan audio file structure
+- Create complete lesson data
+- Prepare for real learning experience
 
-1. **Lesson Content:**
-   - Introduction to 14 vowels
-   - First 10 consonants
-   - Vowel marks (mātras)
+**Tasks:**
+1. Read classical_sanskrit_course.md (Month 1, Week 1 section)
+2. Extract vowel and consonant teaching content
+3. Create proper lesson JSON files (not just examples)
+4. Structure vocabulary entries for all phonemes
+5. Plan audio file paths and placeholder strategy
 
-2. **Vocabulary:**
-   - Devanagari characters with:
-     - Unicode representation
-     - Romanization (IAST)
-     - Category (vowel/consonant)
-     - Audio file path (placeholder initially)
-
-3. **Exercises:**
-   - Character recognition (multiple choice)
-   - Audio matching
-   - Writing practice data
-
-**Output:**
-- JSON files in `content/phases/phase-1/month-1/week-1/`
-- Ready to import to database
+**Estimated Time:** 2-3 hours
+**Deliverable:** Complete Month 1, Week 1 content ready for import
 
 ---
 
 ## 📝 Important Context for Next Session
 
-### Key Decisions Made
-1. **Project structure:** Files now at root level of SANSKRIT/ (no subfolder nesting)
-2. **Repository name:** SANSKRIT (shortened, cleaner)
-3. **Documentation system:** Phase-based logs in `/logs/` + `NEXT_SESSION.md` handoff
-4. **Development approach:** Build Month 1 completely before Month 2
-5. **Audio strategy:** Record/source as we build each module
+### Git Status
+- **Current Branch:** feature/content-structure
+- **Status:** All changes committed and pushed ✅
+- **Ready for:** More development OR merge to main
 
-### Files to Review at Session Start
-1. **NEXT_SESSION.md** (this file) - Start here for immediate context
-2. **logs/PHASE0_FOUNDATION_LOG.md** - Session history (now includes Session 2)
-3. **CLAUDE.md** - Full project context and guidelines
-4. **SETUP.md** - Database setup instructions
+### Database Connection
+```env
+DATABASE_URL="postgresql://johnkitchin@localhost:5432/sanskrit_learning"
+```
+Location: .env and packages/database/.env
 
-### Git Workflow Reminder
-- ⚠️ **ALWAYS** create feature branch before coding
-- ⚠️ **NEVER** commit to main directly
-- ⚠️ **PUSH** after every phase of work
-- ⚠️ **TEST** everything before committing (6-level testing workflow)
+### Key Commands
 
-### Testing Requirements
-- Frontend code: **MUST** have user browser testing before commit
-- All code: Follow 6-level testing workflow
-- No exceptions, no shortcuts
+```bash
+# Start dev server (check if already running first!)
+npm run dev
+
+# Import content to database
+npm run import:content -- --phase 1 --month 1 --week 1
+
+# Build project
+npm run build
+
+# Check database
+psql -d sanskrit_learning -c "SELECT * FROM phases;"
+
+# TypeScript check
+npx tsc --noEmit
+```
+
+### 🚨 CRITICAL REMINDERS
+
+1. **⛔️ BEFORE EVERY COMMIT:**
+   - STOP and scroll to ABSOLUTE BLOCKER section in CLAUDE.md
+   - Answer ALL 8 questions
+   - If ANY answer is "NO" → Do NOT commit
+   - Complete missing steps first
+
+2. **Testing Workflow:**
+   - ALL 6 levels are MANDATORY
+   - Frontend code requires USER browser testing
+   - NO shortcuts, NO exceptions
+   - See docs/guidelines/TESTING_WORKFLOW.md
+
+3. **Server Management:**
+   - ALWAYS check if server already running before starting new one
+   - Ask user whether to use existing or restart
+   - See docs/guidelines/SERVER_MANAGEMENT.md
+
+4. **Git Workflow:**
+   - ALWAYS work on feature branches
+   - NEVER commit to main directly
+   - Push after EVERY phase of work
+
+---
+
+## 🔧 Technical Details
+
+### Content Structure
+```
+content/
+├── phases/phase-1/month-1/week-1/
+│   ├── meta.json
+│   ├── lesson-1-vowels.json
+│   ├── exercises.json
+│   └── (more lessons to be added)
+└── shared/
+    └── vocabulary/
+        └── example-vocabulary.json
+```
+
+### Import Script
+- Location: scripts/import-content.ts
+- TypeScript config: scripts/tsconfig.json (with downlevelIteration: true)
+- Usage: `npm run import:content -- --phase 1 --month 1 --week 1`
+- Verified working with both tsc and ts-node
+
+### Documentation Added This Session
+- docs/testing/CONTENT_STRUCTURE_TEST_RESULTS.md (test results)
+- content/README.md (content structure guide)
+- ABSOLUTE BLOCKER in CLAUDE.md (pre-commit gate)
+- Updated PRE_COMMIT_CHECKLIST.md (mandatory questions)
+
+---
+
+## 📚 Files to Review Before Starting
+
+1. **NEXT_SESSION.md** (this file) - Start here
+2. **logs/PHASE0_FOUNDATION_LOG.md** - Session 5 details
+3. **CLAUDE.md** - Full project context (especially ABSOLUTE BLOCKER section)
+4. **docs/testing/CONTENT_STRUCTURE_TEST_RESULTS.md** - What we tested and fixed
+5. **content/README.md** - Content structure documentation
 
 ---
 
 ## 🎓 What We're Building Next
 
-**Phase 1A Goal:** Month 1, Week 1-2 Devanagari Script Lessons
+Depending on path chosen:
 
-**Features to build:**
-1. Lesson viewer component
-2. Devanagari character display
-3. Audio player component
-4. Character recognition exercises
-5. Progress tracking (basic)
+**If Option A (UI Components):**
+- DevanagariText component
+- AudioPlayer component
+- Lesson viewer
+- Basic navigation
 
-**Order of development:**
-1. Database setup ← **START HERE**
-2. Content structure
-3. Content import
-4. Core UI components
-5. Lesson viewer
-6. Audio integration
+**If Option B (Content Extraction):**
+- Real Month 1, Week 1 lessons
+- 14 vowel entries with metadata
+- 33 consonant entries
+- Proper exercise content
+- Audio file structure planning
 
 ---
 
-## 🔧 Commands Quick Reference
+## ⚠️ Critical Lessons Learned This Session
 
-```bash
-# Start database (if not running)
-brew services start postgresql@14
-
-# Check database
-psql -l | grep sanskrit
-
-# Start dev server
-npm run dev
-
-# Create feature branch
-git checkout -b feature/name
-
-# Run Prisma Studio
-cd packages/database && npm run db:studio
-
-# View current branch
-git branch
-
-# Check git status
-git status
-```
+1. **Testing is NOT optional** - Found 2 real issues during retroactive testing
+2. **ABSOLUTE BLOCKER works** - 8-question checklist prevents violations
+3. **User vigilance matters** - User caught violation and suggested improvements
+4. **Session start protocol validated** - "Read CLAUDE.md" is foolproof
 
 ---
 
-## ⚠️ Critical Reminders
+## 🎯 Success Criteria for Next Session
 
-1. **Read CLAUDE.md** - Contains all project context and mandatory workflows
-2. **Create feature branch** - Before writing any code
-3. **Follow testing workflow** - 6 levels, every commit
-4. **Push frequently** - After every phase
-5. **Update this file** - At end of next session
-
----
-
-## 📂 Updated Project Structure (After Migration)
-
-```
-SANSKRIT/                           # Root directory (clean!)
-├── apps/
-│   └── web/                        # Next.js 14 application
-├── packages/
-│   ├── database/                   # Prisma schema
-│   └── types/                      # Shared TypeScript types
-├── docs/
-│   └── guidelines/                 # 10 development guideline files
-├── logs/
-│   └── PHASE0_FOUNDATION_LOG.md   # Session history
-├── classical_sanskrit_course.md    # 24-month curriculum
-├── CLAUDE.md                       # Project context (44KB)
-├── README.md
-├── SETUP.md
-├── GITHUB_SETUP.md
-├── NEXT_SESSION.md                # This file
-└── package.json
-```
+**Before ending next session:**
+- [ ] All code tested (6 levels)
+- [ ] All code committed
+- [ ] All code pushed to GitHub
+- [ ] Session log updated
+- [ ] NEXT_SESSION.md updated
+- [ ] No uncommitted work (unless documented with reason)
 
 ---
 
-**Ready to begin database setup and content structuring!**
+**Ready to begin!**
 
-**Next session starts with:** Database setup (Step 1 above)
+**Next session starts with:** User chooses Option A or Option B
 
-**Session 2 complete:** Project restructuring ✅
+**Session 5 complete** ✅

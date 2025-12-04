@@ -1,15 +1,44 @@
 # NEXT SESSION - Handoff Document
 
-**Last Updated:** December 3, 2024 (Session 3)
-**Current Phase:** Phase 0 - Foundation (Complete)
-**Next Phase:** Database Setup & Content Structure
+**Last Updated:** December 3, 2024 (Session 4)
+**Current Phase:** Phase 0 - Foundation (Complete - Protocol Testing Pending)
+**Next Phase:** Protocol Validation, then Database Setup & Content Structure
 **Latest Log:** `logs/PHASE0_FOUNDATION_LOG.md`
+
+---
+
+## 🚨 IMPORTANT: HOW TO START THE NEXT SESSION 🚨
+
+**When you start the next session, your FIRST message to Claude should be:**
+
+```
+Read CLAUDE.md
+```
+
+**This will trigger Claude to:**
+1. Read CLAUDE.md explicitly with the Read tool
+2. See the MANDATORY SESSION START PROTOCOL
+3. Automatically read NEXT_SESSION.md (this file)
+4. Automatically read the latest log file
+5. Confirm context and ask what to do next
+
+**You should see Claude use the Read tool 3 times before responding.**
 
 ---
 
 ## 🎯 Where We Are
 
-### ✅ Completed This Session (Session 3 - Documentation Optimization)
+### ✅ Completed This Session (Session 4 - Session Start Protocol Refinement)
+- **Critical issue identified:** Claude wasn't automatically following MANDATORY SESSION START PROTOCOL
+- **Root cause:** Claude sees CLAUDE.md in system context but doesn't explicitly READ it
+- **Solution implemented:** User now says "Read CLAUDE.md" to trigger protocol
+- **Documentation updated:**
+  - CLAUDE.md: Added "FOR USER: SESSION START COMMAND" at very top
+  - NEXT_SESSION.md: Added session start instructions (this section)
+  - Log file: Documented issue and solution
+- **Next:** Test protocol in new session to validate it works
+
+### ✅ Previously Completed (Session 3 - Documentation Optimization)
 - **MANDATORY SESSION START PROTOCOL added:** At top of CLAUDE.md to ensure context files are ALWAYS read automatically
 - **CLAUDE.md optimized:** Reduced from 45.9k to 33.5k chars (27% reduction) - now under 40k threshold
 - **New documentation files created:**

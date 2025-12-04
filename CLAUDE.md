@@ -1,12 +1,39 @@
 # CLAUDE.md - Sanskrit Learning Platform
 
 ## Project Context Document
-**Last Updated:** December 3, 2024 (Session 3 - Added MANDATORY SESSION START PROTOCOL)
+**Last Updated:** December 3, 2024 (Session 4 - Refined Session Start Protocol)
 **Project Status:** Foundation Complete - Ready for Component Development
 
 ---
 
-## 🚨 CRITICAL: MANDATORY SESSION START PROTOCOL 🚨
+## 🚨 FOR USER: SESSION START COMMAND 🚨
+
+**⚠️ AT THE START OF EVERY NEW SESSION, YOUR FIRST MESSAGE TO CLAUDE SHOULD BE:**
+
+```
+Read CLAUDE.md
+```
+
+**This command will trigger Claude to:**
+1. ✅ Use the Read tool to explicitly read the entire CLAUDE.md file
+2. ✅ See and follow the MANDATORY SESSION START PROTOCOL below
+3. ✅ Automatically read NEXT_SESSION.md and the latest log file
+4. ✅ Confirm full context and ask: "What would you like me to do next?"
+
+**Why this works:**
+- Forces Claude to explicitly READ the file (not just see it in system context)
+- Triggers Claude to follow the protocol inside
+- Simple, verifiable, foolproof
+- No ambiguity or missed steps
+
+**You should see Claude use the Read tool 3 times:**
+1. Read CLAUDE.md
+2. Read NEXT_SESSION.md
+3. Read latest log file
+
+---
+
+## 🚨 CRITICAL: MANDATORY SESSION START PROTOCOL (FOR CLAUDE) 🚨
 
 **⚠️ AT THE START OF EVERY NEW SESSION, BEFORE DOING ANYTHING ELSE:**
 
